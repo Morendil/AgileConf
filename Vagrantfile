@@ -6,8 +6,12 @@ Vagrant::Config.run do |config|
 
   # DB Setup
   config.vm.provision :shell, :inline => "createdb -U postgres agileconf"
+  # For Taps
+  config.vm.provision :shell, :inline => "apt-get install libsqlite3-dev"
   # Development gems
   config.vm.provision :shell, :inline => "gem install shotgun"
   config.vm.provision :shell, :inline => "gem install heroku"
+  config.vm.provision :shell, :inline => "gem install sqlite3"
   config.vm.provision :shell, :inline => "gem install taps"
+  config.vm.provision :shell, :inline => "gem install pg"
 end

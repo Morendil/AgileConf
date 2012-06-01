@@ -3,8 +3,6 @@ require 'sinatra'
 require 'dm-core'
 require 'dm-migrations'
 
-require 'sinatras-hat'
-
 require "./lib/session.rb"
 
 configure do
@@ -12,11 +10,16 @@ configure do
   DataMapper.auto_upgrade!
 end
 
-Sinatra::Application.mount Session do
-  finder { |model, params| model.paginate(:page => params[:page], :per_page => 10) }
-  record { |model, params| model.first(:id => params[:id]) }
+get('/') { redirect('/sessions') }
+
+get '/sessions' do
+  @sessions = Session.paginate(:page => params[:page], :per_page => 10)
+  erb :index, :views => "views/sessions"
 end
 
-get('/') { redirect('/sessions') }
+get '/sessions/:id' do
+  @session = Session.first(:id => params[:id])
+  erb :show, :views => "views/sessions"
+end
 
 run Sinatra::Application
