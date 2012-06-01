@@ -1,0 +1,5 @@
+<h1><%= @session.title %></h1>
+<div>
+    <p>Agile <%= @session.year %> / <%= @session.type %> / <%= @session.stage %></p>
+    <p><%= @session.description.gsub("\\n","<br/>") %></p>
+</div>

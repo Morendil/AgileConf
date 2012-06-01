@@ -1,0 +1,10 @@
+<h1>Sessions (<%= @sessions.total_entries %>)</h1>
+<%= will_paginate @sessions %>
+<div>
+  <% @sessions.each do |session| %>
+    <h4><%= session.title %></h4>
+    <p><%= session.type %> / <%= session.stage %></p>
+    <small><a href="/sessions/<%= session.id %>">Click here to go there.</a></small>
+  <% end %>
+</div>
+<small><a href="/sessions/new">Create one.</a></small>
