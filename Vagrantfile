@@ -14,4 +14,6 @@ Vagrant::Config.run do |config|
   config.vm.provision :shell, :inline => "gem install sqlite3"
   config.vm.provision :shell, :inline => "gem install taps"
   config.vm.provision :shell, :inline => "gem install pg"
+  # For scraping
+  config.vm.provision :shell, :inline => "gem install mechanize"
 end
