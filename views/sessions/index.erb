@@ -3,7 +3,7 @@
 <div>
   <% @sessions.each do |session| %>
     <h4><%= session.title %></h4>
-    <p><%= session.type %> / <%= session.stage %></p>
+    <p><%= session.type %> / <%= session.stage %> (<%= session.year %>) :: <%= session.speakers.map(&:name).join(", ") %></p>    
     <small><a href="/sessions/<%= session.id %>">Click here to go there.</a></small>
   <% end %>
 </div>
