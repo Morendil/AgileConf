@@ -3,25 +3,30 @@ require "./lib/scraper02.rb"
 
 class TestScraper02 < Test::Unit::TestCase
 
+  def scraper
+    archive = "http://web.archive.org/web/20030102083415/"
+    link = "#{archive}http://www.xpuniverse.com/schedule/Tutorial1"
+    Scraper02.new(link)
+  end
+
   def test_title
-    link = "http://web.archive.org/web/20030102083415/http://www.xpuniverse.com/schedule/Tutorial1"
-    title = Scraper02.new(link).title
-    assert_equal "XP IN A LEGACY ENVIRONMENT", title
+    assert_equal "XP IN A LEGACY ENVIRONMENT", scraper[:title]
+  end
+
+  def test_stage
+    assert_equal "Main conference", scraper[:stage]
   end
 
   def test_speakers
-    link = "http://web.archive.org/web/20030102083415/http://www.xpuniverse.com/schedule/Tutorial1"
-    assert_equal ["Kuryan Thomas", "Arlen Bankston"], Scraper02.new(link).speakers
+    assert_equal ["Kuryan Thomas", "Arlen Bankston"], scraper[:speakers]
   end
 
   def test_description
-    link = "http://web.archive.org/web/20030102083415/http://www.xpuniverse.com/schedule/Tutorial1"
-    assert Scraper02.new(link).description.include? "journey begins"
+    assert scraper[:description].include? "journey begins"
   end
 
   def test_type
-    link = "http://web.archive.org/web/20030102083415/http://www.xpuniverse.com/schedule/Tutorial1"
-    assert_equal Scraper02.new(link).type, "Tutorial"
+    assert_equal "Tutorial", scraper[:type]
   end
 
 end

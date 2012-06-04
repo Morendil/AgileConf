@@ -4,6 +4,7 @@ require 'dm-core'
 require 'dm-migrations'
 
 require "./lib/session.rb"
+require "./lib/speaker.rb"
 
 configure do
   DataMapper.setup(:default, ENV['DATABASE_URL'])

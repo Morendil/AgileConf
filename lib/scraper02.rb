@@ -7,8 +7,16 @@ class Scraper02
     @page = @agent.get link
   end
 
+  def [] symbol
+    self.send symbol
+  end
+
   def title
     @page./("span.orangeTitle").first.text
+  end
+
+  def stage
+    "Main conference"
   end
 
   def speakers
@@ -24,4 +32,15 @@ class Scraper02
     @page./("span.brownTitle").first.text
   end
 
+  def hash
+    result = {}
+    [:title,:description,:type,:speakers,:stage].each do |key|
+      result[key]=self[key]
+    end
+    result
+  end
+
+
+
 end
+
