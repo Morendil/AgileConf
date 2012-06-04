@@ -25,7 +25,7 @@ class Scraper02
   end
 
   def description
-    @page./("/html/body/table[2]/tr[2]/td[2]").text
+    @page./("/html/body/table[2]/tr[2]/td[2]/*[not(self::table)]").text.strip
   end
 
   def type

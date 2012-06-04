@@ -22,6 +22,7 @@ class TestScraper02 < Test::Unit::TestCase
   end
 
   def test_description
+    assert scraper[:description].start_with? "Summary"
     assert scraper[:description].include? "journey begins"
   end
 
