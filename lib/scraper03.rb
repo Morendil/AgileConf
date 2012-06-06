@@ -8,6 +8,14 @@ class Scraper03
     @page = @agent.get "http://agile2003.agilealliance.org/schedule/#{stage}.html"
   end
 
+  def hash
+    result = {}
+    [:title,:description,:type,:speakers,:stage,:records].each do |key|
+      result[key]=self[key]
+    end
+    result
+  end
+
   def [] symbol
     self.send symbol
   end
@@ -23,6 +31,7 @@ class Scraper03
 
   def shift
     items.shift
+    items.first
   end
 
   def marker
@@ -30,7 +39,9 @@ class Scraper03
   end
 
   def anchor
-    xpath = "/html/body/table/tr[3]/td[2]/table[2]/tr/td/table[3]/tr/td[1]/a[@name='#{marker}']"
+    m = marker
+    m = "T#{marker}" if m[0] == "E"
+    xpath = "/html/body/table/tr[3]/td[2]/table[2]/tr/td/table[3]/tr/td[1]/a[@name='#{m}']"
     anchor = @page./(xpath).first
   end
 
@@ -59,7 +70,15 @@ class Scraper03
       when "researchpapers" then "Research"
       when "experiencereports" then "Experience Reports"
       when "technicalexchange" then "Technical Exchange"
-      when "technicalexchange" then "Technical Exchange"
+    end
+  end
+
+  def type
+    case @stage
+      when "tutorials" then "Tutorial"
+      when "researchpapers" then "Research Paper"
+      when "experiencereports" then "Experience Report"
+      when "technicalexchange" then "Talk"
     end
   end
 

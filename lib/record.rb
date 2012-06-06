@@ -5,6 +5,8 @@ require 'will_paginate/data_mapper'
 class Record
   include DataMapper::Resource
 
+  belongs_to :session
+
   property :url, Text, :key => true
 
   def self.from url

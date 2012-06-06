@@ -21,7 +21,7 @@ class TestScraper03 < Test::Unit::TestCase
   end
 
   def test_speakers
-    # 2003 has really stupid formatting for speaker names... fix post
+    # 2003 has really stupid formatting for speaker names... fix afterward
     s = scraper
     5.times do s.shift end
     assert_equal ["Diana Larsen","Joshua Kerievsky"], s[:speakers]

@@ -2,6 +2,9 @@ require 'dm-core'
 require 'will_paginate'
 require 'will_paginate/data_mapper'
 
+require "./lib/speaker.rb"
+require "./lib/record.rb"
+
 class Session
   include DataMapper::Resource
 
@@ -20,7 +23,8 @@ class Session
     records = (hash.delete :records) || []
     result = Session.new hash
     speakers.each do |speaker|
-      result.speakers << (Speaker.from speaker)
+      adding = (Speaker.from speaker)
+      result.speakers << adding unless result.speakers.include? adding
     end
     records.each do |record|
       result.records << (Record.from record)
