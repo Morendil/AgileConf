@@ -13,12 +13,17 @@ class Session
   property :year, Integer
 
   has n, :speakers, :through => Resource
+  has n, :records
 
   def self.from hash
-    speakers = hash.delete :speakers
+    speakers = (hash.delete :speakers) || []
+    records = (hash.delete :records) || []
     result = Session.new hash
     speakers.each do |speaker|
       result.speakers << (Speaker.from speaker)
+    end
+    records.each do |record|
+      result.records << (Record.from record)
     end
     result
   end
