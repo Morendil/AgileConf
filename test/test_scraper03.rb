@@ -5,8 +5,7 @@ require "./lib/scraper03.rb"
 class TestScraper03 < Test::Unit::TestCase
 
   def scraper
-    link = "http://web.archive.org/web/20090607084452/http://agile2003.agilealliance.org/schedule/tutorials.html"
-    Scraper03.new link
+    Scraper03.new "tutorials"
   end
 
   def test_items
@@ -17,8 +16,37 @@ class TestScraper03 < Test::Unit::TestCase
 
   def test_title
     s = scraper
-    s.go "T4"
+    5.times do s.shift end
     assert_equal "XP/Agile Organizational Change - Tools for Successful Adoption", s[:title]
+  end
+
+  def test_speakers
+    # 2003 has really stupid formatting for speaker names... fix post
+    s = scraper
+    5.times do s.shift end
+    assert_equal ["Diana Larsen","Joshua Kerievsky"], s[:speakers]
+  end
+
+  def test_stage
+    s = scraper
+    assert_equal "Tutorials", s[:stage]
+  end
+
+  def test_description
+    description = scraper[:description]
+    assert description.include? "Information Age"
+    assert !description.include? "\t"
+  end
+
+  def test_ record
+    s = scraper
+    13.times do s.shift end
+    assert_equal ["http://agile2003.agilealliance.org/files/T17Slides.ppt"], s[: records]
+  end
+
+  def test_ records
+    s = Scraper03.new "researchpapers"
+    assert_equal ["http://agile2003.agilealliance.org/files/P1Paper.pdf","http://agile2003.agilealliance.org/files/P1Slides.pdf"], s[: records]
   end
 
 end
