@@ -15,12 +15,24 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
+-- Name: records; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE records (
+    url text NOT NULL,
+    session_id integer NOT NULL
+);
+
+
+ALTER TABLE public.records OWNER TO postgres;
+
+--
 -- Name: session_speakers; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
 --
 
 CREATE TABLE session_speakers (
     session_id integer NOT NULL,
-    speaker_name text NOT NULL
+    speaker_id integer
 );
 
 
@@ -66,7 +78,7 @@ ALTER SEQUENCE sessions_id_seq OWNED BY sessions.id;
 -- Name: sessions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('sessions_id_seq', 140, true);
+SELECT pg_catalog.setval('sessions_id_seq', 193, true);
 
 
 --
@@ -74,11 +86,39 @@ SELECT pg_catalog.setval('sessions_id_seq', 140, true);
 --
 
 CREATE TABLE speakers (
-    name text NOT NULL
+    name text NOT NULL,
+    id integer NOT NULL
 );
 
 
 ALTER TABLE public.speakers OWNER TO postgres;
+
+--
+-- Name: speakers_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE speakers_id_seq
+    INCREMENT BY 1
+    NO MAXVALUE
+    NO MINVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.speakers_id_seq OWNER TO postgres;
+
+--
+-- Name: speakers_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE speakers_id_seq OWNED BY speakers.id;
+
+
+--
+-- Name: speakers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('speakers_id_seq', 381, true);
+
 
 --
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
@@ -88,539 +128,653 @@ ALTER TABLE sessions ALTER COLUMN id SET DEFAULT nextval('sessions_id_seq'::regc
 
 
 --
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE speakers ALTER COLUMN id SET DEFAULT nextval('speakers_id_seq'::regclass);
+
+
+--
+-- Data for Name: records; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY records (url, session_id) FROM stdin;
+http://agile2003.agilealliance.org/files/T17Slides.ppt	154
+http://agile2003.agilealliance.org/files/P1Paper.pdf	157
+http://agile2003.agilealliance.org/files/P1Slides.pdf	157
+http://agile2003.agilealliance.org/files/P2Paper.pdf	158
+http://agile2003.agilealliance.org/files/P3Paper.pdf	159
+http://agile2003.agilealliance.org/files/P4Paper.pdf	160
+http://agile2003.agilealliance.org/files/P5Paper.pdf	161
+http://agile2003.agilealliance.org/files/P6Paper.pdf	162
+http://agile2003.agilealliance.org/files/R1Paper.pdf	163
+http://agile2003.agilealliance.org/files/R2Paper.pdf	164
+http://agile2003.agilealliance.org/files/R3Paper.pdf	165
+http://agile2003.agilealliance.org/files/R3Slides.pdf	165
+http://agile2003.agilealliance.org/files/R4Paper.pdf	166
+http://agile2003.agilealliance.org/files/R5Paper.pdf	167
+http://agile2003.agilealliance.org/files/R5Slides.ppt	167
+http://agile2003.agilealliance.org/files/R6Paper.pdf	168
+http://agile2003.agilealliance.org/files/R7Paper.pdf	169
+http://agile2003.agilealliance.org/files/R8Paper.pdf	170
+http://agile2003.agilealliance.org/files/R9Paper.pdf	171
+http://agile2003.agilealliance.org/files/R10Paper.pdf	172
+http://agile2003.agilealliance.org/files/R11Paper.pdf	173
+http://agile2003.agilealliance.org/files/R12Paper.pdf	174
+http://agile2003.agilealliance.org/files/R13Paper.pdf	175
+http://agile2003.agilealliance.org/files/R13Slides.ppt	175
+http://agile2003.agilealliance.org/files/R14Paper.pdf	176
+http://agile2003.agilealliance.org/files/R14Slides.pdf	176
+http://agile2003.agilealliance.org/files/R15Paper.pdf	177
+http://www.poppendieck.com/agilecontracts.htm	178
+http://agile2003.agilealliance.org/files/E3Paper.pdf	180
+http://agile2003.agilealliance.org/files/E5Slides.ppt	182
+http://agile2003.agilealliance.org/files/E13Notes.pdf	185
+http://www.ebgconsulting.com/images/ADC%20Conference%20-%20Cust%20Involvt%206-27/page_01.htm	187
+http://trondheim.cs.washington.edu/cgi-bin/agile/BaseQuicki/wiki.cgi?WelcomeVisitors	191
+http://www.cebase.org/ADCexchange/	192
+http://agile2003.agilealliance.org/files/E17Slides.ppt	193
+\.
+
+
+--
 -- Data for Name: session_speakers; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY session_speakers (session_id, speaker_name) FROM stdin;
-8716	Jeff Gothelf
-8736	Jennitta Andrea
-8739	Jonathan Rasmusson
-8741	David Dalka
-8745	Leah Buley
-8747	Patrick Kua
-8750	Willem Larsen
-8751	Skip Angel
-8752	Max Guernsey
-8760	Bob Galen
-8764	Yi Lv
-8765	Yi Lv
-8773	Jonathan Rasmusson
-8774	Abby Fichtner
-8780	Jim  Highsmith
-8782	Karl Scotland
-8785	Ahmed Sidky
-8785	Greg Smith
-8797	Lisa Crispin
-8797	Janet Gregory
-8798	Joe Fecarotta
-8800	Samantha Laing
-8801	Craig Smith
-8801	Adrian Smith
-8808	Karl Scotland
-8810	Michael DePaoli
-8821	Leeann Berner
-8823	David Chilcott
-8831	Paul Dolman-Darrall
-8832	Karen Greaves
-8838	Jenni Jepsen
-8840	Karen Greaves
-8845	Roger Brown
-8845	Mark Levison
-8848	Mary Poppendieck
-8849	Bas Vodde
-8854	Pollyanna Pixton
-8855	Richard Lawrence
-8857	Carlton  Nettleton
-8858	Gil Broza
-8858	Luiz Claudio Parzianello
-8859	Carlton  Nettleton
-8860	Jonny LeRoy
-8860	Matt Simons
-8867	George Dinwiddie
-8873	Ravindar Gujral
-8873	D. André Dhondt
-8876	Carsten Jakobsen
-8876	Mary Poppendieck
-8877	Thushara Wijewardena
-8881	Carsten Jakobsen
-8881	Tom Poppendieck
-8883	Venkat Subramaniam
-8887	Portia Tung
-8887	Jenni Jepsen
-8888	Pete Behrens
-8890	John Maxwell
-8900	Michael Kaiser
-8900	Guy Royse
-8901	Aaron Sanders
-8902	Pat Maddox
-8902	Elizabeth Keogh
-8912	Craig Smith
-8912	Greg Smith
-8917	Howard Deiner
-8918	Sanjiv Augustine
-8918	arlen bankston
-8920	Dan LeFebvre
-8921	Israel Gat
-8923	Markku Åhman
-8923	Timo Punkka
-8924	Israel Gat
-8925	Emmanuel Gaillot
-8925	Jonathan Perret
-8933	Ted Layher
-8933	Kealy Opelt
-8939	Tom Perry
-8945	Jason Little
-8950	Mike Cottmeyer
-8950	Dennis Stevens
-8954	Tim McCoy
-8955	Mike Cottmeyer
-8967	Chris Sims
-8968	Amr Noaman
-8968	Mohamed Amr
-8969	Dean Leffingwell
-8970	Julien Mazloum
-8972	Jim Ungar
-8972	Todd Zaki Warfel
-8973	Adam Light
-8975	Ken Power
-8976	Johanna Rothman
-8976	William Rowden
-8977	Satoshi Kuroiwa
-8977	Kazumasa Ebata
-8985	Ken Clyne
-8985	Julie Chickering
-8989	Simon Bennett
-8991	Ken Clyne
-8991	Eric Willeke
-8994	Mike Russell
-9001	Brian Sobus
-9008	Jason Fair
-9011	Tom Perry
-9021	Gary Bernhardt
-9021	Jeremy Lightsmith
-9025	Karl Scotland
-9025	Eric Willeke
-9029	Patrick Debois
-9029	Julian Simpson
-9033	Timo Punkka
-9038	Amr Elssamadisy
-9042	David Bland
-9047	Lyssa Adkins
-9047	Michael Spayd
-9048	Elizabeth Keogh
-9048	Katherine Kirk
-9051	Sonya Lowry
-9051	Lars Skaar
-9052	Doug Bradbury
-9056	Lisa Ho
-9056	Tracy Beeson
-9066	Agustín Villena
-9066	Philippe Camacho
-9068	Judy Wankerl
-9074	Julian Simpson
-9077	Gerry Kirk
-9082	Eric Sink
-9083	Ainsley Nies
-9083	Diana Larsen
-9088	Mary Gorman
-9088	Ellen Gottesdiener
-9089	Ralph Miarka
-9089	Marc Bless
-9091	Gerry Kirk
-9095	Lyssa Adkins
-9104	Christian Vindinge Rasmussen
-9104	Cathrine Lippert
-9108	Mary Gorman
-9111	Michele Sliger
-9112	Perry Reid
-9117	Martin Heider
-9117	Bernd Schiffer
-9128	Ellen Gottesdiener
-9128	Janet Gregory
-9140	Christopher Avery
-9140	Ashley Johnson
-9143	Carol Morton
-9143	Clement "James" Goebel
-9167	Angela Druckman
-9167	Jimi Fosdick
-9170	Alistair McKinnell
-9172	Bob Payne
-9172	Michael Kaiser
-9173	Ronen Rubinfeld
-9173	Mik Kersten
-9176	Dan Mezick
-9178	Michael Sahota
-9182	Jean Tabaka
-9185	Marc Bless
-9185	Olaf Lewitz
-9186	Kenny Rubin
-9192	David Hussman
-9197	Lars Skaar
-9207	David Hussman
-9207	Tim McCoy
-9210	Simon Orrell
-9210	Jaron Lambert
-9212	Damon Poole
-9213	Declan Whelan
-9213	Bryan Beecham
-9215	neil johnson
-9219	Jean Tabaka
-9219	Julie Chickering
-9228	Val Scott
-9228	William Rowden
-9231	Jeremy Lightsmith
-9238	Michael Elbaz
-9241	William Krebs
-9265	Jim McCarthy
-9269	Alan Shalloway
-9271	John Haniotis
-9314	Scott Dunn
-9316	Scott Dunn
-9328	Steven "Doc" List
-9347	Jon Innes
-9454	Matt Block
-9504	Ian Ratner
-9504	Jack Harvey
-9544	Steve Ropa
-9544	Joel Tosi
-9574	Robert Martin
-9604	Marian Willeke
-9615	Shane Hastie
-9615	Steve Adolph
-9655	Robert Martin
-9701	Don McGreal
-9764	Keith Nottonson
-9906	Michael McCullough
-9906	Don McGreal
-9925	Jon Stahl
-9964	Tsuyoshi Ushio
-9964	Emerson Mills
-10005	Michael Keeling
-10005	Mike Velichansky
-10030	Scott Ambler
-10113	James Grenning
-10150	Bas Vodde
-10150	James Grenning
-10201	Eewei Chen
-10202	Charles Suscheck
-10580	Dean Wampler
-10596	Elisabeth Hendrickson
-10636	Nick Horney
-10636	Jim  Highsmith
-10686	Nancy Van Schooenderwoert
-10782	Joseph Wilk
-10877	Francisco Trindade
-10877	Patrick Kua
-10905	Micah Martin
-10905	Colin Jones
-10908	Brian Marick
-10908	Michael Feathers
-10914	Arlo Belshee
-10915	Micah Martin
-10918	Hugh Beyer
-10932	Ryan Polk
-10951	Angela Harms
-10957	Dale Emery
-10959	Arlo Belshee
-10959	James Shore
-11028	Mike Prior
-11031	Cory James Hohs
-11031	Elena M Yatzeck
-11037	Lynn Langit
-11037	Llewellyn Falco
-11055	Kathleen  Rilliet
-11055	Hubert Smits
-11062	Dale Emery
-11074	Chet Hendrickson
-11074	Ron Jeffries
-11103	Lynn Cowan
-11104	Jez Humble
-11105	Jez Humble
-11108	Daniel Brolund
-11110	Denny de Waard
-11110	Jeff Sutherland
-11121	Stephen Denning
-11122	Stephen Denning
-11136	Sami Honkonen
-11136	Arto Eskelinen
-11137	Charles Roman
-11137	Sanjiv Augustine
-11140	Tim Ottinger
-11141	Nafis Ahmad
-11141	Jeff Sutherland
-11142	Bill Wake
-11144	Patti Mandarino
-11146	Esther Derby
-11147	Esther Derby
-11152	Bill Wake
-11165	Michael Spayd
-11166	Leslie Ekas
-11166	Scott Will
-11176	Dave Nicolette
-11210	Andrea Provaglio
-11212	Michael Hill
-11215	Xavier Quesada Allue
-11219	Ali Zewail
-11254	George Schlitz
-11254	Sean Buck
-11266	Pradyumn Sharma
-11270	Chris OConnor
-11272	Harold Shinsato
-11272	Chris Sims
-11304	Don Gray
-11305	Nanette Brown
-11305	Robert Nord
-11309	Zhon Johansen
-11321	Greg Williams
-11326	Derek  Neighbors
-11327	Darius Kumana
-11327	Jeremy Sutherland
-11343	Belkis Vasquez
-11344	Meghann Drury
-11344	Ken Power
-11350	Catherine Clark
-11352	Mauricio Aniche
-11352	Guilherme Silveira
-11369	Steve Andrews
-11370	Raj Mudhar
-11376	Allison Corbett
-11379	Jeff Langr
-11382	Richard Cheng
-11391	Tim Ottinger
-11393	Jeff Langr
-11431	D. André Dhondt
-11431	Ravindar Gujral
-11432	Ken Power
-11436	Ken Power
-11440	Gourav Tiwari
-11440	Zainab Alikhan
-11447	Michael Feathers
-11449	David Bulkin
-11449	Barninder Khurana
-11452	Michael Feathers
-11455	Jason Tanner
-11473	Michael  Meissner
-11479	James Shore
-11482	Mike Suarez
-11482	Isel Fernandez Diez
-11493	Carol Smith
-11494	David Bulkin
-11494	Bob Payne
-11502	Derek W. Wade
-11517	Jason Dean
-11536	Jeff Patton
-11537	Clement "James" Goebel
-12633	Christian Hassa
-12637	candi rai
-12637	Marc-Elian Begin
-12639	Andrew Hunt
-12642	Alan Padula
-12643	Nils Brede Moe
-12643	Torgeir Dingsøyr
-12644	Nils Brede Moe
-12644	Torgeir Dingsøyr
-12646	Børge Haugset
-12646	Geir Kjetil Hanssen
-12647	Steve Adolph
-12647	Philippe Kruchten
-12648	Judith Brown
-12648	Gitte Lindgaard and Robert Biddle
-12649	Tiago Silva
-12649	Angela Martin
-12650	Laura Bocock
-12650	Angela Martin
-12652	Mia Horrigan
-12653	Mali Senapathi
-12653	Ananth Srinivasan
-12655	xiaofeng wang
-12656	Meghann Drury
-12656	Kieran Conboy and Ken Power
-12657	B Veeresh Thummadi
-12657	Omri Shiv and Kalle Lyytinen
-12659	Gayane Azizyan
-12659	Miganoush Magarian and  Mira Kajko-Mattsson
-12661	Theodore Hellmann
-12661	Frank Maurer
-12662	Claudia Melo
-12662	Daniela S. Cruzes, Fabio Kon and Reidar Conradi
-12665	Lene Pries-Heje
-12665	Jan Pries-Heje
-12666	Mia Horrigan
-12692	Barbara Fredrickson
-12693	Kevlin Henney
-12694	Linda Rising
-12706	Edwin Wong
-12709	Drew Jemilo
-12711	Bill Gaiennie
-12712	Brad Swanson
-12715	Dean Wampler
-12715	Venkat Subramaniam
-12716	Anders Ramsay
-12718	Patrick Phillips
-1	Kuryan Thomas
-1	Arlen Bankston
-2	James Grenning
-3	Martin Fowler
-4	Pramod Sadalage
-4	Peter Schuh
-5	Joshua Kerievsky and Diana Larsen
-6	Paul Hodgetts
-7	Chet Hendrickson
-7	Ann Anderson
-7	Ron Jeffries
-8	Bret Pettichord and Brian Marick
-9	Kuryan Thomas
-9	Arlen Bankston
-10	James Grenning
-11	Martin Fowler
-12	Pramod Sadalage
-12	Peter Schuh
-13	Joshua Kerievsky and Diana Larsen
-14	Paul Hodgetts
-15	Chet Hendrickson
-15	Ann Anderson
-15	Ron Jeffries
-16	Bret Pettichord and Brian Marick
-17	Bill Wake
-18	Bill Wake
-19	Bill Wake
-20	Bill Wake
-21	Bill Wake
-22	Kuryan Thomas
-22	Arlen Bankston
-23	James Grenning
-24	Lowell Lindstrom
-25	Ken Schwaber
-26	William Wake and Ron Jeffries
-27	Michael Hill
-28	Laurie Williams
-28	Robert Kessler
-29	Holger Breitling and Martin Lippert
-30	Bret Pettichord and Brian Marick
-31	Kuryan Thomas
-31	Arlen Bankston
-32	James Grenning
-33	Lowell Lindstrom
-34	Ken Schwaber
-35	William Wake and Ron Jeffries
-36	Michael Hill
-37	Laurie Williams
-37	Robert Kessler
-38	Holger Breitling and Martin Lippert
-39	Bret Pettichord and Brian Marick
-40	BARRY BOEHM
-41	Watts S. Humphrey
-42	BARRY BOEHM
-43	Alistair Cockburn
-44	Dave West
-45	Richard P. Gabriel
-46	J. Frenando Naveda
-47	Daniel Steinberg
-48	Tom Kubit
-49	Alan Airth
-50	Alistair Cockburn
-51	Gary Pollice
-52	Granville Miller
-53	Ken Schwaber -- Scott Ambler
-54	Hakan Erdogmus
-55	Ward Cunningham
-56	Alistair Cockburn
-57	Dave West
-58	Richard P. Gabriel
-59	J. Frenando Naveda
-60	Daniel Steinberg
-61	Tom Kubit
-62	Alan Airth
-63	Alistair Cockburn
-64	Gary Pollice
-65	Granville Miller
-66	Ken Schwaber -- Scott Ambler
-67	Hakan Erdogmus
-68	Ward Cunningham
-69	Scott Ambler
-70	Brian Marick
-71	Fernando Naveda
-72	Bill Kleb
-73	James Caristi
-74	Randy Miller
-75	Ken Auer
-76	Steven Fraser and Rachel Reinitz
-77	Zhon Johansen
-78	Dave Thomas
-79	Barry Boehm
-80	Kuryan Thomas
-80	Arlen Bankston
-81	Ken Schwaber
-82	William Wake and Ron Jeffries
-83	Michael Hill
-84	Laurie Williams
-84	Robert Kessler
-85	Holger Breitling and Martin Lippert
-86	John Goodsen
-87	Lisa Crispin
-87	Tip House
-88	Jutta Eckstein
-89	Richard Hightower
-90	James Grenning
-91	Martin Fowler
-92	Pramod Sadalage
-92	Peter Schuh
-93	Alistair Cockburn
-94	Dave West
-95	Richard P. Gabriel
-96	J. Frenando Naveda
-97	Daniel Steinberg
-98	Tom Kubit
-99	Alan Airth
-100	Alistair Cockburn
-101	Gary Pollice
-102	Granville Miller
-103	Ken Schwaber -- Scott Ambler
-104	Hakan Erdogmus
-105	Ward Cunningham
-106	Brian Marick
-107	Fernando Naveda
-108	Bill Kleb
-109	James Caristi
-110	Randy Miller
-111	Ken Auer
-112	Steven Fraser and Rachel Reinitz
-113	Zhon Johansen
-114	Dave Thomas
-115	Barry Boehm
-116	Kuryan Thomas
-116	Arlen Bankston
-117	Ken Schwaber
-118	William Wake and Ron Jeffries
-119	Laurie Williams
-119	Robert Kessler
-120	Holger Breitling and Martin Lippert
-121	John Goodsen
-122	Lisa Crispin
-122	Tip House
-123	Jutta Eckstein
-124	Richard Hightower
-125	James Grenning
-126	Martin Fowler
-127	Pramod Sadalage
-127	Peter Schuh
-128	Joshua Kerievsky and Diana Larsen
-129	Paul Hodgetts
-130	Chet Hendrickson
-130	Ann Anderson
-130	Ron Jeffries
-131	Lowell Lindstrom
-132	Bret Pettichord and Brian Marick
-133	David Stotts and Laurie Williams
-134	Grigori Melnik
-134	Adam Geras
-134	Laurie Williams
-135	Scott Henninger and Frank Maurer
-136	Watts S. Humphrey
-137	Duff O'Melia
-138	Duff O'Melia
-139	Scott Ambler
-140	Michael Hill
+COPY session_speakers (session_id, speaker_id) FROM stdin;
+12666	270
+12692	285
+12693	286
+12694	287
+12706	288
+12709	289
+12711	290
+12712	291
+12715	174
+12715	46
+12716	292
+12718	293
+1	294
+1	295
+2	171
+3	296
+4	297
+4	298
+5	299
+6	300
+7	197
+7	301
+7	198
+8	302
+141	340
+142	341
+143	170
+144	342
+145	343
+146	111
+146	344
+147	345
+147	346
+147	347
+148	348
+149	31
+149	45
+150	322
+150	349
+151	304
+152	350
+153	351
+153	287
+154	311
+155	198
+155	352
+156	17
+163	353
+164	98
+165	354
+166	355
+167	356
+168	357
+169	358
+170	359
+171	360
+172	361
+173	362
+174	363
+175	254
+176	2
+177	364
+178	31
+178	365
+179	366
+179	367
+180	368
+180	369
+181	370
+182	371
+182	372
+183	373
+183	374
+184	375
+185	17
+186	56
+186	129
+187	113
+188	373
+188	374
+189	376
+189	377
+190	378
+191	379
+191	380
+192	381
+192	306
+193	372
+9	294
+9	295
+10	171
+11	296
+12	297
+12	298
+13	299
+14	300
+15	197
+15	301
+15	198
+16	302
+17	210
+18	210
+19	210
+20	210
+21	210
+22	294
+22	295
+23	171
+24	303
+25	304
+26	305
+27	217
+28	306
+28	307
+29	308
+52	319
+53	320
+54	321
+55	322
+56	311
+57	312
+58	313
+59	314
+60	315
+61	316
+62	317
+63	311
+64	318
+65	319
+66	320
+67	321
+68	322
+69	170
+70	182
+71	323
+72	324
+73	325
+74	326
+75	327
+76	328
+77	228
+78	329
+79	330
+80	294
+80	295
+81	304
+82	305
+83	217
+84	306
+84	307
+85	308
+86	331
+87	17
+87	332
+88	333
+89	334
+90	171
+91	296
+92	297
+92	298
+93	311
+94	312
+95	313
+96	314
+97	315
+98	316
+99	317
+100	311
+101	318
+102	319
+8716	1
+103	320
+104	321
+105	322
+106	182
+107	323
+108	324
+109	325
+110	326
+111	327
+112	328
+113	228
+114	329
+115	330
+116	294
+116	295
+117	304
+118	305
+119	306
+119	307
+120	308
+121	331
+122	17
+122	332
+123	333
+124	334
+125	171
+126	296
+127	297
+127	298
+128	299
+129	300
+130	197
+130	301
+130	198
+131	303
+132	302
+133	335
+134	336
+134	337
+134	306
+135	338
+136	310
+137	339
+138	339
+139	170
+140	217
+8736	2
+8739	3
+8741	4
+8745	5
+8747	6
+8750	7
+8751	8
+8752	9
+8760	10
+8764	11
+8765	11
+8773	3
+8774	12
+8780	13
+8782	14
+8785	15
+8785	16
+8797	17
+8797	18
+8798	19
+8800	20
+8801	21
+8801	22
+8808	14
+8810	23
+8821	24
+8823	25
+8831	26
+8832	27
+8838	28
+8840	27
+8845	29
+8845	30
+8848	31
+8849	32
+8854	33
+8855	34
+8857	35
+8858	36
+8858	37
+8859	35
+8860	38
+8860	39
+8867	40
+8873	41
+8873	42
+8876	43
+8876	31
+8877	44
+8881	43
+8881	45
+8883	46
+8887	47
+8887	28
+8888	48
+8890	49
+8900	50
+8900	51
+8901	52
+8902	53
+8902	54
+8912	21
+8912	16
+8917	55
+8918	56
+30	302
+31	294
+31	295
+32	171
+33	303
+34	304
+35	305
+36	217
+37	306
+37	307
+38	308
+39	302
+40	309
+41	310
+42	309
+43	311
+44	312
+45	313
+46	314
+47	315
+48	316
+49	317
+50	311
+51	318
+8918	57
+8920	58
+8921	59
+8923	60
+8923	61
+8924	59
+8925	62
+8925	63
+8933	64
+8933	65
+8939	66
+8945	67
+8950	68
+8950	69
+8954	70
+8955	68
+8967	71
+8968	72
+8968	73
+8969	74
+8970	75
+8972	76
+8972	77
+8973	78
+8975	79
+8976	80
+8976	81
+8977	82
+8977	83
+8985	84
+8985	85
+8989	86
+8991	84
+8991	87
+8994	88
+9001	89
+9008	90
+9011	66
+9021	91
+9021	92
+9025	14
+9025	87
+9029	93
+9029	94
+9033	61
+9038	95
+9042	96
+9047	97
+9047	98
+9048	54
+9048	99
+9051	100
+9051	101
+9052	102
+9056	103
+9056	104
+9066	105
+9066	106
+9068	107
+9074	94
+9077	108
+9082	109
+9083	110
+9083	111
+9088	112
+9088	113
+9089	114
+9089	115
+9091	108
+9095	97
+9104	116
+9104	117
+9108	112
+9111	118
+9112	119
+9117	120
+9117	121
+9128	113
+9128	18
+9140	122
+9140	123
+9143	124
+9143	125
+9167	126
+9167	127
+9170	128
+9172	129
+9172	50
+9173	130
+9173	131
+9176	132
+9178	133
+9182	134
+9185	115
+9185	135
+9186	136
+9192	137
+9197	101
+9207	137
+9207	70
+9210	138
+9210	139
+9212	140
+9213	141
+9213	142
+9215	143
+9219	134
+9219	85
+9228	144
+9228	81
+9231	92
+9238	145
+9241	146
+9265	147
+9269	148
+9271	149
+9314	150
+9316	150
+9328	151
+9347	152
+9454	153
+9504	154
+9504	155
+9544	156
+9544	157
+9574	158
+9604	159
+9615	160
+9615	161
+9655	158
+9701	162
+9764	163
+9906	164
+9906	162
+9925	165
+9964	166
+9964	167
+10005	168
+10005	169
+10030	170
+10113	171
+10150	32
+10150	171
+10201	172
+10202	173
+10580	174
+10596	175
+10636	176
+10636	13
+10686	177
+10782	178
+10877	179
+10877	6
+10905	180
+10905	181
+10908	182
+10908	183
+10914	184
+10915	180
+10918	185
+10932	186
+10951	187
+10957	188
+10959	184
+10959	189
+11028	190
+11031	191
+11031	192
+11037	193
+11037	194
+11055	195
+11055	196
+11062	188
+11074	197
+11074	198
+11103	199
+11104	200
+11105	200
+11108	201
+11110	202
+11110	203
+11121	204
+11122	204
+11136	205
+11136	206
+11137	207
+11137	56
+11140	208
+11141	209
+11141	203
+11142	210
+11144	211
+11146	212
+11147	212
+11152	210
+11165	98
+11166	213
+11166	214
+11176	215
+11210	216
+11212	217
+11215	218
+11219	219
+11254	220
+11254	221
+11266	222
+11270	223
+11272	224
+11272	71
+11304	225
+11305	226
+11305	227
+11309	228
+11321	229
+11326	230
+11327	231
+11327	232
+11343	233
+11344	234
+11344	79
+11350	235
+11352	236
+11352	237
+11369	238
+11370	239
+11376	240
+11379	241
+11382	242
+11391	208
+11393	241
+11431	42
+11431	41
+11432	79
+11436	79
+11440	243
+11440	244
+11447	183
+11449	245
+11449	246
+11452	183
+11455	247
+11473	248
+11479	189
+11482	249
+11482	250
+11493	251
+11494	245
+11494	129
+11502	252
+11517	253
+11536	254
+11537	125
+12633	255
+12637	256
+12637	257
+12639	258
+12642	259
+12643	260
+12643	261
+12644	260
+12644	261
+12646	262
+12646	263
+12647	161
+12647	264
+12648	265
+12648	266
+12649	267
+12649	268
+12650	269
+12650	268
+12652	270
+12653	271
+12653	272
+12655	273
+12656	234
+12656	274
+12657	275
+12657	276
+12659	277
+12659	278
+12661	279
+12661	280
+12662	281
+12662	282
+12665	283
+12665	284
 \.
 
 
@@ -945,6 +1099,59 @@ COPY sessions (id, title, description, stage, type, year) FROM stdin;
 138	XP FEST (Tuesday)	XP FEST\nOne of the core values of XP is feedback, which involves going beyond just talking about something to actually doing it as quickly as possible, because only then do you know if it makes any sense. So, instead of just coming to XP/Agile Universe and talking about XP, why not do some XP, too? It seems fitting to go beyond just talking about abstract concepts to actually implementing them in a simple format.\nIn the style of OOPSLA's AnalysisFest, DesignFest and CodeFest, with their waterfall view of software development, you can participate in XPFest at XP/Agile Universe.\nGoals:\nLearn XP by doing.\nBe exposed to different views of XP. \nTry out XP if you haven't tried it yet. \nCompare how different teams adapt XP. \nHave fun doing something you enjoy: programming using XP! \nMondayTuesday(1) Customer - someone who has a small problem they'd like solved. All sessions will work with this customer.\n\t(1-2) Coaches - people qualified to help the team implement XP. \n\t(up to 8) Developers - people who want to do XP.\n\t(1+) Observer - to record how the team implements XP.\nContact:domelia@rolemodelsoft.comhttp://www.xpfest.org	Main conference	Workshop	2002
 139	METHODS AND SUPPORTING TOOLS	METHODS AND SUPPORTING TOOLS\n\nDesigning Requirements: Incorporating Usage-Centered Design into an Agile SW Development Process\nUsing Ant to Solve Problems Posed by Frequent Deployments\nSupporting Adaptable Methodologies to Meet Evolving Project Needs\nJeff Patton, Steve Shaw, Scott Henninger, Aditya Ivaturi, Krishna Nuli, Ashok Thirunavukkaras	Main conference	Presented papers	2002
 140	SHARPENING THE AXE FOR TEST DRIVEN DEVELOPMENT	Summary\nAbraham Lincoln is famously (mis-) quoted:\n"If you showed me a big tree and an axe and\ngave me eight hours, I’d spend the first 6 hours sharpening the axe.” Software shops all over the world are now\npracticing XP, and specifically Test Driven Development. The tutorial below sets out to accomplish\nthree goals: 1) Offer information on known axe-sharpening efforts in XP-Land. \n2) Provide a demonstration of a small set of hand-rolled tools for TDD\nin real-world projects. 3) Advocate the\nkind of deep laziness that gives making and refining tools its proper value in\nthe framework of XP.\n\nDuration and Target Audience\nThis is a half-day tutorial whose target is intermediate or\nadvanced programmers who feel they are not getting maximum value from the TDD\napproach. Anyone who is trying TDD\nis welcome. Anyone who has understood\nthe urgency of adopting TDD but who is still using crude and ineffectual\ntools should benefit. The presenters particularly welcome new\nadopters and those working with or leading them.\n\n\nOutline\nNote: The tutorial will be handled in true XP style. What follows is a\nrelease plan, and as the class develops, it will surely flex to meet the\nattendees' needs. The real point of the tutorial is to provide a focused topic\nand bring TDD adopters face to face with an experienced practitioner for our\nmutual entertainment and edification. The presentation includes working programs, sample code, and a variety\nof tips, tricks, and techniques.\nThere are Axes and Axes:  It’s Better Than Using A Plastic Knife\n\nThe xUnit Family\n What a Dull xUnit Does, and How\n   The Three Pieces of All xUnits\n   A One-Day xUnit for Language X\nWhat a Sharp xUnit Does, and How\nA Very Sharp xUnit\nIntegrated xUnit\nDeep Laziness:  Preparing And Refining A Good Axe\nIntroducing Tool Smells\n   Learning Not To Type\nCreating Inaccesible Engines\nMaking Your Tool Yours\nBuy, Borrow, or Build?\nxAT, xVersion, xGUI, xProcess:  Attacking The Rest Of The Forest\nWhat xUnit Doesn’t (and Shouldn’t?) Do\nCompleting the Integration\nAcceptance Testing Around the Clock\nTools for Writing Tests\nHard Questions\nOpen season on TDD and tools. The last hour of the tutorial will be focused on the questions and answers that the attendees offer. Real challenges from real applications are the order of the day. \n\nPresenter's Resume\nMichael Hill\n994 Shannon Farm Lane\nAfton, VA 22920\nhill@objectmentor.com\nMichael Hill has been testing first for three years, against a background of twenty+ years as an independent contractor. He is a senior mentor at Object Mentor, Inc., a job that has brought him into contact with literally dozens of differents projects and platforms. He is presently at work on a book on Test Driven Development.  For a more complete bio see Object Mentor - Michael Hill.	Main conference	Tutorial	2002
+141	Review of Agile Approaches	In our Information Age, competitive advantage comes from speed and flexibility. With shortened product development cycles and rapidly changing business initiatives, the formula for success has been articulated by Tom DeMarco: “Agility: 1, everything else: 0.” Agile Software Development redefines how software will be delivered in our 21st century economy.\n\nThere has been a rapidly rising interest in these new approaches to software development such as Extreme Programming, Scrum, Adaptive Software Development, Feature-Driven Development, and Dynamic Systems Development Methodology. Furthermore, scores of organizations have developed their own “lighter” approach to building software.\nThis tutorial is based on the material in Jim Highsmith’s book, Agile Software Development Ecosystems. He is the developer of one of the Agile Methodologies (Adaptive Software Development), a coauthor of the Manifesto for Agile Software Development, and founding member of the AgileAlliance. The workshop addresses key questions: What are Agile Methodologies? What problem domains to Agile Methodologies address? What are the common principles and practices of the various Agile Methodologies? What are the similarities and differences between the various Agile Methodologies?\n	Tutorials	Tutorial	2003
+142	Agile Software Development: Principles, Patterns, and Practices	For the first four decades of software development we did not had a good definition of our craft. If you asked a software developer what he did, he'd have to say something vague like "I write code." Sometimes developers created something good, but could't repeat the process. They could do good things sometimes but didn't know how they did it. Quality was more an accident than a design. In the last decade this has changed significantly.\n\nWe have identified enough principles, patterns, and practices to provide our craft with a solid definition. This definition gives us something we may not have had before -- pride in workmanship. For though we may have been able to take pride in some of our projects before, we weren't often able to take pride in the “way” those projects were build. Now, we can take pride in ”how” we build software, not just in the software we build.\n	Tutorials	Tutorial	2003
+143	From Agile Modeling To Agile Data	In this interactive tutorial we will discuss two agile methodologies --Agile Modeling (AM) and the Agile Data (AD) method.  AM is a chaordic, practices-based methodology which describes how to effectively model and document software based systems.  Modeling and documentation does not have to be dysfunctional!  The AD method encompasses philosophies and techniques which enable data professionals to become active and productive members of an agile software development team.  Modern software development is evolutionary (iterative and incremental) in nature, therefore data professionals need to adopt techniques such as database refactoring, evolutionary performance tuning, Agile Model Driven Development (AMDD), and Test-Driven Development (TDD).  We'll also discuss implementation issues -- mapping objects to RDBs, referential integrity, security access control, transaction control -- that include but go beyond the domain of data.  The AD method also addresses enterprise issues, enterprise architecture and enterprise/data administration, that are critical to your success.  Even enterprise groups can to take an agile approach to development.	Tutorials	Tutorial	2003
+144	An Agile UP	The Unified Process (UP) is popularand with good reason, as it includes skillful practices such as iterative development, and early attention to risks.  However, many organizations are adopting it in an unskilled manner, superimposing “waterfall” or “heavyweight” values onto it that need not apply. Applied well, the UP encourages an agile approach, and so you will learn the essential useful UP practices, the keys to its successful introduction in an organization, and how to apply the UP in an adaptive and agile spirit. And, how to screw it up.  Further, many XP and Scrum practices are either part of the UP, or specializations of more general UP guidelines. What are these, and which may be adopted consistent with a UP project? Nevertheless, this tutorial motivates the need for more than just XP or Scrum on many projects. You will learn why a combination of primarily the UP with other agile process practices is an excellent approach.	Tutorials	Tutorial	2003
+145	Inside Feature Driven Development	Feature Driven Development (FDD) is a proven-in-practice process for producing software applications. Rather than being "all new," Feature Driven Development is a blend of known best practices and techniques, with only those things that really matter abstracted out and described in its simple process descriptions. Only five processes of one to two pages each - and they tell you what to do. This tutorial teaches you the thinking and practices behind FDD and the five FDD processes in detail - explaining the how and the why for each of them.  You will learn how to apply the most relevant practices from Feature Driven Development and how to avoid common mistakes. You will learn why practices are included in FDD and why other practices are not. You will learn about the project as a system versus the software system being constructed. You will learn what a client-valued feature is and how to express a project as a categorized list of client-valued features. You will learn how the first three FDD processes form a project startup phase and how useful a risk reduction strategy that is for you and your clients, plus learn about important predictive metrics from the startup phase to help you size and cost the subsequent construction phase. You will learn how feature teams are dynamically formed, changing the traditional hierarchic project structures. You will learn about feature milestones and how they solve that worldwide problem word for developers - “finished.” Plus you will learn how the milestones are used for amazingly accurate tracking and reporting that is meaningful to clients and keeps your project team better focused  as everything is expressed in the language of the domain rather than the technologies in use. You will learn how in the construction phase, features are bundled into workpackages and collectively moved through the design and build processes. You will learn about scope or feature creep and how to manage it, plus where the accountability for estimating really lies.  The tutorial also teaches, for the first time publicly, FDD workflow which comprises the key “how to” lessons for the FDD construction phase processes  Design By Feature and Build By Feature.  Learn how there are multiple levels of delegation and self-organization happening within the FDD construction phase, but all within planned assembly.  You will learn how and why FDD can scale to very large projects and, finally, throughout the tutorial you will learn key lessons from over 20 years experience in the industry. Bring your questions, stories of what's worked and what hasn't. Interact with and learn from an experienced project manager and the developer of Feature Driven Development.	Tutorials	Tutorial	2003
+146	XP/Agile Organizational Change - Tools for Successful Adoption	Yes, XP and other Agile methods are awesome, but what about your colleagues and managers who staunchly resist them? Have you retreated to practicing only a few XP/Agile practices because you haven’t been able to overcome organizational resistance? Do you feel you are not important enough in your organization to help make extreme changes? Helping organizations, teams and individuals adopt an XP/Agile process is a whole lot easier when you’ve learned the tools of organizational change. In this tutorial, you’ll learn from folks who’ve made extreme changes happen across entire organizations with the help of tools like: change readiness assessments, project charters, test-driven management, retrospectives and more. This tutorial is hands-on and chock full of real-world stories. Join us and learn to practice your own change magic.	Tutorials	Tutorial	2003
+147	Understanding Users and User Tasks	Usability is increasingly recognized as important for the success of software and Web-based applications, but developers often lack the time and techniques needed for effective user interface design. Extreme programming and other agile methods have proved their ability to deliver quality software quickly, but have offered little in the areas of software usability and user interface design. This tutorial introduces core techniques of a proven approach that complements agile development methods. In agile usage-centered design, the focus is on quickly developing a clear understanding of users and user tasks through minimal models that provide maximum payoff. Using hands-on application to a simplified case study, the tutorial will show how ordinary index cards can efficiently model the roles users play in relation to a system and the tasks they need to perform within those roles. The use of card-based user and task models to inform and organize planning and design will be illustrated.	Tutorials	Tutorial	2003
+148	Collaboration 4 Agile Projects	Human interactions are the way we get work done and are the way decisions are made. In Agile projects, we place interactions over documentation and collaboration over contracts. So, meetings for any decision points in an Agile project need to be lean, focused, and productive. Agile teams with outstanding collaboration skills hold the true key to making their projects work. This fast-paced tutorial demystifies the “art” of collaboration with common-sense skills and processes to use again and again in every Agile interaction. In this tutorial, participants will: understand the role of collaboration and consensus in Agile Projects, learn key techniques and processes to use in Agile collaborations and practice these collaboration techniques.\n\nThis tutorial is mapped to the International Association of Facilitators’ schema for effective meeting management. The instructors teach with a high-energy and highly interactive style, maximizing the learner’s experience through the application of sound adult learning techniques. Templates and agenda guides will be provided as “take-aways.”\n	Tutorials	Tutorial	2003
+149	The Lean Development Toolkit	The Lean Software Development tutorial, identifies seven fundamental “lean” principles, adapts them for the world of software development, and shows how they can serve as the foundation for agile development approaches that work. Along the way, you will discover 22 “thinking tools” that can help you customize the right agile practices for any environment.\n\nBetter, cheaper, faster software development. You can have all threeif you adopt the same “lean” principles that have already revolutionized manufacturing, logistics and product development.\nIterating towards excellence: software development as an exercise in discovery\n\nManaging uncertainty: “decide as late as possible” by building change into the system\n\nCompressing the value stream: rapid development, feedback, and improvement\n\nEmpowering teams and individuals without compromising coordination\n\nSoftware with integrity: promoting coherence, usability, fitness, maintainability, and adaptability\n\nHow to “see the whole”even when your developers are scattered across multiple locations and contractors\n\nSimply put, Lean Software Development helps you refocus development on value, flow, and peopleso you can achieve breakthrough quality, savings, speed, and business alignment. For an outline of the tutorial, go to:  http://www.leantoolkit.com/leantutorial.htm\n	Tutorials	Tutorial	2003
+150	Customer Testing with FIT: a Hands-On Introduction	This tutorial will introduce the Framework for Integrated Test (fit) and demonstrate its use in Test-Driven Development (TDD) as practiced in Extreme Programming and other agile development methods. Projects use fit-style tests as much to guide programming as to test the correctness of the result. Test-driven designs are more easily "refactored" making it the only programming method that expects programs to get "cleaner" over time.\n\nShort lectures will explain just enough of Extreme Programming to establish the context for test-driven design. These will be followed by live demonstrations and laboratory exercises. The labs will use simple Java, but the emphasis is on familiarity with the frameworks, tools and techniques, not programming. If you are unfamiliar with Java you will learn enough just by watching so as to be able to complete some of the exercises and received all of the benefits of the class.\nBring a laptop, or join someone who has, to do hands-on exercises. Bring a wireless networking card to participate in additional "online" activities. Install java at home to save time in class. Google "sun java download" to find a version for your computer.\n	Tutorials	Tutorial	2003
+151	Introduction to Scrum	This tutorial will create an experience of Scrum in a project setting, showing how to plan and manage products and projects using incremental, iterative development based in the agile processes. Specifically, this tutorial will provide:\n\nAn understanding of empirical processes, emergence, self-organization, and adaptation;\n\nA detailed understanding of Scrum principles, flow, roles, artifacts, and operation;\n\nA detailed case study of Scrum being used to solve a competitive problem for a large financial institution;\n\nA detailed description of the role and responsibilities of the product owner, ScrumMaster, and development team;\n\nA description of how to use Scrum to develop software for mission critical and life critical systems;\n\nAn approach to using Scrum for fixed price/fixed date contracts;\n\nAn understanding of how Scrum addresses CMM level 2 and 3 requirements;\n\nAn understanding of how to quickly implement agile software development so projects start producing product increments;\n\nAn understanding of implementation alternatives and their benefits for Scrum;\n\nAn understanding of how Scrum solves predictability and productivity issues for projects and products;\n\nAn understanding of the overlap between Scrum and Extreme Programming and how to use Scrum to wrap Extreme Programming to provide project and organizational scalability and control; and,\n\nAn understanding of Scrum as a methodology and toolset that can be used to Plan, Customize, and Manage any type of project.\n\n	Tutorials	Tutorial	2003
+152	Patterns for Agile Software Configuration Management	Software Configuration Management (SCM) is sometimes thought of as a heavy weight discipline that contributes to the rigidity, rather than agility, of the development team. This perception comes out of viewing circumstances where SCM practices were inappropriate to the project. In many cases, proper use of SCM practices can add a level of reproducibility and accountability to the development effort that can enable agility. The tutorial gives a brief overview of the basics of Software Configuration Management, and describes how to use SCM effectively in an Agile environment by describing key SCM Practices that are needed to have a stable, yet agile development environment. This includes practices relating to versioning, workspaces, testing, build, and branching. The tutorial is taught from the perspective of SCM as a part of the daily development cycle. We use a pattern language as a mechanism for describing how the practices fit together, but an understanding of patterns and pattern languages in not essential to understanding the material. Some background on the patterns is available at: www.scmpatterns.com.	Tutorials	Tutorial	2003
+153	Project Retrospectives in Agile Development	The Principles Behind the Agile Manifesto state that, “At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly.” How can we do that? This tutorial will present techniques for facilitating project retrospectives that allow teams to discover what they’re doing well so that their successful practices can be repeated and what they’re not doing as well so that they can discuss how to improve. Retrospectives are not “finger pointing” sessions, but rather a fun and highly effective series of activities in which teams can reflect on the past in order to become more effective in the future. Participants will be introduced to the retrospective process, learn various techniques for leading retrospectives, hear the experiences of the tutorial leaders who have led retrospectives in various kinds of projects, and will get the opportunity to participate in a retrospective simulation.\n\nwww.lindarising.org\n	Tutorials	Tutorial	2003
+154	The Crystal Methods, or How to Make a Methodology Fit	Crystal is a family of highly tolerant, lightweight methodologies and a framework for tuning them to your specific situation. Here, methodology means nothing more (or less) than the conventions the team agrees to use. Level of detail and formality, documents and reviews, office seating and timing of parties can be part of those conventions. Projects vary in size, criticality and priorities, and so should your methodology. The strengths and weaknesses of the organization, the specific people, even the office layout affects how the team best works, and therefore should influence the methodology.\n\nA Crystal methodology aspires to be the least constrictive and yet effective methodology for any particular project team. This tutorial describes the principles and techniques for shaping a methodology to the project-team combination, introduces the colors in the Crystal family, compares different examples of the Crystal family to each other relative to the principles, and shows the differences between Crystal Clear and XP. Expect to learn the methodology tuning principles, and experience how easy and fruitful a methodology-tuning session can be.\n	Tutorials	Tutorial	2003
+155	How to be a Coach	It’s difficult to start a new process, but a coach can make this easier. A coach is part developer and part manager: a coach can help a team stay on process and can help the team learn. A coach brings in some outside perspective to help a team see itself more clearly. We’ll use a combination of lectures, games, and exercises to explore and practice skills that coaches (and team members!) can use. The goal of this tutorial is to give participants: a deeper look at the coach’s role, tools to help communicate better, practice with charts, retrospectives, and other feedback tools and practice diagnosing team problems.	Tutorials	Tutorial	2003
+156	Testing Agile/Agile Testing: What Testers Do for Agile Teams, What Agile Practices Do for Testers	There are a plethora of agile processes being practiced: Extreme Programming, SCRUM, Crystal, FDD, DSDM, and others. It’s not always clear how a tester fits in to these new software development methods. Even if your organization isn’t using agile methods to develop software, you can benefit from using an agile approach to testing. For the tutorial we’ll use XP as an example, but the lessons learned apply to other agile processes. We’ll go through an iteration of an XP project step by step and show what goals to reach for, which activities to engage in, and some helpful techniques for testers to use. The exercises are built around an XP project to develop a simple web-based tracking application. We’ll examine the techniques we use and see how they could apply in a non-agile setting.	Tutorials	Tutorial	2003
+157	YP and Urban Simulation: Applying an Agile Programming Methodology in a Politically Tempestuous Domain	YP is an agile programming methodology that has evolved over the past 15 years. Many of its features are common to other agile methodologies; its novel features include using a highly visible, physical software status indicator (a real traffic light), and a well-defined nested set of development cycles. It is also an exceptionally open process, with the current status of the development process visible to the customers, as well as the code and documentation. We are using YP in developing the software for UrbanSim, a sophisticated simulation system for modeling urban land use, transportation, and environmental impacts over periods of 20 or more years under alternate possible scenarios. Our purpose in developing UrbanSim is to support public deliberation and debate on such issues as building new transit systems or freeways, or changing zoning or economic incentives, as well as on broader issues such as sustainable, livable cities, economic vitality, social equity, and environmental preservation. The domain of use is thus politically charged, with different stakeholders bringing strongly held values to the table. Our goal is to not favor particular stakeholder values in the simulation or its output, but rather to let different stakeholders evaluate the results in light of what is important to them. There are several implications of this for the development process. First, having credible, reliable code is important -- and further, both the code itself and the development process that produced it should be open and inspectable, not a black box. Second, to allow us to respond quickly to different stakeholder values and concerns, a flexible agile development process is required.\n\nBjorn plans to bring his foul weather gear to the conference and mount a 2 minute production at the beginning of the talk (of the opening scene quoted in the Introduction), using selected members of the agile community for the parts of Ship-Master, Boatswain, and assorted mariners.\n	Research	Research Paper	2003
+158	XP Culture: Why the twelve practices both are and are not the most significant thing	XP emphasizes underlying values as well as the more visible twelve practices. We examine the relationship between practices and values from the perspective of a model of culture and from an ethnographic study of mature XP practice. We conclude that the twelve practices are both significant and not significant. They are significant in that they do, in the reality of professional practice, give rise to a culture which embodies underlying XP values. They are not significant since both models of culture and the detailed manner in which the practices give rise to a culture suggest that alternative practices may achieve the same ends.	Research	Research Paper	2003
+159	PARFAIT: Towards a Framework-based Agile Reengineering Process	The paper presents a sketch of a framework-based agile reengineering process, named PARFAIT, whose objective is to provide the users with evolved versions of legacy systems, as soon as possible. The overall static structure of the Rational Unified Process (RUP), originally developed for forward systems engineering, has been here adapted for reengineering and is used for PARFAIT documentation. Frameworks are used in the process aiming at an agile approach to support the reengineering. Frameworks allow applications to be rapidly created, more than if they are built from scratch. Agile characteristics, such as incremental approach, cooperative approach with users and customers, straightforwardness, adaptability, etc. give PARFAIT the ability to support the rapid evolution of the legacy system to a new version, according to the users and customers needs. A summary of a case study and the results obtained in the reengineering are presented. This study refers to a concrete reengineering case of a real system for controlling entry and exit of electronic appliances in a repair shop.	Research	Research Paper	2003
+160	Observations on Balancing Discipline and Agility	Agile development methodologies promise higher customer satisfaction, lower defect rates, faster development times and a solution to rapidly changing requirements. Disciplined (or plan-driven) approaches promise predictability, stability, and high assurance. However, both approaches have shortcomings that, if left unaddressed, can lead to project failure. The challenge is to balance the two approaches to take advantage of their strengths and compensate for their weaknesses. We believe this can be accomplished using a risk-based approach for structuring projects to incorporate both agile and disciplined approaches in proportion to a project’s needs.\n\nThis paper presents six observations drawn from our efforts to develop such an approach. We follow those observations with some practical advice to organizations seeking to integrate agility and discipline in their development process. The material presented here is drawn from our book Balancing Agility and Discipline: A Guide to the Perplexed (Addison Wesley, 2003).\n	Research	Research Paper	2003
+161	Throwing Down the Gauntlet: Finding a Place for Discount Usability Engineering in Agile Development	Many software development organizations are reporting great success with agile software development techniques. However, few techniques explicitly incorporate usability engineering. Further, some agile techniques may not address certain kinds of usability problems. While there are many usability engineering techniques, discount usability engineering should be of particular interest to the agile development community because the two disciplines share many of the same underlying principles. The challenge for the agile development community is to find ways to incorporate such discount usability engineering practices.	Research	Research Paper	2003
+162	Test Driven Development and the Scientific Method	The scientific method serves as a good metaphor for several practices in Extreme Programming (XP). We explore the commonalities and differences and show that the scientific method, by analogy, can be used to better understand Test Driven Development (and vice versa).	Research	Research Paper	2003
+163	Change Your Organization (for Peons)	In this experience report, a programmer at a medium-sized software company explains his tactics for bottom-up organizational change.  The tactics are accompanied by personal recollections of related experiences. Tactics are presented in three primary sections: the difficulty of making change; getting attention; and making a case for change.  A brief section on the consequences of change follows.	Experience Reports	Experience Report	2003
+164	Evolving Agile in the Enterprise: Implementing XP on a Grand Scale	How can XP or other agile methods be used in large corporate IT shops? One large company found out, making XP the official corporate software development methodology for all projects over an 18 month period and counting. This paper explores many facets of that experience, beginning with a summary of the eight key determinants of organizational change model. It then follows the organization in implementing XP, using the change model as a yardstick to assess the success of the hoped for change. The paper concludes with key learnings regarding how to implement an agile methodology within a large organization.	Experience Reports	Experience Report	2003
+165	Improving the Interface Between Business and Product Development Using Agile Practices and the Cycles of Control Framework	The paper describes how we created and adopted an agile product development process in a small software company based on the Cycles of Control framework by combining selected agile practices and principles from the Scrum and XP methodologies. Describing the development process using the framework helped in identifying the crucial control points between business and development and enabled defining practical and well-functioning connections between them. The control points enable visibility and flexible management of product development status and direction. Currently Business understands development status better, which has led to fewer interruptions between the control points, and thus improved working conditions for Development. Positive experiences are reported of newly adopted practices such as scrum meetings, pair programming, and unit testing. However, finding and adopting technical tools to facilitate the process proved to be challenging.\n	Experience Reports	Experience Report	2003
+166	Retrofitting an Acceptance Test Framework for Clarity	An XP customer needs to write and check acceptance tests. However, the format for defining the tests needs to be clear. Many acceptance test approaches use arcane formats which do not promote clarity for the customer, due to a conflict of interest between the complexities of automation and the needs of the customer. We discuss the evolution of acceptance tests to improve their clarity for the customer.\n\nSat is an acceptance test system for testing socket-based servers with multiple clients. The first version used an XML file to define the tests in a test suite. Any errors detected were written to a text log. There were two problems with this first version. The XML format made it difficult to read and edit the tests. When an error was given, it was not easy to identify the place in the test where the problem occurred.\nSat was altered to make use of Fit, a testing framework that uses HTML tables for defining tests and reporting any errors. We found the new version considerably easier to use. The tabular form makes it much simpler to read and alter the tests. Any errors are reported in a copy of the tables, in the place where they occur. We have also found it convenient to include information about the tests in the HTML, providing a form of "literal testing".\n	Experience Reports	Experience Report	2003
+167	It's More than Just Toys and Food: Leading Agile Development in an Enterprise-Class Start-Up	One of the myths of Agile Development is that self-organizing teams do not need direction. The agile development movement focuses primarily on programmers: programmers should do X, Y and Z, and everyone else should do whatever it takes to support the programmers. A fantastic start, since programmers are the people who actually build the organization’s product; however, few techniques are offered to the rest of the organization.\n\nThe admonishment to managers instructing them to only provide “toys and food” and buffer the team from external distractions implies that leaders in an agile environment should do less work, and be less involved with the team on a day-to-day basis, than in a more traditional environment. In fact a leader in an agile group must do more than he/she would in a more traditional environment and must be even more involved in the day-to-day activities of the team.\nThe Sabrix development discipline has strong and deeply involved management as one of its keys to success. Management best practices, when applied appropriately and discerningly, do not limit, but rather enhance, the productivity and job satisfaction of the individual members of the engineering teams. This paper discusses ways a manager can and should help the team be more productive, have a better understanding of their fit in the organization as a whole and develop team members by being active and involved with the team and the rest of the company.\n	Experience Reports	Experience Report	2003
+168	Ready-to-Roll Boxcar Development - a Flexible, Quality-Weighted Process	In January of 1996, Intuit’s QuickBooks team was faced with an aging code-base using a custom Mac/Win GUI toolkit, a large and rapidly growing customer base, and a rapidly growing and product-inexperienced engineering team. To increase the product’s quality and feature predictability while retaining its ship date rigidity, we created “Ready-to-Roll” Boxcar Development.\n\nThe process enabled the defining of each new feature, enhancement, or engineering re-architecture as a set of boxcars on the product train. A “coupled” boxcar was rapidly brought to a supportable level of quality, or “decoupled” for re-evaluation and re-engineering. Frontloading the highest priority boxcars increased predictability of the product train's contents, while the process allowed for greater flexibility with respect to overall content.\n“Ready-to-Roll” Boxcar Development kept the product within 2-3 weeks of being supportable and shippable. The process focused on individuals and interactions, working software, customer collaboration and responding to change. Better yet, it worked!\n	Experience Reports	Experience Report	2003
+169	Iteration Advocate/Iteration Transition Meeting: Small Sampling of New Agile Techniques Used at a Major Telecommunications Firm	This experience report demonstrates a successful implementation of Agile at a major telecommunications firm. Critical aspects to mention about this particular software endeavor include a) this could be one of the largest implementations of Agile documented thus far (approximately 275 immediate and over 3,000 supportive contributors involved), b) the team practicing Agile did so under the constraints of a waterfall-gated (both milestone and financial) environment, c) a 'practice tapestry'' approach was used to 'weave' together elements of Agile that would work for this organization, and finally, d) new practices, not previously known to the Agile community were applied in addition to those well known thus far. Specifically, iteration advocate and iteration transition meeting are two examples of new concepts. This paper focuses on these new practices in an effort to share them with the Agile community. The weaving together of existing and new practices, enabled this major telecommunications firm to deliver a major software release to its large customer base.	Experience Reports	Experience Report	2003
+170	Certifying for CMM Level 2 and ISO9001 with XP@Scrum	This experience report describes the followed road of getting certified for both CMM Level 2 and ISO9001:2000 on a time scale of 2 years by using agile methodologies. We discuss why we selected the combination of extreme Programming (XP) and Scrum as the base for our software development process and which "ceremony" we had to add in order to satisfy the requirements of CMM L2 and ISO9001. Also our major challenges at the moment are described, and the way we try to solve them. Furthermore we want to share a number of issues and experiences.	Experience Reports	Experience Report	2003
+171	Making Agile Development Work in a Government Contracting Environment	Before any of the current “agile” development methods, Earned Value Management provided information for planning and controlling complex projects by measuring how much “value” was produced for a given cost in a period of time. One shortcoming of an agile development method is its inability to forecast the future cost and schedule of the project beyond the use of “yesterday’s weather” metrics. These agile methods assume the delivered value, “velocity” in the case of XP, is compared with the estimated value  this is a simple comparison between budget and actual cost resulting in a Cost Variance. No Schedule Variance process is directly available in XP. Earned Value Analysis provides a means of predicting future schedule and cost variances through three measurements  budgeted cost for work scheduled, actual cost for work performed, and budgeted cost for work performed (earned value). This paper describes the use of Earned Value in conjunction with Agile Development on a mission-critical, high-security, government project.	Experience Reports	Experience Report	2003
+172	Agile Development in the Old Economy	As part of the delivery an automated hub for a postal operator, the Solystic company has to build a complex and feature rich Information System that supports a highly automated process with multiple intricate sub-processes and exceptions.\n\nThe effort has several challenges:\nIt is business critical for the customer, and the output of the project will give the customer a leading position;\n\nIt is the first time Solystic is managing a complete system project, although its mother company Northrop Grumman had previous experience of this business;\n\nThe program is one of the first of the Solystic company in the international field;\n\nIt is a fixed price, fixed time contract with a short time frame.\n\nTo face all these challenges, the software development group in charge of the Information System has adopted a number of agile practices and techniques to manage the project. The major project settings are adapted from Alistair Cockburn's Crystal set of methodologies, SCRUM and Jim Coplien's work on organizational patterns.\nThis paper presents the findings and lessons learned by the team and its manager.\n	Experience Reports	Experience Report	2003
+173	Introducing Agile Development into Bioinformatics: An Experience Report	This experience report describes our efforts to introduce agile development techniques incrementally into our customer’s organization in the National Cancer Institute and develop a partnering relationship in the process. The report addresses the steps we have taken not only to deploy the practices, but also to gain customer support for them. It addresses variations we have used to adapt to our customer’s environment, including our approach to involving customer personnel at remote locations. We also address challenges we still must face, including how best to manage a product-line with agile development techniques.	Experience Reports	Experience Report	2003
+174	Agile Development and Remote Teams: Learning to Love the Phone	I currently work on a project where we adopted an agile process that integrates elements of extreme programming and agile modeling. Our approach is unconventional however; instead of the team being co-located, I work remotely as the lead developer.\n\nThe risk of increased communication costs can be mitigated rather easily.\nHowever, trust is the most complicated element of team dynamics to establish and maintain. A virtual team must address this issue in order to succeed. Remote teams can work quite well. We have been delivering quality software in a timely manner, within the expectations of management for the last two years. We actually are more efficient and successful with a virtual team than when we were all co-located in the same room.\n	Experience Reports	Experience Report	2003
+175	Unfixing the Fixed Scope Project	Although it seems to be common knowledge that it’s impossible to succeed in a project with fixed time, quality and scope, we often continue to try anyway.\n\nThis experience report discusses our successful failure at running fixed time and scope projects. I say successful failure because we actually failed to fix scope but arrived at an acceptable way to vary scope and deliver on time in an environment not normally amenable to variable scope. This paper discusses the methods used and makes recommendations on how you might unfix scope in your development environment.\n	Experience Reports	Experience Report	2003
+176	An Agile Request For Proposal (RFP) Process	The Request For Proposal (RFP) process can be agile and efficient. At a high level, the key to achieving this is to specify requirements just in time and containing just enough detail. This paper applies the following XP practices and concepts to the RFP process: acceptance tests, business value, iterative & incremental delivery, on-site customer, pair development, planning game, spike, story, velocity, and yesterday’s weather. In addition, the following concepts are combined with those from XP to achieve maximal benefit: user-goal use case, context diagram, level of detail, and decision tree.\n\nThe contributions of this paper to the agile community are two-fold: describing a practical application of XP concepts to a non-programming project; and making use case style requirements processes more agile.\n	Experience Reports	Experience Report	2003
+177	Daily Iterations: Approaching Code Frost and Half the Team is Not Agile	As an XP consultant, I'm asked to bring XP to diverse teams. But what happens when a team is split geographically and half the team prefers non-agile methods? Approaching “Code Frost” we decided to do daily iterations to kill bugs and keep the non-agile half of the team happy.	Experience Reports	Experience Report	2003
+178	Agile Contracts (W180)	Agile contracts: These two words together in one phrase just look odd - or at least they seem to be at odds with each other. Contracts have played a very important role in the business of software development; in fact, much of this work is in fact done 'under contract'. Organizations adopting agile methodologies are finding it hard to write contracts for software development without compromising the core values and practices. The Agile Contracts workshop is your chance to help the agile community identify ways contracts can be structured and worded to support agile software development. A pre-conference web site has been established for conference attendees to share their thoughts, ideas, and even contract samples! Visit the web site and get in your two cents now! www.leantoolkit.com/agilecontracts.htm	Technical Exchange	Talk	2003
+179	Evaluating and Documenting Alternatives to Certification (W180)	Martin Fowler led a discussion on Paying For Better Value at the Agile Universe 2002 conference. It posed the question: “How do we make it accepted that able people who are expensive end up being better value than cheap, less able developers?”\n° What makes an expert Agile software developer? How do we prove that we are one? We believe the pattern of Expert Capability Maps answers these questions. In this workshop we will all share our perspectives and assess our own capabilities. If you are an expert you will leave with the proof of it. If not, you will leave with a map of your route to becoming an expert.\n° The steps to proving expert capability are 1) describe the attributes of an expert, and 2) get external validation we possess those attributes. Help us evaluate and document why certification and other common systems fall short in attempting this. We will also demonstrate that such experts provide economic value far beyond that of those with lesser capability or experience.\n° Before the conference please join our AgileAssessment list to contribute to creating an Expert Capability Map for Agile software development, using Behaviorally Anchored Self-Assessments. We will also be posting the evolving documents (does not require list membership).\n	Technical Exchange	Talk	2003
+180	Customer Collaboration: Challenges and successes in practice (G90)	An important principle in agile methodologies is to value customer collaboration over contract negotiation. In XP, for example, this principle is instantiated through the practice of having an end user on-site, someone who is available to answer questions, resolve disputes and set small-scale priorities on an ongoing basis. Other agile methods suggest alternative approaches. This form of customer collaboration is different from the traditional approach to requirements engineering where a substantial period of investigation and negotiation takes place to uncover the client's requirements.\n\nThe session will share, and then disseminate to a wider community, practitioners' experiences with, and insights into, customer collaboration within an agile environment.\n	Technical Exchange	Talk	2003
+181	Enterprise Continuous Integration Limitations and Challenges (T90)	Continuous Integration as discussed in the Extreme Programming literature and elsewhere is largely focused on the development, integration and deployment of a single software product. Many IT shops however have additional problems to solve, problems that result from operating at an enterprise scale.\n\nThis session will determine issues and limitations in scaling Continuous Integration to the enterprise, and identify strategies for overcoming these issues and limitations.\n	Technical Exchange	Talk	2003
+182	Exploring Motivation (W180)	Many organizations attempt to increase their productivity by the use of employee reward schemes. Over the years, an increasing body of research has grown suggesting that the use of rewards to move individuals to action may have negative effects on their team working and the quality of their work products in the long term.\n\nThe objective of the session is to raise awareness of the impact that development practices can have on intrinsic motivation, and to identify ways that the practices in different software development methods (such as RUP, SCRUM, XP, Open Source) affect motivation within teams. Participants will pool their experience to come up with patterns (or anti-patterns) that nurture intrinsic motivation within teams.\n	Technical Exchange	Talk	2003
+183	Clearing Communication Logjams (W180)	Under a heavyweight process, two individuals can work on the same problem and communicate primarily through the buffer of a 2-inch document. As agile teammates, they would rely instead on many short conversations. Compared to their heavyweight counterparts, it is even more vital for members of an agile team to focus on communication, since the quality of communication relates directly to how smoothly the agile project flows. If communication bogs down, and logjams appear, the agile teammates must unblock themselves to stay on track.\n\nWorkshop participants will examine specific and common problems that arise in everyday interactions within teams practicing agile methodologies. Participants will share and assess one another's approaches to a spectrum of communication logjam scenarios.\n	Technical Exchange	Talk	2003
+184	Architectures and Technologies for Agile Development of Enterprise Applications (W90)	Let's cut through the hype and talk about what has really worked. Which technological and architectural choices have best facilitated agile development - early and continuous delivery, at a pace sustainable forever, of valuable, working, simply-designed software, to ever-changing requirements - in the context of enterprise applications?\n\nIn this workshop we'll examine that issue, by breaking down the measures of success of an agile development organization, and correlating architectural and technological choices to performance against those measures, on projects we've experienced. We'll split into small groups to share sanitized characterizations of projects where we've seen correlations, positive or negative, and we'll compile matrices of correlations between such choices and the success measures we break down. We'll describe architectural refactorings we had to do, why we had to do them, and what the end state looked like.\n	Technical Exchange	Talk	2003
+185	Introducing Agile Practices (G90)	Before you can succeed with an agile project, you must first succeed in introducing an agile process to your organization. As news about agile processes spreads, more organizations are becoming intrigued and are ready to dip a toe into agile waters. The goal of this goldfish bowl discussion will be to share experiences and look for common answers to questions such as:\n\nWhat is the best way to convince an organization to try an agile process?\n\nWhat types of projects are appropriate for a company's first agile project?\n\nWhat are the most important things to do during the first 60 days?\n\nHow do we measure success?\n\nWhat obstacles are we likely to meet? How do we overcome them?\n\nShould we start with an established agile process or should we customize our own?\n\nHow do we handle reluctant or skeptical programmers, customers or bosses?\n\n	Technical Exchange	Talk	2003
+186	Experience the Transition to an Agile Organization (S180)	Our experience on several XP projects over the past four years has led us to believe that strong management and organizational change is critical to successful adoption and application. Because traditional command-and-control management doesn't align well with XP, a more appropriate agile approach is needed.\n\nIn this simulation, participants will simulate a greeting card company. Working together, they will produce greeting cards to specification. The goal of the simulation will be to draw out the differences between traditional and agile organizations to gain a deeper understanding of agile organizational principles.\nVisit CC Pace Systems at http://www.ccpace.com to learn more, or go to Electroglide http://www.webdc.com to check out detailed simulation material.\n	Technical Exchange	Talk	2003
+187	Successful Customer Involvement (W180)	Do you want to collaborate effectively with your customers? Use "appreciative inquiry" to harvest wisdom from the best of your own experiences with them.\n\nCustomer involvement is essential for agile projects. We involve customers in chartering (visioning) and planning releases, defining requirements or stories, creating customer scenarios or stories for testing, conducting prototypes, running and checking acceptance tests, and retrospecting (debriefing) iterations and the project as a whole, and more. Using an appreciative inquiry approach, we'll explore the best ways to actively and positively involve customers and users in your project, from beginning to end. Visit http://www.ebgconsulting.com/adceffectivecustcollab.html for more info on this session.\n	Technical Exchange	Talk	2003
+188	Are Design Patterns Dead? (G90)	Designs are emerging; small refactorings add flexibility when and where it's needed; the tests tell you where to go. Do design patterns still have a place in an agile world? Some argue the nail is already in the coffin, others contend design patterns thrive in an agile environment. Proponents of these two positions will square off to convince one another of their views. We'll debate Small Up Front Design, its general appropriateness and whether patterns have a role to play, along with the technique of Refactoring to Patterns spearheaded by Joshua Kerievsky.	Technical Exchange	Talk	2003
+189	Tool Support for Agile Development: Hi Tech vs Low Tech (T90)	Agile development strives to respond better to the software needs of the customer. And in doing so, agile developers use a variety of tools, some technological typically surrounding the creation, testing, and delivery of the software, and others involving ways of communicating and working with people. In some cases, high-tech and low-tech tools can be brought to bear to solve the same or similar problem in agile development.\n\nThe aim of this think tank is to debate whether high-tech or low-tech tools are the best avenues to supporting and improving an agile process. Participants will contribute their own experiences as well as learn from the experiences of others.\n	Technical Exchange	Talk	2003
+190	Requirement Specifications in Agile Projects (T180)	Although "requirements as conversation" works for some organizations, many places still need a written document that can be referred to. Creating an appropriate weight document for Agile projects is the purpose of this session. Specifically this session will look at the enduring specification artifacts that should be preserved by projects as an essential organizational memory of Agile projects.	Technical Exchange	Talk	2003
+191	What Should Students Know About Agile Development? (W180)	As agile practitioners, we know the practices and dispositions necessary for an individual to successfully participate in an agile team. Can we convey this understanding to academia? What do we believe students need to know in order to prepare them for doing agile development? What do we want to see in fresh-out students?\n\nThis collaborative session is designed to start this conversation and produce a set of concrete assertions, guidelines and suggestions that are grounded in our experiences as industrial practitioners of agile development.\n	Technical Exchange	Talk	2003
+192	What We Have Learned about Agile Methods (W90)	For the past year, the Center for Empirically Based Software Engineering (CeBASE) has sponsored three online “eWorkshops” on agile methods. The purpose of each workshop was to build up decision support for software developers. Each eWorkshop started with and then refined a handful of “heuristics” that attempted to describe basic assumptions about the nature of agile methods and how they could be best used for various types of projects.\n\nUsing some of the heuristics that resulted from the eWorkshops as a starting point, participants in this session will have the opportunity to contribute their own experiences to refine or expand the list of heuristics.\n	Technical Exchange	Talk	2003
+193	Retrospectives (S90)	A retrospective is a meeting, where a team looks back on a past period of work so that they can learn from their experience and apply this learning to future projects. Some agile teams run retrospectives at the end of successive iterations rather than at the end of a project. The benefits of running retrospectives every few weeks rather than months are improved communication across teams and early feedback on development practice.\n\nThe objective of this session is to explain the benefits of holding regular retrospectives and give guidance on how to run a retrospective. Participants will get practical experience of how to run a retrospective, using the conference as the subject for reflection.\n	Technical Exchange	Talk	2003
 \.
 
 
@@ -952,355 +1159,397 @@ COPY sessions (id, title, description, stage, type, year) FROM stdin;
 -- Data for Name: speakers; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY speakers (name) FROM stdin;
-Jeff Gothelf
-Jennitta Andrea
-Jonathan Rasmusson
-David Dalka
-Leah Buley
-Patrick Kua
-Willem Larsen
-Skip Angel
-Max Guernsey
-Bob Galen
-Yi Lv
-Abby Fichtner
-Jim  Highsmith
-Karl Scotland
-Ahmed Sidky
-Greg Smith
-Lisa Crispin
-Janet Gregory
-Joe Fecarotta
-Samantha Laing
-Craig Smith
-Adrian Smith
-Michael DePaoli
-Leeann Berner
-David Chilcott
-Paul Dolman-Darrall
-Karen Greaves
-Jenni Jepsen
-Roger Brown
-Mark Levison
-Mary Poppendieck
-Bas Vodde
-Pollyanna Pixton
-Richard Lawrence
-Carlton  Nettleton
-Gil Broza
-Luiz Claudio Parzianello
-Jonny LeRoy
-Matt Simons
-George Dinwiddie
-Ravindar Gujral
-D. André Dhondt
-Carsten Jakobsen
-Thushara Wijewardena
-Tom Poppendieck
-Venkat Subramaniam
-Portia Tung
-Pete Behrens
-John Maxwell
-Michael Kaiser
-Guy Royse
-Aaron Sanders
-Pat Maddox
-Elizabeth Keogh
-Howard Deiner
-Sanjiv Augustine
-arlen bankston
-Dan LeFebvre
-Israel Gat
-Markku Åhman
-Timo Punkka
-Emmanuel Gaillot
-Jonathan Perret
-Ted Layher
-Kealy Opelt
-Tom Perry
-Jason Little
-Mike Cottmeyer
-Dennis Stevens
-Tim McCoy
-Chris Sims
-Amr Noaman
-Mohamed Amr
-Dean Leffingwell
-Julien Mazloum
-Jim Ungar
-Todd Zaki Warfel
-Adam Light
-Ken Power
-Johanna Rothman
-William Rowden
-Satoshi Kuroiwa
-Kazumasa Ebata
-Ken Clyne
-Julie Chickering
-Simon Bennett
-Eric Willeke
-Mike Russell
-Brian Sobus
-Jason Fair
-Gary Bernhardt
-Jeremy Lightsmith
-Patrick Debois
-Julian Simpson
-Amr Elssamadisy
-David Bland
-Lyssa Adkins
-Michael Spayd
-Katherine Kirk
-Sonya Lowry
-Lars Skaar
-Doug Bradbury
-Lisa Ho
-Tracy Beeson
-Agustín Villena
-Philippe Camacho
-Judy Wankerl
-Gerry Kirk
-Eric Sink
-Ainsley Nies
-Diana Larsen
-Mary Gorman
-Ellen Gottesdiener
-Ralph Miarka
-Marc Bless
-Christian Vindinge Rasmussen
-Cathrine Lippert
-Michele Sliger
-Perry Reid
-Martin Heider
-Bernd Schiffer
-Christopher Avery
-Ashley Johnson
-Carol Morton
-Clement "James" Goebel
-Angela Druckman
-Jimi Fosdick
-Alistair McKinnell
-Bob Payne
-Ronen Rubinfeld
-Mik Kersten
-Dan Mezick
-Michael Sahota
-Jean Tabaka
-Olaf Lewitz
-Kenny Rubin
-David Hussman
-Simon Orrell
-Jaron Lambert
-Damon Poole
-Declan Whelan
-Bryan Beecham
-neil johnson
-Val Scott
-Michael Elbaz
-William Krebs
-Jim McCarthy
-Alan Shalloway
-John Haniotis
-Scott Dunn
-Steven "Doc" List
-Jon Innes
-Matt Block
-Ian Ratner
-Jack Harvey
-Steve Ropa
-Joel Tosi
-Robert Martin
-Marian Willeke
-Shane Hastie
-Steve Adolph
-Don McGreal
-Keith Nottonson
-Michael McCullough
-Jon Stahl
-Tsuyoshi Ushio
-Emerson Mills
-Michael Keeling
-Mike Velichansky
-Scott Ambler
-James Grenning
-Eewei Chen
-Charles Suscheck
-Dean Wampler
-Elisabeth Hendrickson
-Nick Horney
-Nancy Van Schooenderwoert
-Joseph Wilk
-Francisco Trindade
-Micah Martin
-Colin Jones
-Brian Marick
-Michael Feathers
-Arlo Belshee
-Hugh Beyer
-Ryan Polk
-Angela Harms
-Dale Emery
-James Shore
-Mike Prior
-Cory James Hohs
-Elena M Yatzeck
-Lynn Langit
-Llewellyn Falco
-Kathleen  Rilliet
-Hubert Smits
-Chet Hendrickson
-Ron Jeffries
-Lynn Cowan
-Jez Humble
-Daniel Brolund
-Denny de Waard
-Jeff Sutherland
-Stephen Denning
-Sami Honkonen
-Arto Eskelinen
-Charles Roman
-Tim Ottinger
-Nafis Ahmad
-Bill Wake
-Patti Mandarino
-Esther Derby
-Leslie Ekas
-Scott Will
-Dave Nicolette
-Andrea Provaglio
-Michael Hill
-Xavier Quesada Allue
-Ali Zewail
-George Schlitz
-Sean Buck
-Pradyumn Sharma
-Chris OConnor
-Harold Shinsato
-Don Gray
-Nanette Brown
-Robert Nord
-Zhon Johansen
-Greg Williams
-Derek  Neighbors
-Darius Kumana
-Jeremy Sutherland
-Belkis Vasquez
-Meghann Drury
-Catherine Clark
-Mauricio Aniche
-Guilherme Silveira
-Steve Andrews
-Raj Mudhar
-Allison Corbett
-Jeff Langr
-Richard Cheng
-Gourav Tiwari
-Zainab Alikhan
-David Bulkin
-Barninder Khurana
-Jason Tanner
-Michael  Meissner
-Mike Suarez
-Isel Fernandez Diez
-Carol Smith
-Derek W. Wade
-Jason Dean
-Jeff Patton
-Christian Hassa
-candi rai
-Marc-Elian Begin
-Andrew Hunt
-Alan Padula
-Nils Brede Moe
-Torgeir Dingsøyr
-Børge Haugset
-Geir Kjetil Hanssen
-Philippe Kruchten
-Judith Brown
-Gitte Lindgaard and Robert Biddle
-Tiago Silva
-Angela Martin
-Laura Bocock
-Mia Horrigan
-Mali Senapathi
-Ananth Srinivasan
-xiaofeng wang
-Kieran Conboy and Ken Power
-B Veeresh Thummadi
-Omri Shiv and Kalle Lyytinen
-Gayane Azizyan
-Miganoush Magarian and  Mira Kajko-Mattsson
-Theodore Hellmann
-Frank Maurer
-Claudia Melo
-Daniela S. Cruzes, Fabio Kon and Reidar Conradi
-Lene Pries-Heje
-Jan Pries-Heje
-Barbara Fredrickson
-Kevlin Henney
-Linda Rising
-Edwin Wong
-Drew Jemilo
-Bill Gaiennie
-Brad Swanson
-Anders Ramsay
-Patrick Phillips
-Kuryan Thomas
-Arlen Bankston
-Martin Fowler
-Pramod Sadalage
-Peter Schuh
-Joshua Kerievsky and Diana Larsen
-Paul Hodgetts
-Ann Anderson
-Bret Pettichord and Brian Marick
-Lowell Lindstrom
-Ken Schwaber
-William Wake and Ron Jeffries
-Laurie Williams
-Robert Kessler
-Holger Breitling and Martin Lippert
-BARRY BOEHM
-Watts S. Humphrey
-Alistair Cockburn
-Dave West
-Richard P. Gabriel
-J. Frenando Naveda
-Daniel Steinberg
-Tom Kubit
-Alan Airth
-Gary Pollice
-Granville Miller
-Ken Schwaber -- Scott Ambler
-Hakan Erdogmus
-Ward Cunningham
-Fernando Naveda
-Bill Kleb
-James Caristi
-Randy Miller
-Ken Auer
-Steven Fraser and Rachel Reinitz
-Dave Thomas
-Barry Boehm
-John Goodsen
-Tip House
-Jutta Eckstein
-Richard Hightower
-David Stotts and Laurie Williams
-Grigori Melnik
-Adam Geras
-Scott Henninger and Frank Maurer
-Duff O'Melia
+COPY speakers (name, id) FROM stdin;
+Jeff Gothelf	1
+Jennitta Andrea	2
+Jonathan Rasmusson	3
+David Dalka	4
+Leah Buley	5
+Patrick Kua	6
+Willem Larsen	7
+Skip Angel	8
+Max Guernsey	9
+Bob Galen	10
+Yi Lv	11
+Abby Fichtner	12
+Jim  Highsmith	13
+Karl Scotland	14
+Ahmed Sidky	15
+Greg Smith	16
+Lisa Crispin	17
+Janet Gregory	18
+Joe Fecarotta	19
+Samantha Laing	20
+Craig Smith	21
+Adrian Smith	22
+Michael DePaoli	23
+Leeann Berner	24
+David Chilcott	25
+Paul Dolman-Darrall	26
+Karen Greaves	27
+Jenni Jepsen	28
+Roger Brown	29
+Mark Levison	30
+Mary Poppendieck	31
+Bas Vodde	32
+Pollyanna Pixton	33
+Richard Lawrence	34
+Carlton  Nettleton	35
+Gil Broza	36
+Luiz Claudio Parzianello	37
+Jonny LeRoy	38
+Matt Simons	39
+George Dinwiddie	40
+Ravindar Gujral	41
+D. André Dhondt	42
+Carsten Jakobsen	43
+Thushara Wijewardena	44
+Tom Poppendieck	45
+Venkat Subramaniam	46
+Portia Tung	47
+Pete Behrens	48
+John Maxwell	49
+Michael Kaiser	50
+Guy Royse	51
+Aaron Sanders	52
+Pat Maddox	53
+Elizabeth Keogh	54
+Howard Deiner	55
+Sanjiv Augustine	56
+arlen bankston	57
+Dan LeFebvre	58
+Israel Gat	59
+Markku Åhman	60
+Timo Punkka	61
+Emmanuel Gaillot	62
+Jonathan Perret	63
+Ted Layher	64
+Kealy Opelt	65
+Tom Perry	66
+Jason Little	67
+Mike Cottmeyer	68
+Dennis Stevens	69
+Tim McCoy	70
+Chris Sims	71
+Amr Noaman	72
+Mohamed Amr	73
+Dean Leffingwell	74
+Julien Mazloum	75
+Jim Ungar	76
+Todd Zaki Warfel	77
+Adam Light	78
+Ken Power	79
+Johanna Rothman	80
+William Rowden	81
+Satoshi Kuroiwa	82
+Kazumasa Ebata	83
+Ken Clyne	84
+Julie Chickering	85
+Simon Bennett	86
+Eric Willeke	87
+Mike Russell	88
+Brian Sobus	89
+Jason Fair	90
+Gary Bernhardt	91
+Jeremy Lightsmith	92
+Patrick Debois	93
+Julian Simpson	94
+Amr Elssamadisy	95
+David Bland	96
+Lyssa Adkins	97
+Michael Spayd	98
+Katherine Kirk	99
+Sonya Lowry	100
+Lars Skaar	101
+Doug Bradbury	102
+Lisa Ho	103
+Tracy Beeson	104
+Agustín Villena	105
+Philippe Camacho	106
+Judy Wankerl	107
+Gerry Kirk	108
+Eric Sink	109
+Ainsley Nies	110
+Diana Larsen	111
+Mary Gorman	112
+Ellen Gottesdiener	113
+Ralph Miarka	114
+Marc Bless	115
+Christian Vindinge Rasmussen	116
+Cathrine Lippert	117
+Michele Sliger	118
+Perry Reid	119
+Martin Heider	120
+Bernd Schiffer	121
+Christopher Avery	122
+Ashley Johnson	123
+Carol Morton	124
+Clement "James" Goebel	125
+Angela Druckman	126
+Jimi Fosdick	127
+Alistair McKinnell	128
+Bob Payne	129
+Ronen Rubinfeld	130
+Mik Kersten	131
+Dan Mezick	132
+Michael Sahota	133
+Jean Tabaka	134
+Olaf Lewitz	135
+Kenny Rubin	136
+David Hussman	137
+Simon Orrell	138
+Jaron Lambert	139
+Damon Poole	140
+Declan Whelan	141
+Bryan Beecham	142
+neil johnson	143
+Val Scott	144
+Michael Elbaz	145
+William Krebs	146
+Jim McCarthy	147
+Alan Shalloway	148
+John Haniotis	149
+Scott Dunn	150
+Steven "Doc" List	151
+Jon Innes	152
+Matt Block	153
+Ian Ratner	154
+Jack Harvey	155
+Steve Ropa	156
+Joel Tosi	157
+Robert Martin	158
+Marian Willeke	159
+Shane Hastie	160
+Steve Adolph	161
+Don McGreal	162
+Keith Nottonson	163
+Michael McCullough	164
+Jon Stahl	165
+Tsuyoshi Ushio	166
+Emerson Mills	167
+Michael Keeling	168
+Mike Velichansky	169
+Scott Ambler	170
+James Grenning	171
+Eewei Chen	172
+Charles Suscheck	173
+Dean Wampler	174
+Elisabeth Hendrickson	175
+Nick Horney	176
+Nancy Van Schooenderwoert	177
+Joseph Wilk	178
+Francisco Trindade	179
+Micah Martin	180
+Colin Jones	181
+Brian Marick	182
+Michael Feathers	183
+Arlo Belshee	184
+Hugh Beyer	185
+Ryan Polk	186
+Angela Harms	187
+Dale Emery	188
+James Shore	189
+Mike Prior	190
+Cory James Hohs	191
+Elena M Yatzeck	192
+Lynn Langit	193
+Llewellyn Falco	194
+Kathleen  Rilliet	195
+Hubert Smits	196
+Chet Hendrickson	197
+Ron Jeffries	198
+Lynn Cowan	199
+Jez Humble	200
+Daniel Brolund	201
+Denny de Waard	202
+Jeff Sutherland	203
+Stephen Denning	204
+Sami Honkonen	205
+Arto Eskelinen	206
+Charles Roman	207
+Tim Ottinger	208
+Nafis Ahmad	209
+Bill Wake	210
+Patti Mandarino	211
+Esther Derby	212
+Leslie Ekas	213
+Scott Will	214
+Dave Nicolette	215
+Andrea Provaglio	216
+Michael Hill	217
+Xavier Quesada Allue	218
+Ali Zewail	219
+George Schlitz	220
+Sean Buck	221
+Pradyumn Sharma	222
+Chris OConnor	223
+Harold Shinsato	224
+Don Gray	225
+Nanette Brown	226
+Robert Nord	227
+Zhon Johansen	228
+Greg Williams	229
+Derek  Neighbors	230
+Darius Kumana	231
+Jeremy Sutherland	232
+Belkis Vasquez	233
+Meghann Drury	234
+Catherine Clark	235
+Mauricio Aniche	236
+Guilherme Silveira	237
+Steve Andrews	238
+Raj Mudhar	239
+Allison Corbett	240
+Jeff Langr	241
+Richard Cheng	242
+Gourav Tiwari	243
+Zainab Alikhan	244
+David Bulkin	245
+Barninder Khurana	246
+Jason Tanner	247
+Michael  Meissner	248
+Mike Suarez	249
+Isel Fernandez Diez	250
+Carol Smith	251
+Derek W. Wade	252
+Jason Dean	253
+Jeff Patton	254
+Christian Hassa	255
+candi rai	256
+Marc-Elian Begin	257
+Andrew Hunt	258
+Alan Padula	259
+Nils Brede Moe	260
+Torgeir Dingsøyr	261
+Børge Haugset	262
+Geir Kjetil Hanssen	263
+Philippe Kruchten	264
+Judith Brown	265
+Gitte Lindgaard and Robert Biddle	266
+Tiago Silva	267
+Angela Martin	268
+Laura Bocock	269
+Mia Horrigan	270
+Mali Senapathi	271
+Ananth Srinivasan	272
+xiaofeng wang	273
+Kieran Conboy and Ken Power	274
+B Veeresh Thummadi	275
+Omri Shiv and Kalle Lyytinen	276
+Gayane Azizyan	277
+Miganoush Magarian and  Mira Kajko-Mattsson	278
+Theodore Hellmann	279
+Frank Maurer	280
+Claudia Melo	281
+Daniela S. Cruzes, Fabio Kon and Reidar Conradi	282
+Lene Pries-Heje	283
+Jan Pries-Heje	284
+Barbara Fredrickson	285
+Kevlin Henney	286
+Linda Rising	287
+Edwin Wong	288
+Drew Jemilo	289
+Bill Gaiennie	290
+Brad Swanson	291
+Anders Ramsay	292
+Patrick Phillips	293
+Kuryan Thomas	294
+Arlen Bankston	295
+Martin Fowler	296
+Pramod Sadalage	297
+Peter Schuh	298
+Joshua Kerievsky and Diana Larsen	299
+Paul Hodgetts	300
+Ann Anderson	301
+Bret Pettichord and Brian Marick	302
+Lowell Lindstrom	303
+Ken Schwaber	304
+William Wake and Ron Jeffries	305
+Laurie Williams	306
+Robert Kessler	307
+Holger Breitling and Martin Lippert	308
+BARRY BOEHM	309
+Watts S. Humphrey	310
+Alistair Cockburn	311
+Dave West	312
+Richard P. Gabriel	313
+J. Frenando Naveda	314
+Daniel Steinberg	315
+Tom Kubit	316
+Alan Airth	317
+Gary Pollice	318
+Granville Miller	319
+Ken Schwaber -- Scott Ambler	320
+Hakan Erdogmus	321
+Ward Cunningham	322
+Fernando Naveda	323
+Bill Kleb	324
+James Caristi	325
+Randy Miller	326
+Ken Auer	327
+Steven Fraser and Rachel Reinitz	328
+Dave Thomas	329
+Barry Boehm	330
+John Goodsen	331
+Tip House	332
+Jutta Eckstein	333
+Richard Hightower	334
+David Stotts and Laurie Williams	335
+Grigori Melnik	336
+Adam Geras	337
+Scott Henninger and Frank Maurer	338
+Duff O'Melia	339
+Jim Highsmith	340
+Robert C. Martin	341
+Craig Larman	342
+Jeff De Luca	343
+Joshua Kerievsky	344
+Larry Constantine	345
+Lockwood	346
+Lucy Lockwood	347
+Janet E. Danforth	348
+Cunningham	349
+Steve Berczuk	350
+Mary Lynn Manns	351
+William C. Wake	352
+Jim Little	353
+Jari Vanhanen	354
+Rick Mugridge	355
+Joseph Blotner	356
+Russell Hill	357
+Brian Boelsterli	358
+Christ Vriens	359
+Measuring velocity with Earned Value	360
+Gery Derbier	361
+David Kane	362
+Christian Sepulveda	363
+Curtis Cooley	364
+Christine Moore	365
+Clyde Cutting	366
+Gary Jedynak	367
+Helen Sharp	368
+Hugh Robinson	369
+William E. Caputo	370
+John Nolan	371
+Rachel Davies	372
+Russ Rufer	373
+Tracy Bialik	374
+Randy Stafford	375
+Laura Hill	376
+Michael Van de Vanter	377
+Pete McBreen	378
+David Socha	379
+Jeff McKenna	380
+Forrest Shull	381
 \.
 
 
 --
--- Name: session_speakers_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+-- Name: records_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
-ALTER TABLE ONLY session_speakers
-    ADD CONSTRAINT session_speakers_pkey PRIMARY KEY (session_id, speaker_name);
+ALTER TABLE ONLY records
+    ADD CONSTRAINT records_pkey PRIMARY KEY (url);
 
 
 --
@@ -1312,11 +1561,26 @@ ALTER TABLE ONLY sessions
 
 
 --
+-- Name: speakers_id_key; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY speakers
+    ADD CONSTRAINT speakers_id_key UNIQUE (id);
+
+
+--
 -- Name: speakers_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
 ALTER TABLE ONLY speakers
     ADD CONSTRAINT speakers_pkey PRIMARY KEY (name);
+
+
+--
+-- Name: index_records_session; Type: INDEX; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE INDEX index_records_session ON records USING btree (session_id);
 
 
 --
