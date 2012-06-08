@@ -35,18 +35,18 @@ class TestScraper03 < Test::Unit::TestCase
   def test_description
     description = scraper[:description]
     assert description.include? "Information Age"
-    assert !description.include? "\t"
+    assert !(description.include? "\t")
   end
 
-  def test_ record
+  def test_record
     s = scraper
     13.times do s.shift end
-    assert_equal ["http://agile2003.agilealliance.org/files/T17Slides.ppt"], s[: records]
+    assert_equal ["http://agile2003.agilealliance.org/files/T17Slides.ppt"], s[:records]
   end
 
-  def test_ records
+  def test_records
     s = Scraper03.new "researchpapers"
-    assert_equal ["http://agile2003.agilealliance.org/files/P1Paper.pdf","http://agile2003.agilealliance.org/files/P1Slides.pdf"], s[: records]
+    assert_equal ["http://agile2003.agilealliance.org/files/P1Paper.pdf","http://agile2003.agilealliance.org/files/P1Slides.pdf"], s[:records]
   end
 
 end
