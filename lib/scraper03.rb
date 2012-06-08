@@ -8,6 +8,11 @@ class Scraper03
     @page = @agent.get "http://agile2003.agilealliance.org/schedule/#{stage}.html"
   end
 
+  def shift
+    items.shift
+    items.first
+  end
+
   def hash
     result = {}
     [:title,:description,:type,:speakers,:stage,:records].each do |key|
@@ -29,11 +34,6 @@ class Scraper03
     @page./(xpath).map(&:text)[1..-1]
   end
 
-  def shift
-    items.shift
-    items.first
-  end
-
   def marker
     items.first
   end
@@ -42,7 +42,7 @@ class Scraper03
     m = marker
     m = "T#{marker}" if m[0] == "E"
     xpath = "/html/body/table/tr[3]/td[2]/table[2]/tr/td/table[3]/tr/td[1]/a[@name='#{m}']"
-    anchor = @page./(xpath).first
+    @page./(xpath).first
   end
 
   def title
@@ -83,4 +83,3 @@ class Scraper03
   end
 
 end
-
