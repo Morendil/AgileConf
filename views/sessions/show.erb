@@ -2,4 +2,5 @@
 <div>
     <p>Agile <%= @session.year %> / <%= @session.type %> / <%= @session.stage %></p>
     <p><%= @session.description.gsub("\\n","<br/>") %></p>
+    <p><%= @session.speakers.map(&:name).join(", ") %></p>
 </div>
