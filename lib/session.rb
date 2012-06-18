@@ -21,13 +21,13 @@ class Session
   has n, :records
 
   searchable do
-    string	:title
+    text	:title
     text	:description
-    string	:speakers do
+    text	:speakers do
       speakers.join " "
     end
-    string	:stage
-    string	:type
+    text	:stage
+    text	:type
     integer	:year
   end
 
