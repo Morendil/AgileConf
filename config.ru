@@ -20,9 +20,11 @@ get '/sessions' do
   erb :index, :views => "views/sessions", :layout => :'../layout'
 end
 
-post '/sessions' do
+get '/sessions/search' do
+  @query = CGI.escapeHTML(params[:query])
   search = Session.search do
     keywords params[:query]
+    paginate :page => params[:page], :per_page => 10
   end
   @sessions = search.results
   erb :index, :views => "views/sessions", :layout => :'../layout'

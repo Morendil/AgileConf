@@ -3,11 +3,11 @@
 <div>
 
 
-	<form method="post" action="/sessions">
+	<form method="get" action="/sessions/search">
 		
 		<div>
 			<label>Keyword</label>
-			<input type="text" name="query" />
+			<input type="text" name="query" value="<%= @query %>"/>
 			(e.g. "scrum" or "TDD" or speaker's name)
 		</div>
 					
