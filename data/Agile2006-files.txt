@@ -1,0 +1,156 @@
+AS1 north-deployment.pdf
+AS2 Agile2006Presentation.pdf
+BT1 - Smits - Overview of Agile handout.pdf
+BT2 2006-07-Intro-to-APM-Agile-2006.pdf
+BT2 Cohn_PlanningAndTracking.pdf
+BT2 casemaster.pdf
+BT3 SutherlandIndividualsAndInteractionsAgile2006.ppt
+BT4 DSDM - Go for Nine.ppt
+BT4 FDD_BeginnersOverview.ppt
+BT4 Introduction to Lean for Agile 2006.pdf
+BT5 Ambler Evolutionary Database Development.ppt
+BT5 Derby Team Dynamics.ppt
+DS17 Handouts Agile2006 Session Proposal.pdf
+DS20 Agile Conference Presentation.ppt
+DS21 Autochthony Intro for Discovery Workshop.pdf
+DS25 Discussing the need for Agile Certification Handouts.pdf
+DS25 Discussing the need for Agile Certification Presentation.pdf
+DS27 DrawingCarousel_handouts.pdf
+DS28 HandoutsAgile2006-AgileFactorsHandout.pdf
+DS6 tracer bullets agile2006.doc
+DS8 Appropriate Agile Metrics - Airplane Simulation.pdf
+DS8 Appropriate Agile Metrics - DS slides.pdf
+DS8 Appropriate Agile Metrics - Heuristics and Template.pdf
+ES1 grossman-bergin-TeachingAgile.pdf
+ES2 Final-FormingSuccessfulXPTeams.pdf
+ES3 girard-ImpactOfAgility.pdf
+ES4 wainer-ShareCourseProjects.pdf
+ES5 Agile_Camera Ready.doc
+HO4 CodersDojoHandout.pdf
+HO5 AS_AgileLeanIntroWithGameAndPlay_v2des.ppt
+HO5 AgileSimulationSessionDetail_ForPublication_20060627_v2des.doc
+RP1 Sulaiman-AgileEVM.pdf
+RP10 agile2006_paper_final.pdf
+RP11 Adolph 2006 agile lessons_final.pdf
+RP2 Cabri Griffiths - Agile and Earned Value Reporting.pdf
+RP3 haugen-PlanningPoker.pdf
+RP4 melnik-maurer-chiasson-executable-acceptance-tests.pdf
+RP5 ho-AgilePerformanceSpecAndTesting.pdf
+RP6 feldman-RefactoringContracts.pdf
+RP7 SharpEtAl-CardsAndWallFinalVersion.pdf
+RP8 korkala-abrahamsson-agile2006.pdf
+RP9 Talby-Reflection.pdf
+TH1 Agilists are Bonobos2.ppt
+TH11 Cohn_UserStories.pdf
+TH12 History of Lean for Agile 2006 Handouts.pdf
+TH13 AgileWaterfallCoop-Sliger.pdf
+TH14 Agile meets Offshore - presentation - new.ppt
+TH2 Ambler Current State of Union.ppt
+TH3 AgileInLargeTHJuttaEckstein.pdf
+TH4 Avery.Agile2006.pdf
+TH5 Highsmith_George_Keirevsky_Agile2006_LargeAgileTranistions_Handouts_R2.ppt
+TH6 LittleA2006Handouts.ppt
+TH7 Homer Odyssey and Life as an Agile Consultant --TABAKA TH7.pdf
+TH9 Advanced Principles of class design.ppt
+TU1 Agile 2006 Exploratory Testing.ppt
+TU10 Fearless Appendix.pdf
+TU10 Interview.pdf
+TU10 Leading Fearless Change.pdf
+TU10 Play June 20 2006.ppt
+TU11 flawless_iterations.ppt
+TU12 handouts bobthinksaboutprojectmanagement.pdf
+TU12 systemsthinkinghandout.pdf
+TU13 TDD-Cpp-Agile2006-Tu13-color-2perPage.pdf
+TU13 TDD-Cpp-Agile2006-Tu13.ppt
+TU13 TDD-hands-on-23Jun2006.doc
+TU14 Agile 2006 Storytelling with FIT.pdf
+TU16 ExtremeTeams-Agile2006.ppt
+TU17 Cohn_AgileEstimatingAndPlanning.pdf
+TU18 V4o1DSDMTutorialAgile2006.ppt
+TU19 xUnit Test Patterns and Smells - Handouts.pdf
+TU2 Patton-UserStoryToUI-handouts.pdf
+TU2 UseStoryToUserInterfaceTutorial.ppt
+TU20 Agile Rqts Workshops for CD.pdf
+TU21 SatirResources.pdf
+TU21 SatirTemperatureReading.pdf
+TU21 TowardsCongruence.pdf
+TU21 satirchangemodel.pdf
+TU21Stances.pdf
+TU22 agile2006_feathers_coaching.ppt
+TU23 From Concept to Cash for Agile2006 Handouts.pdf
+TU24.zip
+TU25 XP Geography Handouts, Agile 2006.ppt
+TU26 Agile 2006 handout.pdf
+TU26 Agile 2006.ppt
+TU28 MakingSenseOfAgile.pdf
+TU29 Scripting101_200507.pdf
+TU3 Rawsthorne_TheRoleOfTheCustomerTeam_Agile2006.pdf
+TU30 TestDrivenJ2EE-XP2006.pdf
+TU31 Martin-TutorialReadings handout.pdf
+TU32 Agile Database Tutorial.ppt
+TU33 LisaCrispinWhatYouNeed2006.ppt
+TU34 handouts CollWorkplacesAgile2006.pdf
+TU35 Enterprise Scrum.ppt
+TU36 TheAgileProductOwnerAndCustomerFieldGuide.pdf
+TU37 RSG Agile2006.pdf
+TU38 HIringforagileteam.pdf
+TU39 Clean Code Args.doc
+TU39 Clean Code.ppt
+TU4 brushingUpOnFunctionalTestEffectiveness.pdf
+TU4 jennitta_andrea_tutorial4_presentation.ppt
+TU40 WotW.pdf
+TU41 dispersed-agile-development.ppt
+TU42 2006.07b crystal 180min.ppt
+TU43 IntroToAutoAT.pdf
+TU44 Handout Derby-Larsen_Retro.pdf
+TU45 agile2006_feathers_welc.ppt
+TU46 - Tabaka Smits.pdf
+TU47-Build-Times.pdf
+TU48 Holacracy - Agile 2006 - Brian Robertson.pdf
+TU48 Holacracy Handouts for Agile 2006.doc
+TU49 Pairing Game (Wilson - Provost - Lacey).ppt
+TU5 Agile 2006 - Rapid Testing.ppt
+TU50 sell_agile_bean_agile_06.pdf
+TU6 Agile 2006 Tutorial Worksheet handout.doc
+TU6 Org_Ready_for_Scrum.ppt
+TU7 lego_xp_game_submitted.ppt
+TU8 innovation-games.pdf
+XR1 AgileMarathon_Submitted_6232006.ppt
+XR1 Schatz-AgileMarathon.pdf
+XR10 KellyPresentation.pdf
+XR10 weyrauch-FrameworkForDefiningAgile.pdf
+XR11 during-oss_sprints.pdf
+XR12 Parnellklabo Introducing Lean_revised final.pdf
+XR14 AgileTalk_Yale.pdf
+XR14 YaleFrequency.pdf
+XR16-lacey-AdvPromPairing1.pdf
+XR18.zip
+XR19 Meszaros - Adding Usability Testing to Agile.pdf
+XR19 Meszaros-AgileUsabilty.pdf
+XR2 Baker-AgileCMMI.pdf
+XR20 LockeHeimgartnerAgileWriters.pdf
+XR20 locke-Writers.pdf
+XR21 puleio-HowNotToDoAgileTesting.pdf
+XR23 hogan-eXtremelyDistributedProject.pdf
+XR24 jain-OffshoreAgileMaintenance.pdf
+XR25 boot camp paper.zip
+XR25 rasmusson-AgileInceptionDeckBootCamp.pdf
+XR26 Poon-Bootstrapping (typos corrected).pdf
+XR27 VanSchooenderwoert_EmbeddedNumbersSlides.pdf
+XR27 VanSchooenderwoert_EmbeddedNumbersSlides.ppt
+XR27 Vanschooenderwoert-EmbeddedNumbers.pdf
+XR28 Tudor OCLC-DSDM Presentation pdf(final).pdf
+XR28 tudor&walter-using an agile approach (DSDM) in a large, traditional organization.pdf
+XR29 UsingAn AgileApproachToFreeTheOrganizationFromR_DParalysis.pdf
+XR29 UsingAnAgileApproachToFreeTheOrganizationFromR_DParalysis_presentation.pdf
+XR3 A Tale of Two Projects Slides.ppt
+XR3 coffin-ATaleofTwoProjects.pdf
+XR30 Extreme Selling in the Early Stage Space.pdf
+XR4 PairingSessionsAgile2006.pdf
+XR4 pairingAgile2006Presentation.pdf
+XR5 nocks-MultipleProjectsWithOneXPTeam.pdf
+XR6 yap-ValueBasedExtremeProgramming.pdf
+XR7 mstriebeck-ShtAddingProcess.pdf
+XR8 AgileCoachingInBritishTelecom_v1.2.ppt
+XR8 hanly-AgileCoachingInBritishTelecom.pdf
+XR9 Honious-Clark-SomethingToBelieveIn.pdf
