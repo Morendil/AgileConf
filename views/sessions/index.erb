@@ -1,10 +1,51 @@
 <h1>Sessions (<%= @sessions.total_entries %>)</h1>
-<%= will_paginate @sessions %>
+
 <div>
+
+
+	<form method="post" action="/sessions">
+		
+		<div>
+			<label>Keyword</label>
+			<input type="text" name="query" />
+			(e.g. "scrum" or "TDD" or speaker's name)
+		</div>
+					
+		<div>
+			<label>With records</label>
+			<input type="checkbox" name="records" />
+			Show only sessions with records in PDF, PPT or video formats
+		</div>
+
+		<input type="submit" value="Search" />
+	</form>
+
+
+        <%= will_paginate @sessions %>
+	<table class="tablesorter">
+		<thead>
+			<tr>
+				<th scope="col">Title</th>
+				<th scope="col">Venue</th>
+				<th scope="col">Description</th>
+			</tr>
+		</thead>
+		<tbody>
+		
   <% @sessions.each do |session| %>
-    <h4><%= session.title %></h4>
-    <p><%= session.type %> / <%= session.stage %> (<%= session.year %>) :: <%= session.speakers.map(&:name).join(", ") %></p>    
-    <small><a href="/sessions/<%= session.id %>">Click here to go there.</a></small>
+			<tr>
+				<th class="title"><%= session.title %></th>
+				<td class="stage"><p>Agile <%= session.year %></p><p><%= session.stage %></p></td>
+				<td class="description">
+					<p><strong>Type:</strong> <%= session.type %></p>
+					<p><strong>Presented by: </strong><%= session.speakers.map(&:name).join(", ") %></p>
+					<p><a href="/sessions/<%= session.id %>">More info</a></p>
+				<td/>
+			</tr>
+
   <% end %>
+
+		</tbody>
+	</table>
+
 </div>
-<small><a href="/sessions/new">Create one.</a></small>

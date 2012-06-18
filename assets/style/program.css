@@ -1,0 +1,190 @@
+/* Content 
+------------------------------- */
+
+table {
+	width:100%;
+	margin:2em 0;
+}
+table thead th {
+	font-weight:bold;
+	font-size:.9em;
+	padding:5px 22px 5px 10px;
+	text-align:left;
+	text-transform:uppercase;
+	border-bottom:1px solid #035F6E;	
+	vertical-align: middle;
+}
+table tbody th {
+	font-size:.9em;
+	padding:5px 5px 5px 10px;
+	text-align:left;
+	border-bottom:1px solid #D6F1F5;
+	font-weight:bolder;
+}
+table td {
+	font-size:.9em;
+	padding:5px 5px 5px 10px;
+	text-align:left;
+	border-bottom:1px solid #D6F1F5;
+}
+table td.description {
+	width:62%;
+}
+
+.highlight {			
+	background:yellow;
+}
+
+/* Form Styles */
+form {
+	background:#53A2CC;
+	color:#fff;
+	padding:12px 12px 24px;
+	line-height:2.5em;
+	margin:2em auto;
+}
+form.small {
+	padding:24px 12px;	
+}
+label {
+	display: inline-block;
+	font-size:14px;
+	width:150px;
+	text-align:right;
+}
+#popup select {
+	width:200px;
+}
+#popup select.wee {
+	width:75px;
+}
+input[type=text],
+input[type=password] {
+	border:2px solid #D6F1F5;
+	margin:0 12px;
+	display:inline-block;
+	width:200px;
+}
+input[type=file] {
+	border:2px solid #D6F1F5;
+	margin:0 12px;
+	display:inline-block;
+	cursor: pointer;
+}
+textarea {
+	border:2px solid #D6F1F5;
+	margin:0 12px;
+	display:inline-block;
+	width:290px;
+	height:100px;
+	font-family:Arial,sans-serif;
+	font-size:12px;
+}
+textarea.address {
+	font-style:italic;
+	height:5em;
+}
+select {
+	margin:0 12px;
+	display:inline-block;
+}
+input[type=submit],input[type=button],input[type=reset] {
+	display:block;
+	margin:1.25em 0 0 162px;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+	-o-box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+	-webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+	padding:4px 6px;
+	text-decoration: none;
+	background:#A1B753;
+	color:#FFF;
+	font-size:14px;
+	text-align:center;
+	border-radius:12px;
+	-o-border-radius:12px;
+	-webkit-border-radius:12px;
+	-moz-border-radius:12px;
+	line-height:1.1em;
+	border:none;
+	font-family:  Arial, sans-serif;
+	cursor: pointer;
+}
+input[type=submit]:hover,input[type=button]:hover,input[type=reset]:hover {
+	background:#B5CA6C;
+	cursor: pointer;
+}
+form div {
+	display:block;
+	margin:1.25em 0 0 0;
+	line-height:1.25em;
+}
+form div p {
+	font-size:11px;
+	line-height:1.25em;
+	margin:.25em 0 1em;
+}
+form div span {
+	display:block;
+	margin-bottom:.5em;
+}
+input[type=checkbox],input[type=radio] {
+	margin:0 8px 0 0;
+	display:inline-block;
+}
+fieldset.section {
+	width:100%;
+	padding:0 12px 12px;
+	margin:0 -12px 12px;	
+}
+fieldset.choices {
+	border-top:2px solid #fff;
+	padding:12px;
+	margin:24px -12px 0;
+}
+fieldset.choices.top {
+	border-top:none;
+	margin:-24px -12px 0;
+}
+fieldset p.description {
+	margin-top:0;
+	margin-bottom:2em;
+	padding:0 12px;
+}
+legend {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 14px;
+	padding:0 12px;
+}
+form fieldset label {
+	float:left;	
+	line-height:3em;
+}
+form fieldset.section label {
+	float:none;
+	line-height: 2.5em;
+}
+form fieldset.section fieldset.choices label {
+	float:left;	
+	line-height:3em;
+}
+
+/* Table Sorter Styles */
+
+thead th { 
+//    background-image: url(/images/sort_start.gif);     
+    cursor: pointer; 
+    font-weight: bold; 
+    background-repeat: no-repeat; 
+    background-position: center right; 
+    padding-right: 20px; 
+    border-right: 1px solid #dad9c7; 
+    margin-left: -1px; 
+}
+th.headerSortUp { 
+//    background-image: url(/images/sort_asc.gif);  
+} 
+th.headerSortDown { 
+//    background-image: url(/images/sort_desc.gif);
+}  
