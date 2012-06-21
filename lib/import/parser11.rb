@@ -15,10 +15,14 @@ class Parser11
     end
   end
 
+  def empty column
+    @row[column].nil? || @row[column] == ""
+  end
+
   def speakers
    result = []
-   result << @row["presenter1"] unless @row["presenter1"] == ""
-   result << @row["presenter2"] unless @row["presenter2"] == ""
+   result << @row["presenter1"] unless empty "presenter1"
+   result << @row["presenter2"] unless empty "presenter2"
    result
   end
 
