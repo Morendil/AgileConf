@@ -36,6 +36,12 @@ get '/sessions/:id' do
   erb :show, :views => "views/sessions", :layout => :'../layout'
 end
 
+get '/reindex' do
+    Session.remove_all_from_index
+    Sunspot.commit
+    Session.all.map(&:index!)
+end
+
 get '/assets/*' do |file|
   send_file File.join('.',request.path)
 end
