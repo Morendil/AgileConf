@@ -3,14 +3,14 @@ require 'dm-migrations'
 
 require "./lib/session.rb"
 require "./lib/speaker.rb"
-require "./lib/parser11.rb"
+require "./lib/import/parser06.rb"
 
 DataMapper.setup(:default, ENV['DATABASE_URL'])
 DataMapper.auto_upgrade!
 
-parser = Parser11.new "data/view-program2011.csv"
+parser = Parser06.new "data/Agile2006.csv"
 begin
   session = Session.from parser.hash
-  session.year = 2011
+  session.year = 2006
   session.save
 end while parser.shift

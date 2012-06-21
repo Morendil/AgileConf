@@ -1,6 +1,6 @@
 require 'mechanize'
 
-require "./lib/scraper_adapter.rb"
+require "./lib/import/scraper_adapter.rb"
 
 class Scraper05
   include ScraperAdapter

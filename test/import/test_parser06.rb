@@ -1,6 +1,6 @@
 require 'test/unit'
 
-require "./lib/parser06.rb"
+require "./lib/import/parser06.rb"
 
 class TestParser11 < Test::Unit::TestCase
 

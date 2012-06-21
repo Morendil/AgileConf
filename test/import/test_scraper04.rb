@@ -2,7 +2,7 @@
 
 require 'test/unit'
 
-require "./lib/scraper04.rb"
+require "./lib/import/scraper04.rb"
 
 class TestScraper04 < Test::Unit::TestCase
 
