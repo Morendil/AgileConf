@@ -5,6 +5,7 @@ require 'dm-migrations'
 
 require "./lib/session.rb"
 require "./lib/speaker.rb"
+require "./lib/session_search.rb"
 
 configure do
   DataMapper.finalize

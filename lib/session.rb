@@ -4,11 +4,9 @@ require 'will_paginate/data_mapper'
 
 require "./lib/speaker.rb"
 require "./lib/record.rb"
-require "./lib/dm_sunspot.rb"
 
 class Session
   include DataMapper::Resource
-  include Sunspot::DataMapper
 
   property :id, Serial, :key => true
   property :title, Text
@@ -19,17 +17,6 @@ class Session
 
   has n, :speakers, :through => Resource
   has n, :records
-
-  searchable do
-    text	:title
-    text	:description
-    text	:speakers do
-      speakers.map(&:name).join " "
-    end
-    text	:stage
-    text	:type
-    integer	:year
-  end
 
   def self.from hash
     speakers = (hash.delete :speakers) || []
