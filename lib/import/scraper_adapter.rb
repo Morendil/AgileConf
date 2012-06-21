@@ -5,8 +5,13 @@ module ScraperAdapter
   end
 
   def shift
+    @index = number+1
     items.shift
     items.first
+  end
+
+  def number
+    @index || 0
   end
 
   def items

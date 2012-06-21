@@ -1,0 +1,107 @@
+ES2 - AgileExperiencePaper.pdf
+ES3 - ExperiencesTeachingTDD.pdf
+ES4 - paper_agile2005_final.pdf
+ES6 - StudentExepriencesWithExecutableAcceptanceTesting.pdf
+ES7 - Teaching Agile Project Management to the PMI.pdf
+ES8 - Student Perceptions.pdf
+INTRO1 - Hubert Smits - Getting Started with Agile v5.pdf
+INTRO2 - Agile2005_Intro_to_Agile_Highsmith_Handouts.ppt
+INTRO2 Meszaros - Agile Requirments with User Stories.pdf
+INTRO2 Planning-Cohn.pdf
+INTRO3 - IntroXP Overview.ppt
+INTRO3 - Martin XP Overview.ppt
+INTRO3 Tabaka Handouts Introduction to Scrum Practices V02.ppt
+INTRO4 - Ambler AMDD Overview Agile 2005.ppt
+INTRO4 - Ambler Agile Database Techniques Agile 2005.ppt
+INTRO4 - MClark PragAutoAgile.pdf
+RP1 - Metaphors be with you.pdf
+RP10 - SutherlandFutureOfScrumAgile2005.pdf
+RP2 - AgileUnited05-AgileMeasurementAirForce.pdf
+RP3 - Agile is for people final.pdf
+RP4 - 228 - AGILE 2005 - Final Submission.pdf
+RP5 - Social Behaviors on XP Teams v 2.pdf
+RP6 - Robinson&SharpAgile2005ProcVersion.pdf
+RP7 - Hazzan&Dubinsky_AgileUnited2005_Culture&XP.pdf
+RP8 - MannMaurerAU2005.pdf
+RP9 - AU 2005.ppt
+RP9 - An Environment for Collaborative Iteration Planning.pdf
+TU10 - Lean Software Development Agile 2005 Handouts.pdf
+TU11 - Tutorial Agile Testing_send.ppt
+TU13 - scalingAgileJutta2005.pdf
+TU14 - Tutorial_Skills for the Agile Designer.pdf
+TU15 - AgileEstimatingAndPlanning_Cohn.pdf
+TU16 - Scripting101_200507.pdf
+TU17 - Collabration Works Tutorial - Gottesdiener for CD.pdf
+TU18 - TestDrivenJ2ee.pdf
+TU2 - ExpressingBusinessRulesAgile2005.pdf
+TU2 - ExpressingBusinessRulesAgile2005.ppt
+TU20 - APP.pdf
+TU20 - Interview.pdf
+TU22 - Survival Guidev4.ppt
+TU23 SDD-Tutorial-Handouts.pdf
+TU27 - AI-LdrshpforAgile2005 v2.ppt
+TU27 - AIBibforAgile2005 v2.doc
+TU27 - Agile Challenge Print 24-Jun-05.ppt
+TU27 - Reference List 24-Jun-05.doc
+TU28 - How to Integrate - Agile 2005.ppt
+TU29 -agile2005-incremental-design.ppt
+TU3 - PattonTutorialHandouts.pdf
+TU3 -AgileUserExperienceDesignTutorial.ppt
+TU30 - Stop Super-sizing your Release Plans v7.pdf
+TU31 - Agile2005.ppt
+TU32 - mcf_welc_agile2005.ppt
+TU33 - Org_Ready_for_Scrum.ppt
+TU4 - RetrospectivesED-DL4-1Agile.pdf
+TU7 - Test_Driven_Development_for_Embedded_Systems.ppt
+TU8 - Backlogs for 59-minute Scrum.pdf
+TU8 - Scrum Gathering 59 Minute Simulation v4.pdf
+TU9 - ProfitEngineProcess-June-2005.pdf
+WK10 - 10 Principles for Leading.pdf
+WK10 - AveryResponsArticle.pdf
+WK10 - Books CA WS 24-Jun-05.doc
+WK10 - ExpertsSayTakeRespons.pdf
+WK10 - Reference List WS 24-Jun-05.doc
+WK10 - citj0604avery.pdf
+WK10 -Microsoft Word - RPM_poster.doc.pdf
+WK17 - HiringAnAgileTesterHandout.doc
+WK8 - InformativeWorkspaceHandout.doc
+WK9 - Wkshp35HandoutAg2005.pdf
+XR1 - Agile Database Development Presentation.ppt
+XR1 - Agile Development of the Database.pdf
+XR10 - Gil Broza - Experience Paper - Early Community.pdf
+XR10 - Gil Broza - Presentation - Early Community Building.ppt
+XR11 - UsingOpenspacesf10.pdf
+XR12 - A False Measure of Success.ppt
+XR12 - AFalseMeasureOfSuccessRevised.pdf
+XR13 - Steve Baker XR16 Paper.pdf
+XR13 - Steve Baker XR16 Presentation.ppt
+XR14 - Agile 2005 Paper DJA v1_5.pdf
+XR15 Costs of Compliance FINAL DRAFT.pdf
+XR16 - 2005 Experience Report Paper.ppt
+XR16 - Formalized Agility.pdf
+XR17 - Agile Offshore Techniques - A Case Study.pdf
+XR18 - Agile2005 - Follow the sun XP Paper _IEEE Format_.pdf
+XR18 - Agile2005 - Follow the sun XP Slides.ppt
+XR19 - CaseStudyOfCustomerInput.pdf
+XR2 - teaching a goliath to fly - Updated Final.pdf
+XR20 _ExperiencesIntegratingUEDPractices.pdf
+XR21 - Customer_Developer_Communication_20050624.pdf
+XR21 - Customer_Developer_Communication_20050624.ppt
+XR22 - CreatingALivingSpecificationUsingFitDocuments.pdf
+XR23 - Test-Driven Porting.ppt
+XR23 - TestDrivenPorting.pdf
+XR24 - Ongoing Quality Improvement Agile2005.pdf
+XR24 - Ongoing Quality Improvement Agile2005.ppt
+XR25 - 137_3.pdf
+XR25 - 137_3.ppt
+XR26 - WaltzingWithChanages.ppt
+XR26 - WaltzingWithChanges.pdf
+XR4 - Promiscuous Pairing and  Beginner's Mind .pdf
+XR5 - estimating in actual time.pdf
+XR6 - Improving Agile Team Learning by Improving Team.pdf
+XR6 - Improving Agile Team Learning.ppt
+XR7 - IBM-WM-exp-final.pdf
+XR7 - Introducing Agile Development-v2.ppt
+XR8 - Experience Report v20.pdf
+XR8 - StayingAgile v20.ppt
+XR9 - agile2005_eckfeldt-madden-horowitz_final.pdf
