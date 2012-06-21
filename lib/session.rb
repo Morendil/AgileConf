@@ -24,7 +24,7 @@ class Session
     text	:title
     text	:description
     text	:speakers do
-      speakers.join " "
+      speakers.map(&:name).join " "
     end
     text	:stage
     text	:type
