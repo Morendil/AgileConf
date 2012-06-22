@@ -3,6 +3,7 @@ require 'dm-migrations'
 
 require "./lib/session.rb"
 require "./lib/import/scraper03.rb"
+require "./lib/import/session_import.rb"
 
 DataMapper.setup(:default, ENV['DATABASE_URL'])
 DataMapper.auto_upgrade!
