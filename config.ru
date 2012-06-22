@@ -17,7 +17,10 @@ end
 get('/') { redirect('/sessions') }
 
 get '/sessions' do
-  @sessions = Session.paginate(:page => params[:page], :per_page => 10)
+  @sessions = Session.paginate(
+    :page => params[:page],
+    :per_page => 10,
+    :order => [:year.desc, :stage.asc])
   erb :index, :views => "views/sessions", :layout => :'../layout'
 end
 
