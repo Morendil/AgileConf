@@ -1,0 +1,388 @@
+"id","title","stage","session_type","duration","room","timeslot","presenter1","presenter2"
+4080,"Systemic Coaching Techniques for Agile Coaches","Learning & Education","Workshop","90 minutes","Conference B","Tuesday 10:45-12:15","Michael Spayd","Doug Rosenberg"
+628,"The Agile Playground - Learning Games for the Agile Practitioner","Learning & Education","Workshop","180 minutes","Conference B","Tuesday 14:00-15:30, Tuesday 16:00-17:30","Don McGreal","Michael McCullough"
+2404,"The Learning Circle: an evolution of Agile for learning environments ","Learning & Education","Experience report","30 minutes","Conference B","Wednesday 08:30-10:00","garry berteig",
+4261,"Coding Dojo: an environment for learning and sharing Agile practices","Learning & Education","Experience report","30 minutes","Conference B","Wednesday 08:30-10:00","Danilo Sato","Mariana Bravo"
+5008,"Eleven Guidelines for Implementing Pair Programming in the Classroom","Learning & Education","Experience report","30 minutes","Conference B","Wednesday 08:30-10:00","Laurie  Williams",
+257,"An Agile Classroom Experience: Teaching TDD and Refactoring","Learning & Education","Experience report","30 minutes","Conference B","Wednesday 10:30-12:00","Brandon Carlson",
+3373,"Transitioning a Team to Agile Test Methods","Learning & Education","Experience report","30 minutes","Conference B","Wednesday 10:30-12:00","Susan Shaye",
+3782,"An Agile Classroom Experience","Learning & Education","Experience report","30 minutes","Conference B","Wednesday 10:30-12:00","Pat Reed",
+1628,"Learning Collaboration and the Planning via the Process Game ","Learning & Education","Tutorial","60 minutes","Conference B","Wednesday 14:00-15:30","Charles Suscheck",
+2300,"Scrum Accelerator - The Game","Learning & Education","Workshop","30 minutes","Conference B","Wednesday 14:00-15:30","Tim Walker",
+433,"Who's Teaching Best Practices?  A review of Canadian CS/SE curriculums and how to improve integration of agile/best practices.","Learning & Education","Workshop","60 minutes","Conference B","Wednesday 16:00-17:30","Christopher R Chapman",
+4257,"Game Design Workshop","Learning & Education","Workshop","180 minutes","Conference B","Thursday 08:30-10:00, Thursday 10:30-12:00","Hubert Smits",
+4563,"Cross Cultural Casino","Learning & Education","Workshop","90 minutes","Conference B","Thursday 14:00-15:30","Sarah Edrie","Susan Borges"
+4720,"(Re)Defining the Agile Coach","Learning & Education","Workshop","90 minutes","Conference C","Tuesday 10:45-12:15","Erik Lundh",
+4812,"Beer Miles! The Product Owner Simulation.","Learning & Education","Tutorial","180 minutes","Conference C","Tuesday 14:00-15:30, Tuesday 16:00-17:30","Robin Dymond","David Douglas"
+4141,"Coaching Agile Teams","Learning & Education","Workshop","90 minutes","Conference C","Wednesday 08:30-10:00","Rachel Davies","Liz Sedley"
+336,"Fostering Software Craftsmanship in a Corporate Setting","Learning & Education","Talk","90 minutes","Conference C","Wednesday 10:30-12:00","Scott Dillman",
+1852,"Are We Done Yet?","Learning & Education","Workshop","90 minutes","Conference C","Wednesday 14:00-15:30","Julie Chickering","lisa shoop"
+3672,"Defining the Role of Agile Manager â€“ Theory and Practice","Learning & Education","Workshop","90 minutes","Conference C","Wednesday 16:00-17:30","Michael Spayd","Lyssa Adkins"
+1742,"Meta-Agile: Using Agile Methods to Deliver Agile Training","Learning & Education","Other","180 minutes","Conference C","Thursday 08:30-10:00, Thursday 10:30-12:00","Mishkin Berteig",
+2512,"Using the Unified Process a Scaling Framework for Scrum","Learning & Education","Tutorial","90 minutes","Conference C","Friday 08:30-10:00","Mike Cottmeyer","Brian Sondergaard"
+6799,"Legacy Code Keynote","Legacy Code","Talk","90 minutes","Osgoode Ballroom East","Wednesday 10:30-12:00","Michael Feathers",
+915,"Agile at Scale: What it Takes on the Right-Hand Side of the Chasm","Legacy Code","Talk","90 minutes","York","Wednesday 08:30-10:00","Scott Ambler",
+1778,"Agile Automated Testing Strategies: Flipping the Testing Pyramid Right-Side-Up","Legacy Code","Tutorial","180 minutes","York","Wednesday 14:00-15:30, Wednesday 16:00-17:30","Patrick Wilson-Welsh","Lisa Crispin"
+2835,"Agile Architecture IS Possible â€“ You First Have to Believe!","Legacy Code","Experience report","30 minutes","York","Thursday 08:30-10:00","Mark Isham",
+4037,"Technical Debt - How not to ignore it","Legacy Code","Talk","60 minutes","York","Thursday 08:30-10:00","Henrik Kniberg",
+2936,"TDD Principles for Database Development   ","Legacy Code","Talk","90 minutes","York","Thursday 10:30-12:00","Dennis Lloyd Jr","Sebastian Meine"
+2739,"Refactoring for Testable C++","Legacy Code","Tutorial","180 minutes","York","Thursday 14:00-15:30, Thursday 16:00-17:30","C. Keith Ray","Alex Aizikivski"
+923,"How to be Agile with Fragile Large Legacy Applications?","Legacy Code","Experience report","45 minutes","York","Friday 08:30-10:00","Vandana Shah","Ainsley Nies"
+6810,"Legacy Stage Wrap-Up","Legacy Code","Other","45 minutes","York","Friday 08:30-10:00","Angela Martin","Michael Feathers"
+928,"The Secrets of High-Performance Agile Implementations","Leadership & Teams","Tutorial","180 minutes","Conference H","Thursday 08:30-10:00, Thursday 10:30-12:00","Gil Broza",
+4377,"Dancing with the Agile Goddess","Leadership & Teams","Talk","90 minutes","Conference G","Friday 08:30-10:00","Israel Gat",
+4151,"Practices of an Agile Team","Leadership & Teams","Experience report","30 minutes","Dominion North","Tuesday 10:45-12:15","Fumihiko Kinoshita",
+4490,"Agile Project Experiences â€“ The Story Of Three Little Pigs","Leadership & Teams","Experience report","30 minutes","Dominion North","Tuesday 10:45-12:15","Craig Smith","Paul King"
+4617,"The Myth and Magic of Self-Organizing Teams","Leadership & Teams","Talk","30 minutes","Dominion North","Tuesday 10:45-12:15","Kevin Wagoner",
+3485,"product management in an agile world","Leadership & Teams","Talk","30 minutes","Dominion North","Tuesday 14:00-15:30","Steve Johnson",
+4682,"""Un-assessments"" using Agile Evaluation Framework - actions by the teams, for the teams","Leadership & Teams","Experience report","30 minutes","Dominion North","Tuesday 14:00-15:30","William Krebs","Per Kroll"
+3629,"XP: My Greatest Misses 2000-2008","Leadership & Teams","Talk","90 minutes","Dominion North","Tuesday 16:00-17:30","J. B. Rainsberger",
+1179,"Scaling Up - pushing Scrum out of its comfort zone","Leadership & Teams","Experience report","30 minutes","Dominion North","Wednesday 08:30-10:00","Richard Lyon","Marcus Evans"
+2769,"New Car Development in Toyota","Leadership & Teams","Talk","30 minutes","Dominion North","Wednesday 08:30-10:00","Kenji Hiranabe",
+3269,"7 years of agile management","Leadership & Teams","Experience report","30 minutes","Dominion North","Wednesday 08:30-10:00","Rene Barto",
+1644,"Dependency Management in a Large Agile Environment","Leadership & Teams","Experience report","60 minutes","Dominion North","Wednesday 10:30-12:00","Eric Babinet","Rajani Ramanathan"
+5093,"A Product Managerâ€™s Guide to Surviving the Big Bang Approach to Agile Transitions","Leadership & Teams","Experience report","30 minutes","Dominion North","Wednesday 10:30-12:00","Rasmus Mencke",
+298,"Overhauling a Failed Project Using Out of the Box Scrum","Leadership & Teams","Experience report","90 minutes","Dominion North","Wednesday 14:00-15:30","Matthew D Edwards",
+1647,"Agile Project Leadership - my top 10 value driven principles","Leadership & Teams","Experience report","30 minutes","Dominion North","Wednesday 14:00-15:30","Lynne Ralston",
+2656,"Cowboys and Indians: Impacts of Cultural Diversity on Agile Teams","Leadership & Teams","Experience report","30 minutes","Dominion North","Wednesday 14:00-15:30","Janice Aston","Gerard Meszaros"
+2650,"The Value of Collaborative Estimation"," A Case Study","Leadership & Teams","Talk","90 minutes","Dominion North","Wednesday 16:00-17:30","Mitch Lacey"
+374,"Appraisals and Compensation:  The Elephant in the Room","Leadership & Teams","Talk","90 minutes","Dominion North","Thursday 08:30-10:00","Mary Poppendieck",
+1291,"Guerilla Agile: Stop Playing Schedule Games","Leadership & Teams","Talk","90 minutes","Dominion North","Thursday 10:30-12:00","Johanna Rothman",
+3075,"When Whole-Team Attacks: How can we ensure true whole-teams survive and thrive?","Leadership & Teams","Talk","30 minutes","Dominion North","Thursday 14:00-15:30","Angela Martin","Robert Biddle"
+3571,"The social nature of agile teams","Leadership & Teams","Experience report","30 minutes","Dominion North","Thursday 14:00-15:30","Elizabeth Whitworth",
+4039,"Bootstrapping Scrum and XP under crisis - a story from the trenches","Leadership & Teams","Experience report","30 minutes","Dominion North","Thursday 14:00-15:30","Henrik Kniberg",
+1794,"What Are They Doing? What A CIO Wants To Know From An Agile Development Team","Leadership & Teams","Talk","90 minutes","Dominion North","Thursday 16:00-17:30","Niel Nickolaisen",
+415,"Searching For and Developing Agile Leaders","Leadership & Teams","Tutorial","90 minutes","Dominion North","Friday 08:30-10:00","David Spann",
+5099,"Building High-Performance Agile Teams","Leadership & Teams","Tutorial","90 minutes","Dominion South","Tuesday 16:00-17:30","Paul Hodgetts",
+3364,"Functional roles, managers and individual growth in Agile contexts","Leadership & Teams","Panel","90 minutes","Dominion South","Wednesday 08:30-10:00","Rachel Weston",
+3334,"Programmers may be from Mars, Customers may be from Venus, but why does everyone think that Project Managers are from Uranus?","Leadership & Teams","Workshop","90 minutes","Dominion South","Wednesday 10:30-12:00","clarke ching","graeme thomas"
+1430,"Metrics for Agility","Leadership & Teams","Talk","90 minutes","Dominion South","Wednesday 14:00-15:30","Dan Rawsthorne",
+3939,"A Framework for Agile Leadership","Leadership & Teams","Tutorial","90 minutes","Dominion South","Wednesday 16:00-17:30","Todd Little","Pollyanna Pixton"
+2949,"The Software Project Manager's Bridge to Agility","Leadership & Teams","Tutorial","90 minutes","Dominion South","Thursday 08:30-10:00","Michele Sliger","Stacia Broderick"
+4434,"Oles 8 steps for Agile Mentors","Leadership & Teams","Tutorial","90 minutes","Dominion South","Thursday 10:30-12:00","Ole Jepsen",
+3841,"Seeking To Perceive More Than To Be Perceived","Leadership & Teams","Tutorial","90 minutes","Dominion South","Thursday 14:00-15:30","Emmanuel Gaillot","Bernard Notarianni"
+1132,"For Agile Leaders Only -- Exploring the ""Hard Bits""","Leadership & Teams","Workshop","90 minutes","Dominion South","Thursday 16:00-17:30","Bob Galen",
+1053,"Leadership Success Recipes for Agile in the 21st Century","Leadership & Teams","Tutorial","90 minutes","Dominion South","Tuesday 10:45-12:15","Jean Tabaka","chris louvion"
+1289,"Hiring For An Agile Team: Detecting Candidates Who Will Fit With the Team","Leadership & Teams","Tutorial","90 minutes","Dominion South","Tuesday 14:00-15:30","Johanna Rothman",
+1879,"PMI and Agile â€“ Oil and Water or Can They Co-exist?","Leadership & Teams","Workshop","90 minutes","Dominion South","Friday 08:30-10:00","Kelly Snavely","Tania Broome"
+2978,"The Leadership Imperative: Creating a Culture of Trust","Leadership & Teams","Workshop","90 minutes","Huron","Tuesday 10:45-12:15","Pollyanna Pixton",
+2772,"Diana and Estherâ€™s Excellent Retrospective Adventures","Leadership & Teams","Tutorial","180 minutes","Huron","Tuesday 14:00-15:30, Tuesday 16:00-17:30","Diana Larsen","Esther Derby"
+1293,"Building Your Coaching Skills","Leadership & Teams","Tutorial","180 minutes","Huron","Wednesday 08:30-10:00, Wednesday 10:30-12:00","Johanna Rothman",
+2321,"Leading Volunteers with Agility","Leadership & Teams","Workshop","90 minutes","Huron","Wednesday 14:00-15:30","Mike Cottmeyer",
+1355,"How to Overcome Pertinent Conflicts","Leadership & Teams","Tutorial","90 minutes","Huron","Wednesday 16:00-17:30","Christoph Steindl","Christian Federspiel"
+604,"What Makes Pairing Work?","Leadership & Teams","Workshop","90 minutes","Huron","Thursday 08:30-10:00","George Dinwiddie",
+249,"The Road from Project Manager to Agile Coach","Leadership & Teams","Workshop","90 minutes","Huron","Thursday 10:30-12:00","Lyssa Adkins",
+1354,"Agile Leadership: What Is It and How Do You Do It?","Leadership & Teams","Tutorial","180 minutes","Huron","Thursday 14:00-15:30, Thursday 16:00-17:30","Pollyanna Pixton","Johanna Rothman"
+1791,"Iteration Zero: Starting a new Agile project","Leadership & Teams","Workshop","90 minutes","Huron","Friday 08:30-10:00","Javid Jamae",
+890,"Implementation Agile Internationale chez Yahoo","Chansons FranÃ§aises","Talk","60 minutes","Elgin","Tuesday 10:45-12:15","Alexandre Boutin",
+6922,"Chansons franÃ§aises - Introduction","Chansons FranÃ§aises","Other","30 minutes","Elgin","Tuesday 10:45-12:15","Emmanuel Gaillot",
+4016,"""Agile ?! Ã§a ne marchera jamais chez nous !""","Chansons FranÃ§aises","Workshop","180 minutes","Elgin","Tuesday 14:00-15:30, Tuesday 16:00-17:30","FranÃ§ois Bachmann",
+788,"Jeu de Direction","Chansons FranÃ§aises","Workshop","180 minutes","Elgin","Wednesday 08:30-10:00, Wednesday 10:30-12:00","Yves Hanoulle","Bernard Notarianni"
+2980,"Crossing Cultures","Chansons FranÃ§aises","Tutorial","180 minutes","Elgin","Wednesday 14:00-15:30, Wednesday 16:00-17:30","Esther Derby",
+2875,"Vision Pluridisciplinaire: GÃ©nÃ©rer une charte de projet en un jour, en enfermant des gens de point de vue divers dans une salle","Chansons FranÃ§aises","Tutorial","180 minutes","Elgin","Thursday 08:30-10:00, Thursday 10:30-12:00","Alain DÃ©silets",
+2816,"Contractualisation des projets Agiles","Chansons FranÃ§aises","Workshop","90 minutes","Elgin","Thursday 14:00-15:30","Greg Hutchings",
+550,"La technique d'interview des ""Neuf Cases"" pour mieux comprendre votre client","Chansons FranÃ§aises","Tutorial","90 minutes","Elgin","Thursday 16:00-17:30","Pascal Van Cauwenberghe","Portia Tung"
+3471,"Mon langage est plus gros que le tien","Chansons FranÃ§aises","Workshop","90 minutes","Elgin","Friday 08:30-10:00","Arnaud Bailly",
+3478,"Test-Driven Requirements: beyond tools","Examples","Workshop","90 minutes","Norfolk","Tuesday 10:45-12:15","Gilles Mantel",
+5042,"Styles of TDD: First Tests","Examples","Workshop","180 minutes","Norfolk","Tuesday 14:00-15:30, Tuesday 16:00-17:30","Bill Wake","Naresh Jain"
+2781,"Fashion Cycle","Examples","Other","180 minutes","Norfolk","Wednesday 08:30-10:00, Wednesday 10:30-12:00","Tobias Mayer","Jennifer Gonsalves"
+3676,"How Am I Supposed To Act?","Examples","Workshop","180 minutes","Norfolk","Wednesday 14:00-15:30, Wednesday 16:00-17:30","Michael Bolton","Adam Geras"
+1753,"Style and Taste in Writing FIT Documents","Examples","Tutorial","90 minutes","Norfolk","Friday 08:30-10:00","Mike Hill","Steve Freeman"
+936,"Behaviour Driven Development using Plain Old JUnit","Examples","Workshop","90 minutes","York","Tuesday 10:45-12:15","Elizabeth Keogh","Dan North"
+3059,"ET by Example: An exploratory testing experience","Examples","Tutorial","180 minutes","York","Tuesday 14:00-15:30, Tuesday 16:00-17:30","erik petersen",
+4942,"Sleight-of-Quality : A Magical Approach to Testing","Examples","Talk","90 minutes","York","Wednesday 10:30-12:00","Jeremy Kominar",
+240,"Backing the Truth into a Corner","Examples","Workshop","180 minutes","Norfolk","Thursday 08:30-10:00, Thursday 10:30-12:00","Keith Braithwaite",
+4338,"Patterns Poster Children","Examples","Tutorial","180 minutes","Norfolk","Thursday 14:00-15:30, Thursday 16:00-17:30","Brian Foote",
+1167,"Agile Distributed Teams","Distributed Agile","Talk","90 minutes","Conference G","Tuesday 10:45-12:15","Douglas Shimp",
+4718,"Ambassador Model for Effectively Distributed Agile Teams","Distributed Agile","Talk","90 minutes","Conference G","Tuesday 14:00-15:30","Giora Morein","George Schlitz"
+934,"How Did We Adapt Agile Processes to Our Distributed Development?","Distributed Agile","Experience report","30 minutes","Conference G","Tuesday 16:00-17:30","Cynick Young","Hiroki Terashima"
+1224,"Yahoo! Distributed Agile: Notes from the World Over","Distributed Agile","Experience report","30 minutes","Conference G","Tuesday 16:00-17:30","Brian Drummond","JF (John Francis) Unson"
+2884,"Distributed Agile Outsourcing:  Growing a Practice Together","Distributed Agile","Experience report","30 minutes","Conference G","Tuesday 16:00-17:30","Michael Vax","Stephen Michaud"
+4483,"Distributed Retrospectives","Distributed Agile","Workshop","90 minutes","Conference G","Wednesday 08:30-10:00","Jutta Eckstein",
+3765,"Remote mentoring a distributed agile team","Distributed Agile","Experience report","30 minutes","Conference G","Wednesday 10:30-12:00","Jagadish Shrinivasavadhani","Vinod Panicker"
+3875,"Practical Considerations for Distributed Agile Projects","Distributed Agile","Experience report","30 minutes","Conference G","Wednesday 10:30-12:00","Jane Robarts",
+4455,"Insights into an Agile Adventure with Offshore Partners","Distributed Agile","Experience report","30 minutes","Conference G","Wednesday 10:30-12:00","Mark Summers",
+2233,"Agile development within a distributed team","Distributed Agile","Talk","90 minutes","Conference G","Wednesday 14:00-15:30","Jamie Allsop",
+1442,"Fully Distributed Scrum:  The Secret Sauce for Hyperproductive Outsourced Development Teams","Distributed Agile","Experience report","30 minutes","Conference G","Wednesday 16:00-17:30","Jeff Sutherland","Guido Schoonheim"
+3794,"Growing and Sustaining an Offshore Scrum Engagement","Distributed Agile","Experience report","30 minutes","Conference G","Wednesday 16:00-17:30","Edward Uy","Nikos Ioannou"
+4954,"How to apply Agile/Scrum in delivering IT projects remotely for Small-Businesses and overcome cultural barriers. ","Distributed Agile","Experience report","30 minutes","Conference G","Wednesday 16:00-17:30","Syed Rayhan","Nimat  Haque"
+388,"How to support a collaborative atmosphere in distributed projects?","Distributed Agile","Workshop","180 minutes","Conference G","Thursday 08:30-10:00, Thursday 10:30-12:00","Lars Arne SkÃ¥r","Jan-Erik Sandberg"
+4681,"Distributed Agile Game","Distributed Agile","Workshop","180 minutes","Conference G","Thursday 14:00-15:30, Thursday 16:00-17:30","Desi McAdam",
+4456,"Creating Proximity over a Distance","Distributed Agile","Talk","90 minutes","Conference H","Tuesday 10:45-12:15","Jutta Eckstein",
+4690,"What Makes Distributed Agile Projects Succeed (or Fail)?","Distributed Agile","Workshop","90 minutes","Conference H","Tuesday 14:00-15:30","Chris Sims",
+1597,"Working With Global and Distributed Agile Teams ","Distributed Agile","Talk","90 minutes","Conference H","Tuesday 16:00-17:30","Ken Pugh",
+4322,"Panel discussion on troubleshooting distributed agile team projects","Distributed Agile","Panel","90 minutes","Conference H","Wednesday 08:30-10:00","Monica Yap",
+3888,"Distributed agile teams and alternative contractual forms: what works best?","Distributed Agile","Talk","90 minutes","Conference H","Wednesday 10:30-12:00","Greg Hutchings",
+252,"Updating ""Patterns for Distributed Agile""","Distributed Agile","Workshop","180 minutes","Conference H","Wednesday 14:00-15:30, Wednesday 16:00-17:30","Keith Braithwaite",
+3216,"Managing Database Development on Distributed Teams","Distributed Agile","Demonstration","90 minutes","Conference H","Thursday 14:00-15:30","Pramod Sadalage",
+1669,"Colossal, Scattered, and Chaotic (Planning with a Large Distributed Team)","Distributed Agile","Experience report","30 minutes","Conference H","Thursday 16:00-17:30","Wes Williams","Mike Stout"
+2337,"The Good and Bad of Offshore Agile Development","Distributed Agile","Experience report","30 minutes","Conference H","Thursday 16:00-17:30","Mike Cottmeyer",
+2780,"Overcoming the Challenges of a Distributed Organization","Distributed Agile","Experience report","30 minutes","Conference H","Thursday 16:00-17:30","Elaine Therrien","Michele Sliger"
+3958,"Refactoring Strategies & Tactics","Developer Jam","Tutorial","180 minutes","Osgoode Ballroom East","Wednesday 14:00-15:30, Wednesday 16:00-17:30","Joshua Kerievsky",
+1632,"Coding Contest","Developer Jam","Other","180 minutes","Osgoode Ballroom East","Thursday 08:30-10:00, Thursday 10:30-12:00","Christoph Steindl","Christian Federspiel"
+449,"TDD Clinic: BDD, Ruby, & Rails","Developer Jam","Clinic","90 minutes","Osgoode Ballroom West","Tuesday 10:45-12:15","Gregg Pollack",
+2039,"TDD Clinic: Ron & Chet","Developer Jam","Clinic","180 minutes","Osgoode Ballroom West","Tuesday 14:00-15:30, Tuesday 16:00-17:30","Chet Hendrickson","Ron Jeffries"
+648,"TDD Clinic: incremental design with Mock Objects.","Developer Jam","Clinic","180 minutes","Osgoode Ballroom West","Wednesday 08:30-10:00, Wednesday 10:30-12:00","Steve Freeman",
+2799,"TDD Clinic: C++","Developer Jam","Clinic","180 minutes","Osgoode Ballroom West","Wednesday 14:00-15:30, Wednesday 16:00-17:30","James Grenning",
+243,"TDD Clinic: .Net and C#","Developer Jam","Clinic","180 minutes","Osgoode Ballroom West","Thursday 08:30-10:00, Thursday 10:30-12:00","David Starr",
+285,"TDD Clinic: C and Legacy Code","Developer Jam","Clinic","180 minutes","Osgoode Ballroom West","Thursday 14:00-15:30, Thursday 16:00-17:30","Bas Vodde","Michael Feathers"
+2205,"TDD Clinic: NUnit","Developer Jam","Clinic","90 minutes","Osgoode Ballroom West","Friday 08:30-10:00","James Newkirk",
+4854,"Clean Code Clinic: TDD Ping Pong Match!","Developer Jam","Clinic","90 minutes","Osgoode Foyer","Tuesday 10:45-12:15","Andy Maleh","Dave Hoover"
+2989,"Clean Code Clinic: Ugly Tic Tac Toe","Developer Jam","Clinic","180 minutes","Osgoode Foyer","Tuesday 14:00-15:30, Tuesday 16:00-17:30","Patrick Wilson-Welsh","J. B. Rainsberger"
+4593,"Clean Code Clinic: Dealing with CRRAP (Microtesting Legacy Code)","Developer Jam","Clinic","180 minutes","Osgoode Foyer","Wednesday 08:30-10:00, Wednesday 10:30-12:00","Michael Hill",
+443,"Clean Code Clinic: Refactoring Fest","Developer Jam","Clinic","180 minutes","Osgoode Foyer","Wednesday 14:00-15:30, Wednesday 16:00-17:30","Naresh Jain",
+2381,"Automated Testing Clinic: Testing with a Purpose","Developer Jam","Clinic","180 minutes","Osgoode Foyer","Thursday 08:30-10:00, Thursday 10:30-12:00","Kay Johansen","Christian Hargraves"
+734,"Automated Testing Clinic: FitNesse.NET","Developer Jam","Clinic","180 minutes","Osgoode Foyer","Thursday 14:00-15:30, Thursday 16:00-17:30","Mike Stockdale",
+4674,"Acceptance Testing Clinic: FitNesse","Developer Jam","Clinic","90 minutes","Osgoode Foyer","Friday 08:30-10:00","Micah Martin",
+4596,"Continuous Integration Clinic","Developer Jam","Clinic","180 minutes","Peel","Thursday 08:30-10:00, Thursday 10:30-12:00","Maciej Zawadzki",
+4381,"Continuous Integration Clinic: Continuous Monitoring","Developer Jam","Clinic","180 minutes","Peel","Thursday 14:00-15:30, Thursday 16:00-17:30","Owen Rogers","Sreekanth V"
+377,"Continuous Testing: TDD Turned Up To 12","Developer Jam","Demonstration","90 minutes","Sheraton Hall C","Tuesday 10:45-12:15","Ben Rady",
+4224,"Advanced Test Patterns in C++","Developer Jam","Tutorial","90 minutes","Sheraton Hall C","Tuesday 14:00-15:30","Bill Hanlon",
+337,"Code Metrics & Analysis for Agile Projects","Developer Jam","Talk","90 minutes","Sheraton Hall C","Tuesday 16:00-17:30","Neal Ford","Ram Singaram"
+801,"Architecture in an Agile Organization","Developer Jam","Talk","90 minutes","Sheraton Hall C","Wednesday 08:30-10:00","Chris Sterling","Michael Phoenix"
+4299,"Agile Developer Practices for Dynamic Languages","Developer Jam","Talk","90 minutes","Sheraton Hall C","Wednesday 10:30-12:00","Paul King",
+4747,"Clean Systems: Clean Code at the Architecture Level","Developer Jam","Tutorial","90 minutes","Sheraton Hall C","Wednesday 14:00-15:30","Dean Wampler",
+2766,"Exploratory Test Driven Development: Red,Yellow, Green, Refactor","Developer Jam","Demonstration","90 minutes","Sheraton Hall C","Wednesday 16:00-17:30","Jonathan de Halleux","Nikolai Tillmann"
+4274,"Don't give up on mocking!","Developer Jam","Demonstration","90 minutes","Sheraton Hall C","Thursday 08:30-10:00","Szczepan Faber",
+802,"A Hundred Days of Continuous Integration","Developer Jam","Experience report","30 minutes","Sheraton Hall C","Thursday 10:30-12:00","Ade Miller",
+2238,"Team pace - Keeping build times down","Developer Jam","Experience report","30 minutes","Sheraton Hall C","Thursday 10:30-12:00","Graham Brooks",
+4594,"Effective and pragmatic Test Driven Development ","Developer Jam","Experience report","30 minutes","Sheraton Hall C","Thursday 10:30-12:00","Andrew Rendell",
+1650,"Advanced TDD Randori and Fishbowl","Developer Jam","Workshop","180 minutes","Sheraton Hall C","Thursday 14:00-15:30, Thursday 16:00-17:30","Dave Nicolette","Ryan Hoegg"
+3298,"Test-Driven GUI Development Made Easy","Developer Jam","Tutorial","90 minutes","Sheraton Hall C","Friday 08:30-10:00","Alex Ruiz","Yvonne Price"
+847,"Agility Night Live - TV Sketches and Project Stories","Agile & Organizational Culture","Talk","90 minutes","Osgoode Ballroom East","Friday 08:30-10:00","Ken Collier",
+2400,"Learning Kaizen from TOYOTA [with MindMaps]","Agile & Organizational Culture","Workshop","90 minutes","Churchill Room","Tuesday 10:45-12:15","Kenji Hiranabe",
+380,"Exposing the â€œdevilsâ€ within - Agile taboos and other hurdles in a large organization","Agile & Organizational Culture","Workshop","180 minutes","Churchill Room","Tuesday 14:00-15:30, Tuesday 16:00-17:30","Jan-Erik Sandberg","Lars Arne SkÃ¥r"
+1655,"Overcoming Resistance to Change","Agile & Organizational Culture","Workshop","180 minutes","Churchill Room","Wednesday 08:30-10:00, Wednesday 10:30-12:00","Dave Nicolette","Lasse Koskela"
+1960,"Successful Agile Transitions: Using Appreciative Inquiry to Discover What Works","Agile & Organizational Culture","Workshop","180 minutes","Churchill Room","Wednesday 14:00-15:30, Wednesday 16:00-17:30","Ellen Gottesdiener",
+3078,"Mr Agile Goes To Washington: The Impact of Politics on Agile Projects","Agile & Organizational Culture","Workshop","180 minutes","Churchill Room","Thursday 08:30-10:00, Thursday 10:30-12:00","Angela Martin","Rachel Davies"
+4941,"Building Self-Organization Skills through the Touchstones Discussion Project","Agile & Organizational Culture","Workshop","90 minutes","Churchill Room","Thursday 14:00-15:30","Pam Rostal",
+5051,"Whose Project is it Anyway?","Agile & Organizational Culture","Workshop","90 minutes","Churchill Room","Thursday 16:00-17:30","Bonnie Aumann",
+3715,"Punctuated Continuity: Using Ritual and Ceremony to Avoid Process Fatigue","Agile & Organizational Culture","Workshop","90 minutes","Churchill Room","Friday 08:30-10:00","Michael Tardiff","Paul Dupuy, Jr."
+4639,"Throwing the Agile Transition Party","Agile & Organizational Culture","Talk","60 minutes","City Hall Room","Tuesday 10:45-12:15","Michael Hill",
+6429,"Culture Stage Introduction","Agile & Organizational Culture","Talk","30 minutes","City Hall Room","Tuesday 10:45-12:15","Marc Evers","Linda Rising"
+2640,"Storytelling Skills for Agile Teams","Agile & Organizational Culture","Tutorial","180 minutes","City Hall Room","Tuesday 14:00-15:30, Tuesday 16:00-17:30","Rebecca Wirfs-Brock","Rachel Davies"
+1131,"Lessons from Agility meets an eCommerce SaaS Product","Agile & Organizational Culture","Talk","30 minutes","City Hall Room","Wednesday 08:30-10:00","Bob Galen",
+3289,"â€œItâ€™s not the pants, itâ€™s the people in the pantsâ€: Learnings from The Gap Agile Transformation","Agile & Organizational Culture","Experience report","30 minutes","City Hall Room","Wednesday 08:30-10:00","Michael Elbaz",
+4083,"Crawl, Walk, Run: 4 years of Agile Adoption at BabyCenter.com","Agile & Organizational Culture","Experience report","30 minutes","City Hall Room","Wednesday 08:30-10:00","Keith Nottonson","Kenneth DeLong"
+3889,"Scaling Agile: Finding your Agile Tribe","Agile & Organizational Culture","Experience report","30 minutes","City Hall Room","Wednesday 10:30-12:00","Erik Moore","John Spens"
+4702,"The Price of Agile Is Eternal Vigilance","Agile & Organizational Culture","Experience report","30 minutes","City Hall Room","Wednesday 10:30-12:00","Joe Ryan","Rob Scudiere"
+1249,"Becoming a fearless leader of change (to agile or any new idea) in your organization","Agile & Organizational Culture","Tutorial","180 minutes","City Hall Room","Wednesday 14:00-15:30, Wednesday 16:00-17:30","Linda Rising","MaryLynn Manns"
+2977,"Creating Cultures Where Agile Emerges","Agile & Organizational Culture","Tutorial","180 minutes","City Hall Room","Thursday 08:30-10:00, Thursday 10:30-12:00","Pollyanna Pixton",
+410,"Creating Agile Streams for business and technical value","Agile & Organizational Culture","Experience report","30 minutes","City Hall Room","Thursday 14:00-15:30","David Spann",
+2881,"The Big Projects Always Fail: Taking an Enterprise Agile","Agile & Organizational Culture","Experience report","30 minutes","City Hall Room","Thursday 14:00-15:30","Roger Valade",
+3313,"An Ericsson example of enterprise class Agility","Agile & Organizational Culture","Experience report","30 minutes","City Hall Room","Thursday 14:00-15:30","Jasper Goos","Alfo Melisse"
+2172,"Enterprise Agile - panel discussion","Agile & Organizational Culture","Panel","90 minutes","City Hall Room","Thursday 16:00-17:30","Nicola Dourambeis",
+1464,"Planning and Facilitating Release Retrospectives","Agile & Organizational Culture","Experience report","30 minutes","City Hall Room","Friday 08:30-10:00","Michael Maham",
+2785,"The (Fr)Agile Organisation - (an experience report of trying to make an Agile culture stick)","Agile & Organizational Culture","Experience report","30 minutes","City Hall Room","Friday 08:30-10:00","Marcus Evans",
+4295,"Integrating Software by Integrating People","Agile & Organizational Culture","Experience report","30 minutes","City Hall Room","Friday 08:30-10:00","Todd Little",
+493,"Jazz improvisation as a metaphor for understanding agile development organizational behavior","Agile & Organizational Culture","Talk","60 minutes","Kenora","Tuesday 10:45-12:15","Charles Suscheck",
+247,"An HR Perspective on Agile Careers in Corporations - Survey Results, Analysis and Forecast","Agile & Organizational Culture","Talk","60 minutes","Kenora","Tuesday 14:00-15:30","Timothy Brown",
+3357,"Agile Communities in Japan","Agile & Organizational Culture","Talk","30 minutes","Kenora","Tuesday 14:00-15:30","Tsutomu Yasui","Yukie Kushida"
+3058,"When Working Software Is Not Enough: A Story of Project Failure","Agile & Organizational Culture","Talk","90 minutes","Kenora","Tuesday 16:00-17:30","Mitch Lacey",
+2797,"From Waterfall to Agile â€“ transforming the mindset","Agile & Organizational Culture","Experience report","30 minutes","Kenora","Wednesday 08:30-10:00","Kalpana Sureshchandra","Jagadish Shrinivasavadhani"
+4267,"Tidal Wave: The Game Changing Transformation","Agile & Organizational Culture","Experience report","30 minutes","Kenora","Wednesday 08:30-10:00","Mun-Wai Chung","Sofyan Nugroho"
+4403,"Forming to Performing: Transitioning Large-Scale Project Into Agile","Agile & Organizational Culture","Experience report","30 minutes","Kenora","Wednesday 08:30-10:00","Eric Lee",
+789,"â€œCome Together, right nowâ€â€“How the songs of The Beatles helped our Product Owners and Teams Live in Harmony","Agile & Organizational Culture","Experience report","30 minutes","Kenora","Wednesday 10:30-12:00","Anne Moon",
+833,"Implementing Agile at MyBoeingFleet.com and Beyond","Agile & Organizational Culture","Experience report","30 minutes","Kenora","Wednesday 10:30-12:00","Joe Fecarotta",
+966,"SOX Compliant Agile Processes","Agile & Organizational Culture","Experience report","30 minutes","Kenora","Wednesday 10:30-12:00","Sumit Gupta",
+1573,"Dead Sheepdog: Ethical Dilemmas and Agile Software Development","Agile & Organizational Culture","Talk","90 minutes","Kenora","Wednesday 14:00-15:30","Ken H. Judy","Steven ""Doc"" List"
+3632,"How to Get Started with Enterprise Agile Adoption: An Emergent Organizational Change Approach","Agile & Organizational Culture","Talk","90 minutes","Kenora","Wednesday 16:00-17:30","Michael Hamman",
+3876,"Refactoring of Cultural Smells ","Agile & Organizational Culture","Tutorial","90 minutes","Kenora","Thursday 08:30-10:00","Orit  Hazzan","Yael Dubinsky"
+3489,"A better culture change approach for busy practitioners","Agile & Organizational Culture","Tutorial","90 minutes","Kenora","Thursday 10:30-12:00","Mike Russell","Amy Levine"
+242,"Agile Supports Improved Culture and Quality for Healthwise","Agile & Organizational Culture","Experience report","30 minutes","Kenora","Thursday 14:00-15:30","David Starr","Ken Long"
+1337,"Executing Agile in a Structured Organization: Government","Agile & Organizational Culture","Experience report","30 minutes","Kenora","Thursday 14:00-15:30","Robyn Johnson","Michael McCullough"
+4771,"The Accidental Agilists: One Teamâ€™s Journey from Waterfall to Agile","Agile & Organizational Culture","Experience report","30 minutes","Kenora","Thursday 14:00-15:30","Mary Beth Snapp","Diane Dagefoerde"
+2119,"Touchy-feely Impediments to Agile Adoption","Agile & Organizational Culture","Talk","90 minutes","Kenora","Thursday 16:00-17:30","Amr Elssamadisy",
+2245,"Integrating Scrum with the Process Framework at Yahoo! Europe","Agile & Organizational Culture","Experience report","30 minutes","Kenora","Friday 08:30-10:00","Karl Scotland","Alexandre Boutin"
+2877,"Throw-Away - But Recycle! How Scrum affects the PMO","Agile & Organizational Culture","Talk","30 minutes","Kenora","Friday 08:30-10:00","Jochen (Joe) Krebs",
+4736,"The Tail and the Dog: Aligning Governance with Agile Project Management","Agile & Organizational Culture","Talk","30 minutes","Kenora","Friday 08:30-10:00","Alan Goerner",
+3637,"Extreme Interviewing: Finding the Right People for Your Agile Team","Agile & Organizational Culture","Talk","90 minutes","Kent","Friday 08:30-10:00","Lisamarie Babik","Clement ""James"" Goebel"
+376,"Open Source Meets Agile - What can each teach the other?","Breaking Acts","Workshop","180 minutes","Osgoode Ballroom East","Tuesday 14:00-15:30, Tuesday 16:00-17:30","Mary Poppendieck","Christian Reis"
+5032,"Agility, Evolution, Emergence, and the Primodial Ooze","Breaking Acts","Talk","90 minutes","Essex Ballroom","Tuesday 10:45-12:15","Brian Foote",
+4186,"Coaching self-organizing teams","Breaking Acts","Tutorial","180 minutes","Essex Ballroom","Tuesday 14:00-15:30, Tuesday 16:00-17:30","Joseph Pelrine","Steve Freeman"
+1604,"Real Options in a Nutshell - Bottled Common Sense","Breaking Acts","Tutorial","90 minutes","Essex Ballroom","Wednesday 08:30-10:00","Olav Maassen","Chris Matts"
+2092,"Stuck in your own code? Alleviate cognitive friction today!","Breaking Acts","Talk","90 minutes","Essex Ballroom","Wednesday 10:30-12:00","RÃ©gis Medina",
+741,"Come and Take It! Lean Pull Applied","Breaking Acts","Demonstration","90 minutes","Essex Ballroom","Wednesday 14:00-15:30","Rod Coffin","Don McGreal"
+3757,"GTD + Kanban + Round Robin for Product Owners","Breaking Acts","Demonstration","45 minutes","Essex Ballroom","Wednesday 16:00-17:30","Thomas Nilsson",
+4949,"Enterprise Agile Consortium - Company to Company Mentorship for Agile Adoption","Breaking Acts","Talk","45 minutes","Essex Ballroom","Wednesday 16:00-17:30","Sue Holstad",
+2311,"KFC Development - Finger Lickin' Good","Breaking Acts","Workshop","180 minutes","Essex Ballroom","Thursday 08:30-10:00, Thursday 10:30-12:00","Karl Scotland","Aaron Sanders"
+5166,"Artful Making for Agile Teams","Breaking Acts","Workshop","90 minutes","Essex Ballroom","Thursday 14:00-15:30","Lee Devin","Stacia Broderick"
+4804,"Estimating Considered Wasteful: Introducing Micro-Releases","Breaking Acts","Talk","90 minutes","Essex Ballroom","Thursday 16:00-17:30","Joshua Kerievsky",
+957,"Starting a Kanban System for Software Engineering with Value Stream Maps and Theory of Constraints","Breaking Acts","Tutorial","90 minutes","Essex Ballroom","Friday 08:30-10:00","Corey Ladas",
+1420,"The use of Ritual in Agile currently and identifying improving ways to harness the power of ritual","Breaking Acts","Workshop","90 minutes","Windsor East","Tuesday 10:45-12:15","Mark Smith",
+1229,"The Pomodoro Technique: can you focus - really focus - for 25 minutes?","Breaking Acts","Tutorial","90 minutes","Windsor East","Tuesday 14:00-15:30","Staffan Noteberg",
+1999,"Good Used Cars, Cheap Health Insurance, and Successful Consulting Engagements","Breaking Acts","Talk","90 minutes","Windsor East","Tuesday 16:00-17:30","Michael Nygard",
+307,"Starfish are agile!","Breaking Acts","Talk","90 minutes","Windsor East","Wednesday 08:30-10:00","Vinayak Joglekar",
+1977,"Can IT Projects be insured?","Breaking Acts","Workshop","90 minutes","Windsor East","Wednesday 10:30-12:00","Graham Oakes",
+424,"Agile infrastructure and operations: how infra-gile are you?","Breaking Acts","Experience report","45 minutes","Windsor East","Wednesday 14:00-15:30","Patrick Debois",
+570,"Agile and labour turnover - Should I stay or should I go? ","Breaking Acts","Workshop","90 minutes","Windsor East","Wednesday 14:00-15:30","Nicole Belilos","Willem van den Ende"
+3483,"The Hidden Life of Groups","Breaking Acts","Talk","90 minutes","Windsor East","Wednesday 16:00-17:30","Dan Mezick",
+4064,"Operating on the Creative Edge: Applying Improvisation Techniques in Agile","Breaking Acts","Workshop","180 minutes","Windsor East","Thursday 08:30-10:00, Thursday 10:30-12:00","Jim York","Tobias Mayer"
+3887,"Agile development in a medical device company","Breaking Acts","Experience report","45 minutes","Windsor East","Thursday 14:00-15:30","Riaan Rottier","Victor Rodrigues"
+3926,"Mature  Agile with a twist of CMMI","Breaking Acts","Experience report","45 minutes","Windsor East","Thursday 14:00-15:30","Carsten Jakobsen",
+495,"Separation of concerns: New Practices for Decreasing Coupling and Raising Cohesion","Breaking Acts","Talk","90 minutes","Windsor East","Friday 08:30-10:00","Mario Cardinal",
+769,"Agile Game Development","Breaking Acts","Talk","90 minutes","Windsor West","Tuesday 10:45-12:15","Clinton Keith",
+917,"Mirror, Mirror on the Wall... Why Me?","Breaking Acts","Workshop","90 minutes","Windsor West","Tuesday 14:00-15:30","Portia Tung","Pascal Van Cauwenberghe"
+1468,"Agile Contracting","Breaking Acts","Workshop","90 minutes","Windsor West","Tuesday 16:00-17:30","Rachel Weston","Chris Spagnuolo"
+4190,"Value Stream Mapping - Extending Our View to the Enterprise","Breaking Acts","Tutorial","180 minutes","Windsor West","Wednesday 08:30-10:00, Wednesday 10:30-12:00","Alan Shalloway",
+2340,"The Doctor is ""In"" - Using the Office Hours Concept to Make Limited Resources Most Effective","Breaking Acts","Experience report","45 minutes","Windsor West","Wednesday 14:00-15:30","Andrea Leszek","Catherine Courage"
+3716,"Overcoming Brooks' Law","Breaking Acts","Experience report","45 minutes","Windsor West","Wednesday 16:00-17:30","Kealy Opelt",
+4268,"Beginner's Mind--The Zen of Agile","Breaking Acts","Workshop","180 minutes","Windsor West","Thursday 08:30-10:00, Thursday 10:30-12:00","David Hussman","Jean Tabaka"
+3567,"Swarming - The Birds and the Bees and Agile","Breaking Acts","Talk","90 minutes","Windsor West","Thursday 14:00-15:30","Tom Perry","Dhaval Panchal"
+1930,"The Agile Haiku Workshop","Breaking Acts","Workshop","90 minutes","Windsor West","Thursday 16:00-17:30","Elizabeth Keogh",
+4863,"Estimating Relative Complexity","Breaking Acts","Workshop","90 minutes","Windsor West","Friday 08:30-10:00","Steve Bockman",
+1226,"Converting Business Value into Actual Money","Customers & Business Value","Tutorial","90 minutes","Civic Ballroom North","Tuesday 10:45-12:15","Luke Hohmann",
+4388,"Business Value: Discovering what it is and what to do about it","Customers & Business Value","Workshop","90 minutes","Civic Ballroom North","Tuesday 14:00-15:30","Joseph Little",
+552,"Business Value - Soup to Nuts","Customers & Business Value","Other","90 minutes","Civic Ballroom North","Tuesday 16:00-17:30","Andy Pols","Chris Matts"
+3266,"Toward Enterprise Agile Scalability:  A New Way to Look at Accounting for Agile Software Development Costs","Customers & Business Value","Tutorial","90 minutes","Civic Ballroom North","Wednesday 08:30-10:00","Pat Reed",
+4944,"Crafting User Stories â€“ Four Experts and The Audience Weigh In","Customers & Business Value","Panel","90 minutes","Civic Ballroom North","Wednesday 10:30-12:00","Joshua Kerievsky",
+2541,"Delivering Measurable Business Value with Scrum","Customers & Business Value","Tutorial","90 minutes","Civic Ballroom North","Wednesday 14:00-15:30","Ryan Shriver",
+1608,"Prioritizing and Sequencing Features: several techniques including â€œMinimal Marketable Featuresâ€","Customers & Business Value","Tutorial","90 minutes","Civic Ballroom North","Wednesday 16:00-17:30","evan campbell",
+5075,"User Story Mapping: making sense out of your user story backlog","Customers & Business Value","Tutorial","180 minutes","Civic Ballroom North","Thursday 08:30-10:00, Thursday 10:30-12:00","Jeff Patton",
+2887,"From Concept to Product Backlog - What Happens Before Iteration 0?","Customers & Business Value","Tutorial","90 minutes","Civic Ballroom North","Thursday 14:00-15:30","Gerard Meszaros","Janice Aston"
+3073,"Creating Shared Understanding with Cards","Customers & Business Value","Tutorial","90 minutes","Civic Ballroom North","Thursday 16:00-17:30","Angela Martin","Artem Marchenko"
+4865,"Beyond Agile!  Product Innovation Debate: What and who drives innovation?","Customers & Business Value","Panel","90 minutes","Civic Ballroom North","Friday 08:30-10:00","Thad Scheer","Luke Hohmann"
+1728,"Extremely Short Iterations as a Catalyst for Effective Prioritization of Work","Customers & Business Value","Experience report","30 minutes","Civic Ballroom South","Tuesday 10:45-12:15","Mishkin Berteig",
+3856,"Establishing an Agile Portfolio to Align IT Investments with Business Needs","Customers & Business Value","Experience report","30 minutes","Civic Ballroom South","Tuesday 10:45-12:15","Joseph C Thomas","Steve Baker"
+4655,"Using Agile for Buy vs. Build Decisions","Customers & Business Value","Experience report","30 minutes","Civic Ballroom South","Tuesday 10:45-12:15","Mike Register","Tod Golding"
+4739,"Adventures in Agile Contracting: Evolving from Time and Materials to Fixed Price, Fixed Scope, Fixed Schedule Contracts","Customers & Business Value","Experience report","90 minutes","Civic Ballroom South","Tuesday 14:00-15:30","Teresa Franklin",
+282,"Money for Nothing and Your Change for Free: Agile Contracts","Customers & Business Value","Talk","90 minutes","Civic Ballroom South","Tuesday 16:00-17:30","Jeff Sutherland",
+2170,"The Intermediate Customer Anti-Pattern","Customers & Business Value","Experience report","30 minutes","Civic Ballroom South","Wednesday 08:30-10:00","Tom Perry",
+3214,"Successful Customer Collaboration Resulting in the Right Product for the End User","Customers & Business Value","Experience report","30 minutes","Civic Ballroom South","Wednesday 08:30-10:00","Sean Cohan",
+4568,"The product owner team","Customers & Business Value","Experience report","30 minutes","Civic Ballroom South","Wednesday 08:30-10:00","Alan de Ste Croix","alan  easton"
+1295,"Building Great Products, Incrementally: An Agile Product Owner's Primer","Customers & Business Value","Tutorial","90 minutes","Civic Ballroom South","Wednesday 10:30-12:00","Alex Pukinskis",
+1084,"Prioritizing Your Product Backlog","Customers & Business Value","Tutorial","90 minutes","Civic Ballroom South","Wednesday 14:00-15:30","Mike Cohn",
+1710,"Manager's Introduction to Test-Driven Development","Customers & Business Value","Demonstration","90 minutes","Civic Ballroom South","Wednesday 16:00-17:30","Dave Nicolette","Karl Scotland"
+1159,"Get Your Agile Project Started on the Right Foot: Requirements and Architectural Envisioning","Customers & Business Value","Talk","30 minutes","Civic Ballroom South","Thursday 08:30-10:00","Scott Ambler",
+2236,"User Stories and Use Cases? Sure, it even makes sense.","Customers & Business Value","Talk","30 minutes","Civic Ballroom South","Thursday 08:30-10:00","Jamie Allsop",
+5047,"Stop confusing my customer! The challenge of balancing frequent feature releases with dependent feature sets in large projects. ","Customers & Business Value","Experience report","30 minutes","Civic Ballroom South","Thursday 08:30-10:00","Angela Vinci",
+4916,"Agile Planning in Action","Customers & Business Value","Tutorial","90 minutes","Civic Ballroom South","Thursday 10:30-12:00","James Shore",
+823,"The Customer Role in Agile Projects","Customers & Business Value","Workshop","90 minutes","Civic Ballroom South","Thursday 14:00-15:30","Mike Stout","lisa shoop"
+1586,"Energize your Strategy through Agility and Innovation","Customers & Business Value","Tutorial","90 minutes","Civic Ballroom South","Thursday 16:00-17:30","Jochen (Joe) Krebs",
+2993,"Dude, Where's Our Release Plan?","Customers & Business Value","Tutorial","90 minutes","Civic Ballroom South","Friday 08:30-10:00","David Hussman",
+553,"Feature Injection","Customers & Business Value","Tutorial","90 minutes","Kent","Tuesday 10:45-12:15","Chris Matts","Julie Chickering"
+1884,"Requirements-Driven Workshops for Large Agile Projects: Essentials for Product, Release and Iteration Planning","Customers & Business Value","Tutorial","180 minutes","Kent","Tuesday 14:00-15:30, Tuesday 16:00-17:30","Ellen Gottesdiener",
+2271,"Barely Sufficient Portfolio Management","Customers & Business Value","Tutorial","180 minutes","Kent","Wednesday 08:30-10:00, Wednesday 10:30-12:00","Todd Little","Kent McDonald"
+1225,"Managing the Middle: Product Owners and the Politics of Backlog Management","Customers & Business Value","Workshop","90 minutes","Kent","Wednesday 14:00-15:30","Luke Hohmann",
+2037,"Release Planning (The Small Card Game)","Customers & Business Value","Tutorial","90 minutes","Kent","Wednesday 16:00-17:30","Chet Hendrickson","Ron Jeffries"
+4712,"The Aikido of Agile Project Metrics","Customers & Business Value","Tutorial","90 minutes","Kent","Thursday 14:00-15:30","Alan Goerner",
+3868,"Exploring user stories through mind mapping","Customers & Business Value","Workshop","90 minutes","Kent","Thursday 16:00-17:30","Kenji Hiranabe","Takeshi Kakeda"
+3051,"Pragmatic Personas: Connecting With Developers Via TDD","User Experience","Tutorial","90 minutes","Dufferin","Tuesday 10:45-12:15","David Hussman",
+1140,"Agile and Paper Prototyping","User Experience","Tutorial","180 minutes","Dufferin","Tuesday 14:00-15:30, Tuesday 16:00-17:30","Todd Zaki Warfel",
+4765,"Mental Models: Sparking Creativity Through Empathy","User Experience","Workshop","180 minutes","Dufferin","Wednesday 08:30-10:00, Wednesday 10:30-12:00","Indi Young",
+4574,"User Interface Design Studio","User Experience","Tutorial","180 minutes","Dufferin","Wednesday 14:00-15:30, Wednesday 16:00-17:30","Jeff White","Jim Ungar"
+4213,"Sketchboards and Prototypes: Agile methods for better and faster UX solutions","User Experience","Tutorial","180 minutes","Dufferin","Thursday 08:30-10:00, Thursday 10:30-12:00","Dan Harrelson","Leah Buley"
+4860,"The User Feedback Two-Step","User Experience","Tutorial","180 minutes","Dufferin","Thursday 14:00-15:30, Thursday 16:00-17:30","Hugh Beyer",
+3860,"The UX Graffiti Wall","User Experience","Other","30 minutes","Dufferin","Friday 08:30-10:00","Peter Roessler","Anshu  Agarwal"
+5097,"Meshing Gears: Real-world examples of how design and development integrate -- and fail to","User Experience","Talk","60 minutes","Dufferin","Friday 08:30-10:00","William Pietri","Amanda Willoughby"
+5082,"Secrets of a Sticky Note Ninja : Rapid Ideation and Problem-Solving with Post-It Notes","User Experience","Workshop","90 minutes","Simcoe&Dufferin","Tuesday 14:00-15:30","Kate Rutter",
+5085,"Postcard Patterns: An Agile Pattern Creation Process","User Experience","Tutorial","90 minutes","Simcoe&Dufferin","Tuesday 16:00-17:30","Ian Swinson","Jason Winters"
+3265,"An Agile Approach to Proposition Assessment","User Experience","Experience report","30 minutes","Simcoe&Dufferin","Wednesday 08:30-10:00","Luke Barrett",
+4391,"User Interface Design in an Agile Environment: The Design Studio Approach","User Experience","Experience report","30 minutes","Simcoe&Dufferin","Wednesday 08:30-10:00","Jim Ungar",
+4790,"Using lightweight analysis techniques to workshop shared solutions","User Experience","Tutorial","90 minutes","Simcoe&Dufferin","Wednesday 10:30-12:00","Luke Barrett",
+542,"Two Case Studies of User Experience Design and Agile Development","User Experience","Experience report","30 minutes","Simcoe&Dufferin","Wednesday 14:00-15:30","Maryam Najafi","Len Toyoshiba"
+4912,"Are You Sure? Really? A Contextual Approach to Agile User Research","User Experience","Experience report","30 minutes","Simcoe&Dufferin","Wednesday 14:00-15:30","Josh Evnin","Marjorie Pries"
+5037,"Using Persona with XP at LANDesk Software, an Avocent Company","User Experience","Experience report","30 minutes","Simcoe&Dufferin","Wednesday 14:00-15:30","David Broschinsky","Lisa Baker"
+3553,"Experience report: Design to Delivery in 7 Weeks","User Experience","Experience report","30 minutes","Simcoe&Dufferin","Wednesday 16:00-17:30","Jade Ohlhauser",
+3679,"Product Innovation is Practical, Important, and Possible","User Experience","Experience report","30 minutes","Simcoe&Dufferin","Wednesday 16:00-17:30","Theresa Smith",
+4316,"U-SCRUM: An Agile Methodology for Promoting Usability","User Experience","Experience report","30 minutes","Simcoe&Dufferin","Wednesday 16:00-17:30","Mona Singh",
+262,"What is user experience? ","User Experience","Other","30 minutes","Simcoe&Dufferin","Thursday 19:00-21:00","Elizabeth Whitworth",
+2188,"Rethinking Unit Testing: xUnit.net","Tools for Agility","Demonstration","90 minutes","Osgoode Ballroom East","Tuesday 10:45-12:15","James Newkirk","Brad Wilson"
+3191,"Tangible Bug Tracking using LEGO bricks","Tools for Agility","Talk","30 minutes","Sheraton Hall A","Tuesday 10:45-12:15","Takeshi Kakeda",
+3793,"See Large Scale Multi-Stage Continuous Integration in Real Time","Tools for Agility","Demonstration","30 minutes","Sheraton Hall A","Tuesday 10:45-12:15","Damon Poole","Joshua Sherwood"
+4424,"APDT: An Agile Planning Tool for Digital Tabletops","Tools for Agility","Demonstration","30 minutes","Sheraton Hall A","Tuesday 10:45-12:15","Xin Wang","Frank Maurer"
+4663,"Maven and Continuum - building an ecosystem for Agile builds and testing","Tools for Agility","Tutorial","180 minutes","Sheraton Hall A","Tuesday 14:00-15:30, Tuesday 16:00-17:30","Christian Gruber",
+3337,"Critical Chain AND Agile - best of friends","Tools for Agility","Tutorial","90 minutes","Sheraton Hall A","Wednesday 08:30-10:00","clarke ching",
+280,"Tools, Frameworks and Libraries: the Devil's work or Manna from Heaven?","Tools for Agility","Workshop","90 minutes","Sheraton Hall A","Wednesday 10:30-12:00","Mike Hill",
+925,"Drifting Toward Invisibility: the transition to the electronic task board","Tools for Agility","Experience report","30 minutes","Sheraton Hall A","Wednesday 14:00-15:30","Tom Perry",
+1929," Pushing the boundaries of testing and Continuous Integration","Tools for Agility","Experience report","30 minutes","Sheraton Hall A","Wednesday 14:00-15:30","Fabrizio Cannizzo","Raghav Ramesh"
+3791,"Migrating from SharePoint to a Better Scrum Tool","Tools for Agility","Experience report","30 minutes","Sheraton Hall A","Wednesday 14:00-15:30","Edward Uy","Rene Rosendahl"
+2959,"Itâ€™s Our Schedule, Letâ€™s Manage It! (Backlogs & Burndowns as tools for Agile Project Planning)","Tools for Agility","Tutorial","90 minutes","Sheraton Hall A","Wednesday 16:00-17:30","Kelly Weyrauch",
+4652,"Using Agile engineering tools and practices to achieve Organizational Change","Tools for Agility","Talk","90 minutes","Sheraton Hall A","Thursday 08:30-10:00","Christian Gruber",
+506,"Evolution of the Tools and Practices of a Large Distributed Agile Team","Tools for Agility","Experience report","30 minutes","Sheraton Hall A","Thursday 10:30-12:00","Fabrizio Cannizzo","Paul Moser"
+2819,"Adopting agile testing practices when legacy tools and practices rule !","Tools for Agility","Talk","30 minutes","Sheraton Hall A","Thursday 10:30-12:00","Xavier Warzee",
+276,"JDemo - lightweight exploratory developer testing","Tools for Agility","Talk","90 minutes","Sheraton Hall A","Thursday 14:00-15:30","Ilja PreuÃŸ",
+3435,"JTestMe - improving test feedback and reducing build times with dynamically defined optimised smoke tests","Tools for Agility","Demonstration","30 minutes","Sheraton Hall A","Thursday 16:00-17:30","Joshua Graham",
+4350,"Workshop on build/test grids and selective testing tools","Tools for Agility","Workshop","90 minutes","Sheraton Hall A","Thursday 16:00-17:30","David Vydra",
+3218,"Collaboration Explained--Tools for Facilitating Real Agile Teams","Tools for Agility","Tutorial","90 minutes","Sheraton Hall A","Friday 08:30-10:00","Jean Tabaka",
+3070,"Test-Driven Ajax","Tools for Agility","Talk","90 minutes","Sheraton Hall B","Tuesday 10:45-12:15","Johannes Link",
+5043,"Mastering Selenium","Tools for Agility","Tutorial","90 minutes","Sheraton Hall B","Tuesday 14:00-15:30","John Tangney",
+4491,"Open source performance testing tools for the web","Tools for Agility","Talk","90 minutes","Sheraton Hall B","Tuesday 16:00-17:30","Paul King","Dalton Cranston"
+4713,"Boosting your testing productivity with Groovy","Tools for Agility","Tutorial","180 minutes","Sheraton Hall B","Wednesday 08:30-10:00, Wednesday 10:30-12:00","Andres Almiray","Ixchel Ruiz"
+4746,"Narrative Testing: Tools for Story Test Driven Development","Tools for Agility","Tutorial","90 minutes","Sheraton Hall B","Wednesday 14:00-15:30","Michael Phoenix","Rand Huso"
+1232,"Executable User Stories with RSpec and BDD","Tools for Agility","Demonstration","90 minutes","Sheraton Hall B","Wednesday 16:00-17:30","Aslak HellesÃ¸y",
+1702,"Text-based Acceptance Testing using TextTest","Tools for Agility","Demonstration","90 minutes","Sheraton Hall B","Thursday 08:30-10:00","Geoffrey Bache","Emily Bache"
+4855,"Domain Specific Testing Languages","Tools for Agility","Tutorial","90 minutes","Sheraton Hall B","Thursday 10:30-12:00","Michael Phoenix","Rand Huso"
+446,"FitNesse Demo","Tools for Agility","Tutorial","90 minutes","Sheraton Hall B","Thursday 14:00-15:30","Naresh Jain",
+400,"Effective test-driven database development","Tools for Agility","Demonstration","90 minutes","Sheraton Hall B","Thursday 16:00-17:30","Gojko Adzic","Marisa Seal"
+2615,"Test Driven Development for Data Management projects using FIT4Data","Tools for Agility","Demonstration","90 minutes","Sheraton Hall B","Friday 08:30-10:00","Adrian Mowat",
+65,"A Model for Questioning Agile","Questioning Agile","Talk","60 minutes","Conference F","Tuesday 10:45-12:15","Jon Bach","Scott Barber"
+4363,"Trying to save a Scrum implementation using Lean Principles and Artifacts","Questioning Agile","Talk","30 minutes","Conference F","Tuesday 10:45-12:15","Rafael Santos",
+4331,"Big Ball of Mud","Questioning Agile","Talk","90 minutes","Conference F","Tuesday 14:00-15:30","Brian Foote",
+3853,"Scale Back: Small is Beautiful","Questioning Agile","Workshop","30 minutes","Conference F","Tuesday 16:00-17:30","Tobias Mayer",
+4891,"Agile is Groovy, Testing is Square","Questioning Agile","Talk","60 minutes","Conference F","Tuesday 16:00-17:30","James Lyndsay",
+1336,"Constituencies and Concerns, Reactions and Aspirations in Developing a Software System - Rev 0.5","Questioning Agile","Other","90 minutes","Conference F","Wednesday 08:30-10:00","James Bullock",
+4462,"The State of IT - Is Agile a symptom of an industry in a midlife crisis? ","Questioning Agile","Talk","90 minutes","Conference F","Wednesday 10:30-12:00","Olav Maassen","Machiel Groeneveld"
+1157,"Agile in Practice: What is ACTUALLY Going On Out There","Questioning Agile","Talk","30 minutes","Conference F","Wednesday 14:00-15:30","Scott Ambler",
+4264,"Why Business Isn't Agile","Questioning Agile","Talk","30 minutes","Conference F","Wednesday 14:00-15:30","Kevin Brennan",
+4904,"When Agile Estimating is not Sufficient - Five Collaborative Techniques to use for Estimating Software Projects Up Front","Questioning Agile","Talk","30 minutes","Conference F","Wednesday 14:00-15:30","Kjetil MolÃ¸kken-Ã˜stvold",
+3903,"Calling All Agile Skeptics, The Curious, and Die-Hard non-Agile","Questioning Agile","Workshop","90 minutes","Conference F","Wednesday 16:00-17:30","Damon Poole",
+3144,"That's Not Agile! Removing Religion From Software Development","Questioning Agile","Workshop","90 minutes","Conference F","Thursday 08:30-10:00","Doug Bradbury",
+4058,"Why So Little Questioning?  Skeptical Humanist Seeks Same for Discrete Afternoon Encounters","Questioning Agile","Other","90 minutes","Conference F","Thursday 10:30-12:00","Michael Bolton",
+3513,"How much compromise is too much â€“ when is Agile no longer agile?","Questioning Agile","Workshop","90 minutes","Conference F","Thursday 14:00-15:30","Bob Screptock","Julie Brooks"
+3292,"Successful Open Source, with little or no Agile","Questioning Agile","Panel","90 minutes","Conference F","Thursday 16:00-17:30","Dennis Byrne","Naresh Jain"
+4160,"Questioning the Perception of Agile","Questioning Agile","Workshop","90 minutes","Conference F","Friday 08:30-10:00","Damon Poole",
+3569,"The Tester Who Came In From the Cold: Helping Testers Make an Agile Transition","Committing to Quality","Tutorial","90 minutes","Conference D","Tuesday 10:45-12:15","Janet Gregory","Lisa Crispin"
+306,"Build Analysis: Questions Answered, Questions Raised","Committing to Quality","Talk","30 minutes","Conference D","Tuesday 14:00-15:30","Adam Goucher",
+4953,"Software is a Princess, Another Mattress Won't Help - Why Small Things Matter in Agile","Committing to Quality","Talk","60 minutes","Conference D","Tuesday 14:00-15:30","Patrick Farley","Zak Tamsen"
+4297,"Agile Deployment:  Lean Configuration Management and Deployment Strategies for the Agile SaaS Enterprise","Committing to Quality","Talk","60 minutes","Conference D","Tuesday 16:00-17:30","Robert Benefield",
+4937,"Fast & Predictable â€“ A Lightweight Release Framework Promotes Agility through Rhythm and Flow","Committing to Quality","Experience report","30 minutes","Conference D","Tuesday 16:00-17:30","amy farrow","Steve Greene"
+2550,"XUnit Test Patterns and Smells"," Improving Test Code and Testability Through Refactoring","Committing to Quality","Tutorial","180 minutes","Conference D","Wednesday 08:30-10:00, Wednesday 10:30-12:00","Gerard Meszaros"
+2646,"Skills for the Agile Designer","Committing to Quality","Tutorial","180 minutes","Conference D","Wednesday 14:00-15:30, Wednesday 16:00-17:30","Rebecca Wirfs-Brock",
+568,"Using TDD with Concurrent Applications","Committing to Quality","Workshop","180 minutes","Conference D","Thursday 08:30-10:00, Thursday 10:30-12:00","Brett Schuchert","David Nunn"
+1659,"What Is Your Unit Testing Philosophy?","Committing to Quality","Tutorial","90 minutes","Conference D","Thursday 14:00-15:30","Alistair McKinnell","Jason Cheong-Kee-You"
+2795,"Measuring the Effect of TDD","Committing to Quality","Workshop","90 minutes","Conference D","Thursday 16:00-17:30","Keith Braithwaite",
+2109,"Effective Pairing: The Good, the Bad, and the Ugly","Committing to Quality","Demonstration","90 minutes","Conference D","Friday 08:30-10:00","Dave Nicolette",
+2107,"Paving the way for Agile Testing","Committing to Quality","Talk","60 minutes","Conference E","Thursday 08:30-10:00","Eric Jimmink",
+3717,"Agile Teams Require Agile QA: How we made it work.","Committing to Quality","Experience report","30 minutes","Conference E","Thursday 08:30-10:00","Kealy Opelt","Tracy Beeson"
+375,"Robust Performance of Complex Systems","Committing to Quality","Workshop","90 minutes","Conference E","Thursday 10:30-12:00","Michael Nygard","Mary Poppendieck"
+2306,"Use-Case Recording: Testing a rich client UI by recording in a domain-specific language","Committing to Quality","Talk","45 minutes","Conference E","Thursday 14:00-15:30","Geoffrey Bache",
+4414,"Maintain High Quality Web Applications with a Green Web Acceptance Build that Runs Under 10 minutes","Committing to Quality","Talk","45 minutes","Conference E","Thursday 14:00-15:30","Philippe Hanrigou",
+3776,"Automated Functional Testing on the TransCanada Alberta Gas Accounting Program of Projects","Committing to Quality","Experience report","30 minutes","Conference E","Thursday 16:00-17:30","Stelios Pantazopoulos","Stephen  Marsh"
+4463,"Technical lessons learned turning the agile dials to eleven!","Committing to Quality","Experience report","30 minutes","Conference E","Thursday 16:00-17:30","Paul King","Craig Smith"
+4627,"Leading Manual Test Efforts with Agile Methods","Committing to Quality","Experience report","30 minutes","Conference E","Thursday 16:00-17:30","Adam Geras",
+3149,"""Dear XP"" -- a song at the banquet party","Main Stage","Other","30 minutes","Grand Ballroom (combined)","Thursday 19:00-21:00","Kenji Hiranabe","Yukie Kushida"
+4178,"Introduction to Lean Software Development","Main Stage","Tutorial","90 minutes","Grand Ballroom (Center)","Tuesday 14:00-15:30","Alan Shalloway",
+2549,"Agile by any other name does NOT smell as sweet!","Main Stage","Talk","90 minutes","Grand Ballroom (Center)","Tuesday 16:00-17:30","Jennitta Andrea",
+1817,"Embrace Uncertainty, why in Agile development knowing what you want may be an impediment to getting it","Main Stage","Talk","90 minutes","Grand Ballroom (Center)","Wednesday 08:30-10:00","Jeff Patton",
+4049,"10 ways to screw up with Scrum and XP","Main Stage","Talk","90 minutes","Grand Ballroom (Center)","Wednesday 10:30-12:00","Henrik Kniberg",
+1661,"Typical Pitfalls in Agile Software Development ","Main Stage","Talk","90 minutes","Grand Ballroom (Center)","Wednesday 14:00-15:30","Jutta Eckstein",
+3526,"Don't Sell Buzzwords to Business Leaders, Learn How to Describe and Demonstrate Real Value","Main Stage","Talk","90 minutes","Grand Ballroom (Center)","Wednesday 14:00-15:30","Richard Sheridan","Clement ""James"" Goebel"
+2240,"Scaling Software Agility: Best Practices for Large Enterprises","Main Stage","Tutorial","90 minutes","Grand Ballroom (Center)","Wednesday 16:00-17:30","Dean Leffingwell",
+3512,"Future Directions for Agile","Main Stage","Talk","90 minutes","Grand Ballroom (Center)","Thursday 08:30-10:00","David Anderson",
+5130,"Measuring Agile in the Enterprise: 5 Success Factors for Large-Scale Agile Adoption ","Main Stage","Talk","90 minutes","Grand Ballroom (Center)","Thursday 10:30-12:00","Michael Mah",
+6055,"The Economics of Agile: The competitive advantage of developing commercial software with Agile methods.","Main Stage","Talk","90 minutes","Grand Ballroom (Center)","Thursday 14:00-15:30","Sue McKinney","Ted Rivera"
+2029,"Expanding Agile Horizons:  The Five Dimensions of Systems","Main Stage","Talk","90 minutes","Grand Ballroom (East)","Tuesday 10:45-12:15","Mary Poppendieck",
+1105,"Agile Estimating and Planning","Main Stage","Tutorial","180 minutes","Grand Ballroom (East)","Tuesday 14:00-15:30, Tuesday 16:00-17:30","Mike Cohn",
+2041,"Natural Laws of Software Development - Deriving Agile Practices","Main Stage","Talk","90 minutes","Grand Ballroom (East)","Wednesday 08:30-10:00","Ron Jeffries","Chet Hendrickson"
+6798,"Resistance as a Resource","Main Stage","Talk","90 minutes","Grand Ballroom (East)","Wednesday 08:30-10:00","Dale Emery",
+1637,"Who Do You Trust?","Main Stage","Talk","90 minutes","Grand Ballroom (East)","Wednesday 10:30-12:00","Linda Rising",
+1598,"Ancient Philosophers & Blowhard Jamborees","Main Stage","Talk","90 minutes","Grand Ballroom (East)","Wednesday 16:00-17:30","Neal Ford",
+1945,"My First, Shortest, and, Most Recent Agile Testing Frameworks","Main Stage","Talk","90 minutes","Grand Ballroom (East)","Thursday 08:30-10:00","Ward Cunningham",
+2787,"From High-performing to Hyper-performing Agile teams","Main Stage","Panel","90 minutes","Grand Ballroom (East)","Thursday 10:30-12:00","gabrielle benefield",
+5069,"""We suck less!"" Isn't mediocrity great?","Main Stage","Talk","90 minutes","Grand Ballroom (East)","Thursday 14:00-15:30","David Douglas","Robin Dymond"
+4303,"What Haven't You Noticed Lately: Achieving awareness in a complex world","Main Stage","Talk","90 minutes","Grand Ballroom (East)","Thursday 14:00-15:30","Mark Federman",
+3753,"Lightning talks","Main Stage","Other","90 minutes","Grand Ballroom (East)","Thursday 16:00-17:30","Steve Freeman",
+3091,"Agility and SOA - Experiences with System Landscapes under Maintenance","Main Stage","Talk","90 minutes","Grand Ballroom (East)","Friday 08:30-10:00","Nicolai Josuttis",
+3367,"Open Source Businesses and Developer Careers","Main Stage","Talk","90 minutes","Grand Ballroom (West)","Tuesday 10:45-12:15","Dirk Riehle",
+836,"Ten Terrific Transition Tips","Main Stage","Talk","90 minutes","Grand Ballroom (West)","Tuesday 14:00-15:30","Joshua Kerievsky",
+2429,"Trouble with component teams and an alternative","Main Stage","Talk","90 minutes","Grand Ballroom (West)","Tuesday 16:00-17:30","Bas Vodde",
+4614,"Stop Thinking So Small with Agile","Main Stage","Talk","45 minutes","Grand Ballroom (West)","Wednesday 08:30-10:00","Ryan Martens","Jean Tabaka"
+4880,"Driving Agile Transformation from the Top Down","Main Stage","Talk","45 minutes","Grand Ballroom (West)","Wednesday 08:30-10:00","Peter  Morowski",
+3419,"Pressure and Performance: The CTO's Dilemma","Main Stage","Talk","90 minutes","Grand Ballroom (West)","Wednesday 10:30-12:00","Diana Larsen","James Shore"
+2990,"Coaches Are Producers","Main Stage","Talk","90 minutes","Grand Ballroom (West)","Wednesday 14:00-15:30","David Hussman",
+2715,"Leading Agile Teams ","Main Stage","Talk","90 minutes","Grand Ballroom (West)","Wednesday 16:00-17:30","Mike Griffiths",
+2054,"New arrows for the Agile quiver: Now that the team's head is in the game, how do you get their heart in?","Main Stage","Talk","90 minutes","Grand Ballroom (West)","Thursday 08:30-10:00","jim mccarthy",
+4259,"Good Virus / Bad Virus: How Organization Culture Impacts Agile Adoptions (and Vice Versa)","Main Stage","Talk","90 minutes","Grand Ballroom (West)","Thursday 10:30-12:00","Michael Spayd",
+4343,"Agile and Beyond - The power of aspirational teams!","Main Stage","Talk","90 minutes","Grand Ballroom (West)","Thursday 14:00-15:30","Tim Mackinnon",
+1909,"Do the Right Things: Adapting Requirements Practices for Agile Projects","Main Stage","Talk","90 minutes","Grand Ballroom (West)","Friday 08:30-10:00","Ellen Gottesdiener",
