@@ -117,7 +117,7 @@ ALTER SEQUENCE speakers_id_seq OWNED BY speakers.id;
 -- Name: speakers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('speakers_id_seq', 1479, true);
+SELECT pg_catalog.setval('speakers_id_seq', 1496, true);
 
 
 --
@@ -672,7 +672,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 25	20020025
 26	20020025
 10	20020026
-27	20020027
 28	20020027
 29	20020028
 30	20020029
@@ -722,7 +721,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 413	20070794
 486	20070404
 487	20070404
-58	20070655
 488	20070435
 332	20070865
 75	20070730
@@ -754,7 +752,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 503	20070722
 504	20070959
 505	20070959
-58	20070649
 90	20070645
 506	20070645
 507	20070645
@@ -773,7 +770,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 513	20070932
 122	20070627
 57	20030049
-58	20030050
 11	20030051
 59	20030052
 60	20030053
@@ -791,7 +787,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 70	20030061
 1	20030062
 28	20030063
-71	20030063
 35	20030064
 72	20030071
 73	20030072
@@ -866,7 +861,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 339	20070605
 100	20070718
 285	20070425
-527	20070425
 528	20070425
 90	20070992
 113	20070830
@@ -876,13 +870,10 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 44	20040105
 108	20040106
 109	20040107
-110	20040108
-111	20040109
 112	20040110
 113	20040111
 60	20040112
 100	20040113
-114	20040114
 115	20040115
 1	20040116
 75	20040117
@@ -908,14 +899,11 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 129	20040128
 130	20040128
 131	20040128
-132	20040128
 133	20040129
 134	20040129
-135	20040129
 45	20040129
 136	20040130
 137	20040131
-138	20040131
 139	20040131
 140	20040132
 141	20040133
@@ -930,48 +918,31 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 68	20040139
 98	20040140
 26	20040140
-150	20040140
 151	20040141
 152	20040141
-153	20040141
 154	20040142
 22	20040142
-155	20040142
 156	20040143
 157	20040143
 96	20040143
 95	20040143
 158	20040143
-159	20040144
 160	20040145
-161	20040145
 162	20040146
-163	20040146
 164	20040147
-153	20040147
 165	20040148
-166	20040148
 35	20040148
-167	20040148
 168	20040149
-169	20040149
 170	20040150
-171	20040150
-172	20040150
 173	20040151
 174	20040151
 123	20040151
 122	20040151
 175	20040152
-176	20040152
 177	20040152
 178	20040153
-179	20040153
 10	20040154
-180	20040154
 181	20040154
-182	20040154
-529	20070635
 530	20070948
 531	20070825
 532	20070829
@@ -1033,15 +1004,11 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 345	20060361
 46	20060362
 28	20060362
-192	20060363
 121	20060364
 57	20050155
 75	20050156
 84	20050157
-183	20050158
-184	20050158
 46	20050159
-185	20050159
 28	20050159
 45	20050160
 147	20050161
@@ -1054,23 +1021,16 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 189	20050165
 35	20050165
 46	20050166
-185	20050166
 28	20050166
 37	20050167
 113	20050168
 108	20050169
-190	20050170
 191	20050170
 100	20050171
-192	20050172
 43	20050173
 70	20050174
-193	20050174
 69	20050174
-194	20050174
-195	20050174
 196	20050175
-197	20050175
 198	20050175
 199	20050176
 200	20050176
@@ -1086,9 +1046,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 207	20050183
 115	20050183
 41	20050184
-208	20050185
-209	20050186
-210	20050186
 211	20050187
 212	20050188
 213	20050188
@@ -1104,7 +1061,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 222	20050195
 202	20050196
 223	20050197
-224	20050197
 225	20050198
 226	20050199
 227	20050200
@@ -1128,7 +1084,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 242	20050212
 65	20050213
 243	20050214
-244	20050215
 245	20050216
 82	20050216
 246	20050217
@@ -1136,7 +1091,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 162	20050218
 44	20050219
 177	20050220
-248	20050220
 175	20050220
 94	20050221
 237	20050221
@@ -1165,16 +1119,12 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 259	20050233
 48	20050233
 260	20050234
-261	20050234
 54	20050234
 30	20050235
-262	20050235
 263	20050236
-264	20050236
 265	20050237
 266	20050237
 267	20050238
-138	20050239
 267	20050239
 51	20050239
 268	20050240
@@ -1182,18 +1132,9 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 269	20050241
 270	20050242
 271	20050242
-262	20050242
 272	20050243
-273	20050244
-274	20050244
-275	20050244
-276	20050244
 187	20050245
 277	20050245
-278	20050246
-279	20050246
-280	20050246
-281	20050246
 43	20050249
 282	20050250
 282	20050251
@@ -1201,7 +1142,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 206	20050253
 252	20050253
 198	20071066
-58	20070648
 239	20070434
 373	20070434
 398	20070464
@@ -1259,7 +1199,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 428	20070666
 196	20070381
 198	20070381
-429	20070806
 430	20070806
 431	20070806
 432	20070489
@@ -1301,7 +1240,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 454	20070942
 455	20070452
 456	20070856
-457	20070856
 396	20070856
 108	20070361
 8	20071067
@@ -1354,7 +1292,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 377	20060390
 287	20060390
 378	20060391
-331	20060392
 342	20060393
 219	20060394
 379	20060394
@@ -1393,7 +1330,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 396	20060419
 397	20060419
 8	20060420
-331	20060420
 70	20060254
 272	20060255
 108	20060256
@@ -1401,7 +1337,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 84	20060257
 203	20060257
 284	20060258
-192	20060258
 11	20060259
 37	20060261
 285	20060262
@@ -1419,14 +1354,12 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 288	20060270
 289	20060271
 269	20060271
-290	20060272
 291	20060273
 292	20060273
 293	20060274
 14	20060274
 249	20060276
 258	20060277
-294	20060277
 286	20060278
 295	20060279
 296	20060280
@@ -1483,7 +1416,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 108	20060314
 293	20060315
 14	20060315
-192	20060316
 324	20060317
 239	20060318
 325	20060318
@@ -1493,13 +1425,11 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 310	20060321
 309	20060321
 326	20060322
-327	20060322
 328	20060323
 329	20060324
 196	20060324
 267	20060325
 330	20060325
-331	20060326
 332	20060327
 333	20060328
 334	20060328
@@ -1522,7 +1452,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 468	20070724
 469	20070724
 66	20070724
-470	20070724
 45	20070968
 471	20070968
 472	20071070
@@ -1543,7 +1472,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 14	20071072
 546	20070563
 547	20070563
-548	20071074
 121	20071032
 549	20070967
 57	20070375
@@ -1650,7 +1578,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 541	20070978
 520	20070817
 593	20070817
-594	20070479
 595	20070479
 121	20071034
 596	20070623
@@ -1687,7 +1614,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 94	20070547
 332	20070547
 28	20070547
-609	20070547
 122	20070686
 610	20070686
 70	20070437
@@ -1709,7 +1635,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 618	20070532
 108	20070366
 619	20070540
-192	20070414
 68	20071038
 620	20070989
 621	20070989
@@ -1766,7 +1691,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 657	20082404
 658	20084261
 659	20084261
-660	20085008
 661	20080257
 662	20083373
 663	20083782
@@ -1812,7 +1736,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 688	20083485
 623	20084682
 689	20084682
-192	20083629
 690	20081179
 691	20081179
 126	20082769
@@ -1824,7 +1747,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 697	20081647
 373	20082656
 239	20082656
-698	20082650
 366	20082650
 65	20080374
 372	20081291
@@ -1886,7 +1808,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 243	20081753
 720	20080936
 151	20080936
-721	20083059
 722	20084942
 288	20080240
 723	20084338
@@ -1941,7 +1862,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 751	20084854
 464	20084854
 676	20082989
-192	20082989
 29	20084593
 342	20080443
 177	20082381
@@ -2019,10 +1939,8 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 789	20080789
 790	20080833
 791	20080966
-594	20081573
 792	20081573
 386	20083632
-793	20083876
 198	20083876
 794	20083489
 795	20083489
@@ -2196,7 +2114,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 882	20084713
 448	20084746
 450	20084746
-883	20081232
 559	20081702
 884	20081702
 448	20084855
@@ -2275,7 +2192,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 70	20081637
 757	20081598
 13	20081945
-917	20082787
 669	20085069
 312	20085069
 918	20084303
@@ -2291,7 +2207,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 406	20083419
 283	20082990
 269	20082715
-922	20082054
 73	20084259
 141	20084343
 100	20081909
@@ -2331,7 +2246,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 940	20092506
 941	20092902
 73	20093201
-942	20090111
 943	20090145
 944	20090189
 945	20090284
@@ -2401,7 +2315,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 786	20092859
 729	20092859
 991	20092884
-992	20092884
 993	20092898
 763	20093030
 994	20093032
@@ -2421,7 +2334,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 808	20090512
 84	20090512
 1002	20090681
-793	20090986
 1003	20090090
 661	20090123
 1004	20090162
@@ -2452,11 +2364,8 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 671	20090494
 65	20090526
 65	20090532
-192	20090553
-1016	20090560
 767	20090649
 215	20090649
-192	20090650
 344	20090715
 1017	20090782
 827	20090800
@@ -2558,9 +2467,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 1056	20090397
 1057	20090400
 70	20090407
-1058	20090409
-1058	20090410
-1058	20090411
 426	20090438
 426	20090440
 165	20090480
@@ -2576,7 +2482,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 1061	20090622
 936	20090705
 744	20090705
-192	20090708
 794	20090727
 100	20090742
 1062	20090747
@@ -2586,9 +2491,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 39	20090878
 344	20090878
 1064	20090879
-793	20090879
-331	20090908
-331	20090909
 435	20090926
 140	20090926
 115	20090951
@@ -2635,7 +2537,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 504	20092763
 1075	20092763
 492	20092804
-917	20092921
 66	20092921
 73	20092957
 350	20093056
@@ -2737,7 +2638,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 620	20105677
 1110	20105677
 11	20105202
-1058	20105285
 663	20105285
 757	20108588
 187	20106008
@@ -2750,7 +2650,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 432	20105213
 1071	20105213
 1113	20105990
-331	20108616
 337	20105860
 443	20105302
 299	20106362
@@ -2788,7 +2687,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 866	20105873
 287	20105900
 800	20106287
-1122	20105907
 1123	20105907
 45	20106368
 745	20105153
@@ -2806,7 +2704,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 1129	20105565
 1130	20105565
 1131	20105533
-660	20105533
 443	20105383
 312	20106245
 1132	20106245
@@ -2869,7 +2766,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 1153	20106379
 866	20105942
 1037	20105804
-1154	20105243
 202	20105243
 673	20105643
 712	20105420
@@ -2920,7 +2816,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 1	20106179
 11	20105200
 108	20105527
-1058	20105288
 1176	20105515
 1177	20106277
 1006	20105241
@@ -3025,7 +2920,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 1216	8765
 389	8773
 1106	8774
-1058	8780
 444	8782
 432	8785
 1071	8785
@@ -3049,10 +2943,8 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 344	8849
 205	8854
 361	8855
-1154	8857
 202	8858
 1067	8858
-1154	8859
 1225	8860
 1226	8860
 473	8867
@@ -3077,7 +2969,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 1071	8912
 933	8917
 98	8918
-992	8918
 1233	8920
 337	8921
 1234	8923
@@ -3182,7 +3073,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 866	9212
 1037	9213
 1167	9213
-1271	9215
 187	9219
 555	9219
 1272	9228
@@ -3202,11 +3092,9 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 1279	9504
 1280	9544
 1281	9544
-331	9574
 1282	9604
 1025	9615
 328	9615
-331	9655
 655	9701
 770	9764
 656	9906
@@ -3225,7 +3113,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 498	10580
 936	10596
 1288	10636
-1058	10636
 147	10686
 1289	10782
 1056	10877
@@ -3412,7 +3299,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 923	13095
 1238	13129
 1311	13129
-1058	13134
 400	13139
 292	13139
 372	13159
@@ -3445,7 +3331,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 1291	13411
 1393	13424
 1394	13425
-1058	13427
 663	13427
 1395	13429
 1382	13429
@@ -3535,8 +3420,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 1322	14718
 1428	14718
 1429	14737
-331	14749
-331	14751
 913	14752
 905	14792
 1037	14792
@@ -3626,7 +3509,6 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 936	16677
 283	16678
 337	16679
-331	16680
 1315	16681
 84	16682
 70	16683
@@ -3639,14 +3521,45 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 1469	16690
 1470	16691
 1471	16691
-1472	16692
-1473	16692
 1474	16693
 1475	16693
 1476	16694
 1477	16694
-1478	16695
-1479	16696
+11	20050246
+57	20050244
+108	20050244
+239	20050244
+1480	20050246
+1481	20050246
+839	20070806
+1	20040144
+84	20040144
+26	8918
+26	20092884
+1482	16696
+1483	16696
+1484	16696
+1485	20040128
+1486	12662
+1487	12662
+1488	20060375
+14	20040108
+122	12648
+54	16692
+90	16695
+91	16695
+1489	16694
+65	20060277
+1125	12656
+1490	20040104
+66	20040109
+1491	12659
+1492	16693
+1493	12657
+46	20040114
+1494	16694
+1495	16694
+1496	16692
 \.
 
 
@@ -5795,7 +5708,6 @@ COPY speakers (id, name) FROM stdin;
 24	Barry Boehm
 25	Kuryan Thomas
 26	Arlen Bankston
-27	William Wake
 28	Ron Jeffries
 29	Michael Hill
 30	Laurie Williams
@@ -5827,7 +5739,6 @@ COPY speakers (id, name) FROM stdin;
 56	Duff O'Melia
 4	Fernando Naveda
 57	Jim Highsmith
-58	Robert C. Martin
 59	Craig Larman
 60	Jeff De Luca
 61	Larry Constantine
@@ -5838,7 +5749,6 @@ COPY speakers (id, name) FROM stdin;
 68	Steve Berczuk
 69	Mary Lynn Manns
 70	Linda Rising
-71	William C. Wake
 72	Jim Little
 73	Michael Spayd
 74	Jari Vanhanen
@@ -5873,14 +5783,10 @@ COPY speakers (id, name) FROM stdin;
 104	David Socha
 105	Jeff McKenna
 106	Forrest Shull
-107	Manish Shah & Damian Guy
 108	Mike Cohn
 109	Ron Crocker
-110	Elisabeth Hendrickson & Brian Marick
-111	Mary Poppendieck & Tom Poppendieck
 112	Eric Evans
 113	Rebecca Wirfs-Brock
-114	Ron Jeffries & Chet Hendrickson
 115	Luke Hohmann
 116	Jim Newkirk
 117	Anuja Shukla
@@ -5894,17 +5800,10 @@ COPY speakers (id, name) FROM stdin;
 125	Yoshihito Kuranuki
 126	Kenji Hiranabe
 127	Greg Luck
-128	Jackson
-129	Tsang
-130	Gray
-131	Driver
-132	Clarke
 133	Alan Harriman
 134	Michael Leo
-135	Caribou Lake
 136	Bill Greene
 137	Colin R
-138	
 139	Bruce Eckfeldt
 140	Todd Little
 141	Tim Mackinnon
@@ -5916,57 +5815,36 @@ COPY speakers (id, name) FROM stdin;
 147	Nancy Van Schooenderwoert
 148	Ron Morsicato
 149	Jeff Langr
-150	CC Pace
 151	Dan North
 152	Richard Watt
-153	Thoughtworks
 154	Jeff Grover
-155	Symantec
 156	Debbie Utley
 157	Bob Evans
 158	Ken Scott-Hlebek
-159	Alistair Cockburn & Jeff Patton
 160	John Brewer
-161	Google
 162	Ole Jepsen
-163	Cap Gemini
 164	Joe Walnes
 165	Janet Gregory
-166	Wireless-Matrix Corporation
-167	Fast401k Inc
 168	Alan Cameron Wills
-169	Microsoft
 170	Scott Duncan
-171	IEEE SW Engineering St
-172	ards Committee
 173	Rilla Khaled
 174	Pippin Barr
+130	Alan Gray
+131	Cormac Driver
+129	Shiu Lun Tsang
+128	Andrew Jackson
+107	Manish Shah
 175	Jeremy Brown
-176	Utah State University
 177	Kay Johansen
 178	John Daniels
-179	Syntropy Ltd
-180	ADM
 181	Esther Derby
-182	Esther Derby Associates
-183	Esther Derby - esther derby associates
-184	Diana Larsen - FutureWorks Consulting
-185	AgileSoftwareDevelopment.org
 186	David Kramer
 187	Jean Tabaka
 188	Boris Gloger
 189	Anko Tijman
-190	Bret Pettichord - Thoughtworks
-191	Paul Rogers - Wireless Matrix
-192	J. B. Rainsberger
-193	Independent consultant
-194	University of North Carolina
-195	at Asheville
 196	Orit Hazzan
-197	Israel Institute of Technology
 198	Yael Dubinsky
 199	Michele Sliger - Author
-200	Alicia Yanik- Author
 201	Max Baumann
 202	Gil Broza
 203	Julias Shaw
@@ -5974,9 +5852,6 @@ COPY speakers (id, name) FROM stdin;
 205	Pollyanna Pixton
 206	Jeff Nielsen
 207	Ryan Martens
-208	Michael Feathers - ObjectMentor
-209	Bob Schatz - Solstice Software
-210	Ken Schwaber - Scrum Alliance
 211	Roy I. Morien
 212	Salim Nair
 213	Prasad Ramnath
@@ -5990,7 +5865,6 @@ COPY speakers (id, name) FROM stdin;
 221	Rex Madden
 222	John Horowitz
 223	Constance M. Tartaglia
-224	Primavera Systems
 225	Richard K Cheng
 226	Steven W. Baker
 227	David J. Anderson
@@ -6010,11 +5884,9 @@ COPY speakers (id, name) FROM stdin;
 241	Jon Spence
 242	Shawn Learn
 243	Steve Freeman
-244	Scott Duncan  IEEE S2ESC
 245	Robert S. Sfeir
 246	Pam Rostal
 247	David West
-248	The Church of Jesus Christ of Latter-Day Saints
 249	Christopher Avery
 250	Tobias Mayer
 251	Christian Hessler
@@ -6027,10 +5899,7 @@ COPY speakers (id, name) FROM stdin;
 258	Kent Beck
 259	Dale Emery
 260	Chris Mann
-261	University Of Calgary Dept of Computer Science
-262	North Carolina State University
 263	Cyril M. Coupal
-264	Saskatchewan Institute of Applied Science and Technology (SIAST)
 265	Andy Tinkham
 266	Cem Kaner
 267	Joseph Chao
@@ -6039,15 +5908,7 @@ COPY speakers (id, name) FROM stdin;
 270	Kelli M. Slaten
 271	Sarah B. Berenson
 272	Hubert Smits
-273	Agile Requirements with User Stories by Gerard Meszaros
-274	Release and Iteration Planning by Mike Cohn
-275	Agile Project Management by Jim Highsmith
-276	Acceptance Testing with FIT and FitNesse by Rick Mugridge & Ward Cunningham
 277	Bob Martin
-278	Project Automation by Mike Clark
-279	Test Driven Development J.B. Rainsberger
-280	Agile Model Driven Development (AMDD) by Scott Ambler
-281	Agile Database Techniques by Scott Ambler
 282	Tim Snyder
 283	David Hussman
 284	Gareth Powell
@@ -6056,11 +5917,9 @@ COPY speakers (id, name) FROM stdin;
 287	Dan Rawsthorne
 288	Keith Braithwaite
 289	Anthony Cabri
-290	Nils C. Haugen
 291	Tamara Sulaiman
 292	Brent Barton
 293	Bill Wake
-294	Ken Schwaber, ScrumAlliance Mary Poppendieck, Poppendieck, LLC
 295	Bob Schatz
 296	Sam Newman
 297	Rob Westgeest
@@ -6093,11 +5952,11 @@ COPY speakers (id, name) FROM stdin;
 324	Dorothy Tudor
 325	Geoff Hardy
 326	Desi McAdam
-327	Aslak Hellesoy
 328	Steve Adolph
 329	David Talby
 330	Gulgunes Atli
-331	Robert Martin
+200	Alicia Yanik
+191	Paul Rogers
 332	Michael Feathers
 333	Jez Humble
 334	Chris Read
@@ -6136,7 +5995,6 @@ COPY speakers (id, name) FROM stdin;
 367	Antawan Holmes
 368	Marc Kellogg
 369	Micah Alles
-370	David Crosby, Carl Erickson
 371	Jeff McClure
 372	Johanna Rothman
 373	Janice Aston
@@ -6195,7 +6053,6 @@ COPY speakers (id, name) FROM stdin;
 426	Pete Behrens
 427	Von Rhea
 428	Sue Holstad
-429	Alan De Ste Croix
 430	Alan Armitage
 431	Peter Wisniewski
 432	Ahmed Sidky
@@ -6223,7 +6080,6 @@ COPY speakers (id, name) FROM stdin;
 454	Brian Hanks
 455	Joe Little
 456	Alexia Bowers
-457	Brian J Robertson
 458	Ash Tengshe
 459	Scott Noble
 460	Carol A. Wellington
@@ -6235,8 +6091,6 @@ COPY speakers (id, name) FROM stdin;
 466	Dr. Cyril Coupal
 467	Evan Campbell
 468	Werner Wild
-469	Barbara Weber
-470	Willem
 471	Justin Yaros
 472	Al Goerner
 473	George Dinwiddie
@@ -6269,6 +6123,8 @@ COPY speakers (id, name) FROM stdin;
 500	Robert C Fischer
 501	Sarah Edrie Oliveira
 502	Susan Borges
+370	David Crosby
+469	Barbara Weber-Willem
 503	Jennifer Gilmore
 504	Ronica Roth
 505	Amy J. Zuckerman
@@ -6293,9 +6149,7 @@ COPY speakers (id, name) FROM stdin;
 524	Bill McMichael
 525	Marc Lombardi
 526	Stacia Broderick
-527	Carsten R. Jakobsen
 528	Kent Johnson
-529	Hugh R. Beyer
 530	Shaun Bradshaw
 531	Jay Packlick
 532	Jason Chong Lee
@@ -6314,7 +6168,6 @@ COPY speakers (id, name) FROM stdin;
 545	Vaclav Rajlich
 546	Heather Williams
 547	Andrew Ferguson
-548	Dorothy J Tudor
 549	Bob Myers
 550	Thom W. Vincent
 551	Paul W Pagel
@@ -6351,7 +6204,6 @@ COPY speakers (id, name) FROM stdin;
 582	Scott Coburn
 583	Rajeev Bellubbi
 584	Michelle Williams
-585	Eric GROISE
 586	Nicolas Mangin
 587	Steve Bockman
 588	Tom Sulston
@@ -6360,7 +6212,6 @@ COPY speakers (id, name) FROM stdin;
 591	Brad Murphy
 592	Mike Lowery
 593	Scott Gatz
-594	Ken H. Judy
 595	Ilio Krumins-Beens
 596	Jamie Dinkelacker
 597	Jeff Ward
@@ -6375,7 +6226,6 @@ COPY speakers (id, name) FROM stdin;
 606	Sergei Andrzeevski
 607	Markus Hjort
 608	Kirk Knoernschild
-609	Jochen Krebs
 610	Claire Dormann
 611	Julie Brooks
 612	Peter Provost
@@ -6423,10 +6273,8 @@ COPY speakers (id, name) FROM stdin;
 654	Doug Rosenberg
 655	Don McGreal
 656	Michael McCullough
-657	garry berteig
 658	Danilo Sato
 659	Mariana Bravo
-660	Laurie  Williams
 661	Brandon Carlson
 662	Susan Shaye
 663	Pat Reed
@@ -6438,6 +6286,8 @@ COPY speakers (id, name) FROM stdin;
 669	David Douglas
 670	Liz Sedley
 671	Scott Dillman
+585	Eric Groise
+657	Garry Berteig
 672	lisa shoop
 673	Lyssa Adkins
 674	Mike Cottmeyer
@@ -6464,13 +6314,9 @@ COPY speakers (id, name) FROM stdin;
 695	Rasmus Mencke
 696	Matthew D Edwards
 697	Lynne Ralston
-698	Wednesday 16:00-17:30
 699	David Spann
 700	Rachel Weston
-701	clarke ching
-702	graeme thomas
 703	Bernard Notarianni
-704	chris louvion
 705	Kelly Snavely
 706	Tania Broome
 707	Christoph Steindl
@@ -6487,7 +6333,6 @@ COPY speakers (id, name) FROM stdin;
 718	Gilles Mantel
 719	Jennifer Gonsalves
 720	Elizabeth Keogh
-721	erik petersen
 722	Jeremy Kominar
 723	Brian Foote
 724	Douglas Shimp
@@ -6507,7 +6352,6 @@ COPY speakers (id, name) FROM stdin;
 738	Edward Uy
 739	Nikos Ioannou
 740	Syed Rayhan
-741	Nimat  Haque
 742	Lars Arne SkÃ¥r
 743	Jan-Erik Sandberg
 744	Chris Sims
@@ -6559,7 +6403,6 @@ COPY speakers (id, name) FROM stdin;
 790	Joe Fecarotta
 791	Sumit Gupta
 792	Steven "Doc" List
-793	Orit  Hazzan
 794	Mike Russell
 795	Amy Levine
 796	Ken Long
@@ -6598,7 +6441,6 @@ COPY speakers (id, name) FROM stdin;
 829	Joseph Little
 830	Andy Pols
 831	Ryan Shriver
-832	evan campbell
 833	Artem Marchenko
 834	Thad Scheer
 835	Joseph C Thomas
@@ -6606,7 +6448,11 @@ COPY speakers (id, name) FROM stdin;
 837	Tod Golding
 838	Teresa Franklin
 839	Alan de Ste Croix
-840	alan  easton
+704	Chris Louvion
+701	Clarke Ching
+832	Evan Campbell
+702	Graeme Thomas
+741	Nimat Haque
 841	Angela Vinci
 842	Takeshi Kakeda
 843	Todd Zaki Warfel
@@ -6649,7 +6495,6 @@ COPY speakers (id, name) FROM stdin;
 880	Dalton Cranston
 881	Andres Almiray
 882	Ixchel Ruiz
-883	Aslak HellesÃ¸y
 884	Emily Bache
 885	Gojko Adzic
 886	Marisa Seal
@@ -6668,7 +6513,6 @@ COPY speakers (id, name) FROM stdin;
 899	Patrick Farley
 900	Zak Tamsen
 901	Robert Benefield
-902	amy farrow
 903	Brett Schuchert
 904	David Nunn
 905	Alistair McKinnell
@@ -6683,12 +6527,10 @@ COPY speakers (id, name) FROM stdin;
 914	David Anderson
 915	Michael Mah
 916	Sue McKinney
-917	gabrielle benefield
 918	Mark Federman
 919	Nicolai Josuttis
 920	Dirk Riehle
 921	Peter  Morowski
-922	jim mccarthy
 923	Corey Haines
 924	BJ Allmon
 925	Jesse Fewell
@@ -6696,7 +6538,6 @@ COPY speakers (id, name) FROM stdin;
 927	Eric Smith
 928	Eric Meyer
 929	Tommy Norman
-930	Michael  Longin
 931	Christopher Taylor
 932	Max Guernsey
 933	Howard Deiner
@@ -6708,7 +6549,6 @@ COPY speakers (id, name) FROM stdin;
 939	Bent Jensen
 940	Daniel Vacanti
 941	Anda Abramovici
-942	Chris  McMahon
 943	Ken Howard
 944	Arline Sutherland
 945	Alan Atlas
@@ -6753,12 +6593,10 @@ COPY speakers (id, name) FROM stdin;
 984	David Rico
 985	Alan Padula
 986	Justin Babuscio
-987	Lily  Cho
 988	Tom Illmensee
 989	Alyson Muff
 990	Michael Marchi
 991	Kevin Fisher
-992	arlen bankston
 993	Harry Koehnemann
 994	David Wilby
 995	Andre Frank
@@ -6778,11 +6616,12 @@ COPY speakers (id, name) FROM stdin;
 1009	Llewellyn Falco
 1010	Daniel Gilkerson
 1011	Tom Looy
+987	Lily Cho
+930	Michael Longin
 1012	Alistair Jones
 1013	Patrick Kua
 1014	Sharon Buckmaster
 1015	Stephen Palmer
-1016	Sam Gucikenheimer
 1017	Hannu Kokko
 1018	Ronaldo Ferraz
 1019	Tiago Jorge
@@ -6801,7 +6640,6 @@ COPY speakers (id, name) FROM stdin;
 1032	Andrew Shafer
 1033	Paul Nasrat
 1034	Brian Bozzuto
-1035	Gilles  Brouillette
 1036	Jon Dahl
 1037	Declan Whelan
 1038	Joseph Yoder
@@ -6824,7 +6662,6 @@ COPY speakers (id, name) FROM stdin;
 1055	Joe Sokohl
 1056	Francisco Trindade
 1057	Ola Ellnestam
-1058	Jim  Highsmith
 1059	Mack Adams
 1060	Jenni Dow
 1061	Christine DelPrete
@@ -6859,7 +6696,6 @@ COPY speakers (id, name) FROM stdin;
 1090	David Carlton
 1091	Bob Hartman
 1092	Matt Wynne
-1093	marc mcneill
 1094	Lisa Moore
 1095	Keith Voos
 1096	Ami Hileman
@@ -6888,7 +6724,6 @@ COPY speakers (id, name) FROM stdin;
 1119	Michael Sahota
 1120	Gino Marckx
 1121	Barry Paquet
-1122	Samuel CrescÃªncio
 1123	Adriano Campestrini
 1124	Meghann Drury
 1125	Ken Power
@@ -6920,8 +6755,6 @@ COPY speakers (id, name) FROM stdin;
 1151	Elizabeth Woodward
 1152	Helen McKinstry
 1153	Maurits Rijk
-1154	Carlton  Nettleton
-1155	Dina  Friis
 1156	Jens Ostergaard
 1157	Roger Brown
 1158	Fernando Trigoso
@@ -6950,6 +6783,9 @@ COPY speakers (id, name) FROM stdin;
 1181	Gary Baker
 1182	Christopher Beale
 1183	David Bulkin
+1155	Dina Friis
+1035	Gilles Brouillette
+1093	Marc McNeill
 1184	Gary Jones
 1185	Paul Ambro
 1186	Inbar Oren
@@ -7037,7 +6873,6 @@ COPY speakers (id, name) FROM stdin;
 1268	Ronen Rubinfeld
 1269	Olaf Lewitz
 1270	Jaron Lambert
-1271	neil johnson
 1272	Val Scott
 1273	Jim McCarthy
 1274	John Haniotis
@@ -7093,13 +6928,11 @@ COPY speakers (id, name) FROM stdin;
 1324	Gourav Tiwari
 1325	Zainab Alikhan
 1326	Barninder Khurana
-1327	Michael  Meissner
 1328	Mike Suarez
 1329	Isel Fernandez Diez
 1330	Derek W. Wade
 1331	Jason Dean
 1332	Christian Hassa
-1333	candi rai
 1334	Marc-Elian Begin
 1335	Andrew Hunt
 1336	Nils Brede Moe
@@ -7107,21 +6940,21 @@ COPY speakers (id, name) FROM stdin;
 1338	Børge Haugset
 1339	Geir Kjetil Hanssen
 1340	Judith Brown
-1341	Gitte Lindgaard and Robert Biddle
 1342	Tiago Silva
 1343	Laura Bocock
 1344	Mia Horrigan
 1345	Mali Senapathi
 1346	Ananth Srinivasan
 1347	xiaofeng wang
-1348	Kieran Conboy and Ken Power
 1349	B Veeresh Thummadi
-1350	Omri Shiv and Kalle Lyytinen
 1351	Gayane Azizyan
-1352	Miganoush Magarian and  Mira Kajko-Mattsson
 1353	Theodore Hellmann
 1354	Claudia Melo
-1355	Daniela S. Cruzes, Fabio Kon and Reidar Conradi
+1341	Gitte Lindgaard
+1348	Kieran Conboy
+1327	Michael Meissner
+1352	Miganoush Magarian
+1350	Omri Shiv
 1356	Lene Pries-Heje
 1357	Jan Pries-Heje
 1358	Barbara Fredrickson
@@ -7173,7 +7006,6 @@ COPY speakers (id, name) FROM stdin;
 1404	Devin Hedge
 1405	Simon Cromarty
 1406	Oana Juncu
-1407	Jean-Louis LETOUZEY
 1408	Sergey Prokhorenko
 1409	Rafael Maranzato
 1410	Joe Moore
@@ -7220,12 +7052,10 @@ COPY speakers (id, name) FROM stdin;
 1451	David Segonds
 1452	Carissa Demetris
 1453	Jason Tice
-1454	Samuel Cresc�ncio
 1455	Rowan Bunning
 1456	Kate Megaw
 1457	Brian Rabon
 1458	Dajo Breddels
-1459	beverly may
 1460	Susan Eller
 1461	Andrew Prentice
 1462	Gregory Haskins
@@ -7238,14 +7068,34 @@ COPY speakers (id, name) FROM stdin;
 1469	Siva Dorairaj
 1470	Shvetha Soundararajan
 1471	James Arthur
-1472	Theodore D. Hellmann, Abhishek Sharma,
-1473	Jennifer Ferreira and Frank Maurer
-1474	Minna Isomursu, Petri Voltti,
 1475	Markku Halonen and Andey Sirotkin
-1476	Ryushi Shiohama, Hironori Washizaki,  Shin Kuboaki,
-1477	Kazunori Sakamoto and Yoshiaki Fukazawa
-1478	Jennifer Ferreira, Helen Sharp and Hugh Robinson
-1479	Christoph Johann Stettina, Werner Heijstek and Tor Erlend F�gri
+1480	Mike Clark
+1481	J.B. Rainsberger
+840	Alan Easton
+902	Amy Farrow
+1459	Beverly May
+1333	Candi Rai
+1482	Christoph Johann Stettina
+1483	Werner Heijstek
+1484	Tor Erlend Fægri
+1485	Siobhán Clarke
+1486	Daniela S. Cruzes
+1487	Fabio Kon
+1355	Reidar Conradi
+1488	Carl Erickson
+1407	Jean-Louis Letouzey
+1489	Yoshiaki Fukazawa
+1477	Kazunori Sakamoto
+1490	Damian Guy
+1491	Mira Kajko-Mattsson
+1492	Petri Voltti
+1474	Minna Isomursu
+1493	Kalle Lyytinen
+1494	Shin Kuboaki
+1495	Hironori Washizaki
+1476	Ryushi Shiohama
+1454	Samuel Cresçencio
+1496	Abhishek Sharma
 \.
 
 
