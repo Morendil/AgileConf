@@ -21,7 +21,7 @@ class Scraper02
 
   def speakers
     raw = @page./("span.orangeTitle")[1].text
-    raw.gsub("by ","").split(",").map(&:strip)
+    raw.gsub("by ","").split(/(?:,)|(?: and )|(?: -- )/).map(&:strip)
   end
 
   def description
