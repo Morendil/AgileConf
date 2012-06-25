@@ -5,7 +5,7 @@ class Session
 
   searchable do
     text	:title
-    text	:description
+    text	:description, :more_like_this => true
     text	:speakers do
       speakers.map(&:name).join " "
     end
