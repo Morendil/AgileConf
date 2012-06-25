@@ -35,6 +35,15 @@ table td.description {
 	background:yellow;
 }
 
+#program #main  h2 {		
+	font-size: 14px;
+	margin:1em 0 .25em;
+	line-height:1.1em;
+	color:#035F6E;
+	font-weight: bold;
+}
+
+
 /* Form Styles */
 form {
 	background:#53A2CC;

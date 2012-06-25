@@ -1,6 +1,9 @@
 <h1><%= @session.title %></h1>
+<h2>Presented by <%= @session.speakers.map(&:name).join(", ") %></h2>
+<p/>
+<p><strong>Stage:</strong> <%= @session.stage %></p>
+<p><strong>Session type:</strong> <%= @session.type %></p>
+<p><strong>Conference:</strong> Agile <%= @session.year %></p>
 <div>
-    <p>Agile <%= @session.year %> / <%= @session.type %> / <%= @session.stage %></p>
-    <p><%= @session.description.gsub("\\n","<br/>") %></p>
-    <p><%= @session.speakers.map(&:name).join(", ") %></p>
+  <%= @session.description.gsub("\\n","<br/>") %>
 </div>
