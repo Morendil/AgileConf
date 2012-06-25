@@ -9,8 +9,4 @@ class Speaker
   property :name, Text
 
   has n, :sessions, :through => Resource
-
-  def self.from name
-    Speaker.first_or_new(:name=>name)
-  end
 end

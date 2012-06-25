@@ -13,3 +13,15 @@ class Session
     result
   end
 end
+
+class Record
+  def self.from url
+    Record.new :url=>url
+  end
+end
+
+class Speaker
+  def self.from name
+    Speaker.first_or_new(:name=>name)
+  end
+end

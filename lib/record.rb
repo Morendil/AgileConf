@@ -8,8 +8,4 @@ class Record
   belongs_to :session
 
   property :url, Text, :key => true
-
-  def self.from url
-    Record.new :url=>url
-  end
 end
