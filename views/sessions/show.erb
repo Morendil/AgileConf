@@ -4,6 +4,4 @@
 <p><strong>Stage:</strong> <%= @session.stage %></p>
 <p><strong>Session type:</strong> <%= @session.type %></p>
 <p><strong>Conference:</strong> Agile <%= @session.year %></p>
-<div>
-  <%= @session.description.gsub("\\n","<br/>") %>
-</div>
+<div><%= @session.description.gsub("\n","<br/>") %></div>
