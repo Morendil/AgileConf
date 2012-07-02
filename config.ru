@@ -28,12 +28,13 @@ get '/sessions' do
 end
 
 get '/sessions/search' do
-  @query = CGI.escapeHTML(params[:query])
   search = Session.search do
     keywords params[:query]
+    with :records, true if params[:records]
     paginate :page => params[:page], :per_page => 10
   end
   @sessions = search.results
+  @query = CGI.escapeHTML(params[:query])
   erb :index, :views => "views/sessions", :layout => :'../layout'
 end
 
@@ -44,6 +45,7 @@ end
 
 get '/reindex' do
     Session.all.map {|each| each.remove_from_index!; each.index!}
+    "Reindexing..."
 end
 
 get '/assets/*' do |file|

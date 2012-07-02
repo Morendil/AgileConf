@@ -4,14 +4,17 @@ class Session
   include Sunspot::DataMapper
 
   searchable do
-    text	:title
-    text	:description, :more_like_this => true
-    text	:speakers do
+    text		:title
+    text		:description, :more_like_this => true
+    text		:speakers do
       speakers.map(&:name).join " "
     end
-    text	:stage
-    text	:type
-    integer	:year
+    text		:stage
+    text		:type
+    integer		:year
+    boolean	:records do
+      records.any?
+    end
   end
 
 end
