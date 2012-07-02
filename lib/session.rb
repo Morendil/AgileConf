@@ -1,6 +1,4 @@
 require 'dm-core'
-require 'will_paginate'
-require 'will_paginate/data_mapper'
 
 require "./lib/speaker.rb"
 require "./lib/record.rb"

@@ -3,6 +3,9 @@ require 'sinatra'
 require 'dm-core'
 require 'dm-migrations'
 
+require 'will_paginate'
+require 'will_paginate/data_mapper'
+
 require "./lib/session.rb"
 require "./lib/speaker.rb"
 require "./lib/session_search.rb"
