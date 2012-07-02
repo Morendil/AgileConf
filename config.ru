@@ -40,9 +40,7 @@ get '/sessions/:id' do
 end
 
 get '/reindex' do
-    Session.remove_all_from_index
-    Sunspot.commit
-    Session.all.map(&:index!)
+    Session.all.map {|each| each.remove_from_index!; each.index!}
 end
 
 get '/assets/*' do |file|
