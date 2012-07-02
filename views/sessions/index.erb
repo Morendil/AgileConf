@@ -2,7 +2,6 @@
 
 <div>
 
-
 	<form method="get" action="/sessions/search">
 		
 		<div>
@@ -19,7 +18,6 @@
 
 		<input type="submit" value="Search" />
 	</form>
-
 
         <%= will_paginate @sessions %>
 	<table class="tablesorter">
@@ -39,6 +37,14 @@
 				<td class="description">
 					<p><strong>Type:</strong> <%= session.type %></p>
 					<p><strong>Presented by: </strong><%= session.speakers.map(&:name).join(", ") %></p>
+
+<% session.records.each do |record| %>
+  <p>
+  <a href='<%= record.url %>'>Download (<%= record.url[-3..-1].downcase %>)</a>
+  </p>
+<% end %>
+
+
 					<p><a href="/sessions/<%= session.id %>">More info</a></p>
 				<td/>
 			</tr>

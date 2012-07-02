@@ -3,6 +3,7 @@ require 'dm-core'
 
 require 'sinatra'
 require 'tilt'
+require 'capybara'
 
 require "./lib/session.rb"
 
@@ -37,6 +38,10 @@ describe "Displaying sessions: " do
     @session = @sessions.first
   end
 
+  def page rendered
+    Capybara::Node::Simple.new(rendered)
+  end
+
   describe "the sessions list view" do
 
     before do
@@ -48,6 +53,20 @@ describe "Displaying sessions: " do
       result = erb :index, :views => "views/sessions"
       result.should include ">Title</th>"
       result.should include ">Another</th>"
+    end
+
+    it "allows downloading records for sessions that have them" do
+      @sessions[1].records = [Record.new(:url=>"A.PDF")]
+      result = erb :index, :views => "views/sessions"
+      link_path = "//table/tbody/tr/td[@class='description']//a"
+      page(result).should have_xpath "#{link_path}[@href='A.PDF']"
+    end
+
+    it "allows getting more information on each session" do
+      result = erb :index, :views => "views/sessions"
+      link_path = "//td[@class='description']//a"
+      page(result).should have_xpath "#{link_path}[@href='/sessions/1']"
+      page(result).should have_xpath "#{link_path}[@href='/sessions/2']"
     end
 
   end
