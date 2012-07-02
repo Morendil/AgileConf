@@ -1,5 +1,6 @@
 require 'rspec'
 require 'dm-core'
+
 require 'sinatra'
 require 'tilt'
 
@@ -15,13 +16,40 @@ describe "Displaying sessions: " do
 
   before do
     @template_cache = Tilt::Cache.new
-    @session = Session.new(
-      :title=>"Title",
-      :stage=>"Its stage",
-      :type=>"Its type",
-      :description=>"Lorem\nipsum",
-      :year=>"2012",
-      :speakers=>[Speaker.new(:name=>"A"),Speaker.new(:name=>"B")])
+    @sessions = [
+      Session.new(
+        :id=>1,
+        :title=>"Title",
+        :stage=>"Its stage",
+        :type=>"Its type",
+        :description=>"Lorem\nipsum",
+        :year=>"2012",
+        :speakers=>[Speaker.new(:name=>"A"),Speaker.new(:name=>"B")]),
+      Session.new(
+        :id=>2,
+        :title=>"Another",
+        :stage=>"Its stage",
+        :type=>"Its type",
+        :description=>"Lorem\nipsum",
+        :year=>"2011",
+        :speakers=>[Speaker.new(:name=>"C"),Speaker.new(:name=>"D")]),
+    ]
+    @session = @sessions.first
+  end
+
+  describe "the sessions list view" do
+
+    before do
+      def @sessions.total_entries; self.length; end
+      def will_paginate object; end
+    end
+
+    it "shows each session's title" do
+      result = erb :index, :views => "views/sessions"
+      result.should include ">Title</th>"
+      result.should include ">Another</th>"
+    end
+
   end
 
   describe "the sessions detail view" do
@@ -51,9 +79,22 @@ describe "Displaying sessions: " do
       result.should include "<p><strong>Conference:</strong> Agile 2012</p>"
     end
 
-    it "shows a session's description with line breaks" do
+    it "shows a session's description, transforming line breaks" do
       result = erb :show, :views => "views/sessions"
       result.should include "<div>Lorem<br/>ipsum</div>"
+    end
+
+    it "doesn't list records if the session has none" do
+      result = erb :show, :views => "views/sessions"
+      result.should_not include "PDF"
+      result.should_not include "PPT"
+    end
+
+    it "lists records and shows file type" do
+      @session.records = [Record.new(:url=>"A.PDF"),Record.new(:url=>"b.zip")]
+      result = erb :show, :views => "views/sessions"
+      result.should include "<a href='A.PDF'>Download (pdf)</a>"
+      result.should include "<a href='b.zip'>Download (zip)</a>"
     end
 
   end

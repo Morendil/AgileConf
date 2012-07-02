@@ -5,3 +5,9 @@
 <p><strong>Session type:</strong> <%= @session.type %></p>
 <p><strong>Conference:</strong> Agile <%= @session.year %></p>
 <div><%= @session.description.gsub("\n","<br/>") %></div>
+
+<% @session.records.each do |record| %>
+  <p>
+  <a href='<%= record.url %>'>Download (<%= record.url[-3..-1].downcase %>)</a>
+  </p>
+<% end %>
