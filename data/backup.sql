@@ -27,6 +27,26 @@ CREATE TABLE records (
 ALTER TABLE public.records OWNER TO postgres;
 
 --
+-- Name: records_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE records_id_seq
+    INCREMENT BY 1
+    NO MAXVALUE
+    NO MINVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.records_id_seq OWNER TO postgres;
+
+--
+-- Name: records_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('records_id_seq', 497, true);
+
+
+--
 -- Name: session_speakers; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -636,6 +656,166 @@ http://agile2007.agilealliance.org/downloads/handouts/Cohn_366.pdf	20070366
 http://agile2007.agilealliance.org/downloads/proceedings/084_Transforming a Six Month Release_540.pdf	20070540
 http://agile2007.agilealliance.org/downloads/presentations/MyGreatestMisses-handout_414.pdf	20070414
 http://agile2007.agilealliance.org/downloads/handouts/Rainsberger_414.pdf	20070414
+http://submit2011.agilealliance.org/files/session_pdfs/someAssemblyRequired_betterSoftware_jan2008.pdf	8736
+http://submit2011.agilealliance.org/files/session_pdfs/agile-in-a-nutshell-2MB.pdf	8739
+http://submit2011.agilealliance.org/files/session_pdfs/PatKua-TighteningTheFeedbackLoop.pdf	8747
+http://submit2011.agilealliance.org/files/session_pdfs/Agile2011Prez.pdf	8751
+http://submit2011.agilealliance.org/files/session_pdfs/Shu-Ha-Ri Applied to Agile Leadership.pdf	8760
+http://submit2011.agilealliance.org/files/session_pdfs/Manager as SM.pdf	8764
+http://submit2011.agilealliance.org/files/session_pdfs/Apply systems thinking in large-scale Scrum transformation.pdf	8765
+http://submit2011.agilealliance.org/files/session_pdfs/HoorayWereAgileTesters_0.pdf	8797
+http://submit2011.agilealliance.org/files/session_pdfs/Agile 2011  - Agile Café Theory and Design For PDF.pdf	8798
+http://submit2011.agilealliance.org/files/session_pdfs/FINAL_PDF_Smaller.pdf	8800
+http://submit2011.agilealliance.org/files/session_pdfs/The Speed to Cool - Agile Testing & Building Quality In.pdf	8801
+http://submit2011.agilealliance.org/files/session_pdfs/Enterprise KSD.pdf	8808
+http://submit2011.agilealliance.org/files/session_pdfs/WIP and Kaizen-Key Tools for Enabling Continuous Improvement.pdf	8810
+http://submit2011.agilealliance.org/files/session_pdfs/Agile2011_Presentation.pdf	8821
+http://submit2011.agilealliance.org/files/session_pdfs/01-AgileNVC Presentation.pdf	8823
+http://submit2011.agilealliance.org/files/session_pdfs/AgileDecisionsPublicReleaseLowRes.pdf	8831
+http://submit2011.agilealliance.org/files/session_pdfs/TamingCustomerSupportSmall.pdf	8832
+http://submit2011.agilealliance.org/files/session_pdfs/Flirting with your customers -final-Agile2011 pdf.pdf	8838
+http://submit2011.agilealliance.org/files/session_pdfs/AgileManagementSmall.pdf	8840
+http://submit2011.agilealliance.org/files/session_pdfs/TeamCreativity2011 - Public.pdf	8845
+http://submit2011.agilealliance.org/files/session_pdfs/DesignThinking.pdf	8848
+http://submit2011.agilealliance.org/files/session_pdfs/refactoring_steven_stanly.pdf	8849
+http://submit2011.agilealliance.org/files/session_pdfs/cwnchandout_final.pdf.pdf	8854
+http://submit2011.agilealliance.org/files/session_pdfs/Teach Your Cucumber Scenarios to Speak Business.pdf	8855
+http://submit2011.agilealliance.org/files/session_pdfs/RemovingImpedimentsOutline.pdf	8857
+http://submit2011.agilealliance.org/files/session_pdfs/PowerfulQuestionsOutline.pdf	8859
+http://submit2011.agilealliance.org/files/session_pdfs/Creaky Platforms - Jonny LeRoy - Agile 2011.pdf	8860
+http://submit2011.agilealliance.org/files/session_pdfs/Team Swarming.pdf	8867
+http://submit2011.agilealliance.org/files/session_pdfs/MultiSensoryKanban- V 6.0.pdf	8873
+http://submit2011.agilealliance.org/files/session_pdfs/Scaling_Agile_to_the_Enterprise_with_Lean_v1_13mbp_forUploadToSite.pdf	8876
+http://submit2011.agilealliance.org/files/session_pdfs/Lean_as_a_Scrum_Troubleshooter_1_9_FINAL.pdf	8881
+http://submit2011.agilealliance.org/files/session_pdfs/The-Emperor-Long-Version-97-Agile-2011.pdf	8887
+http://submit2011.agilealliance.org/files/session_pdfs/EmbeddedTesting.pdf	8890
+http://submit2011.agilealliance.org/files/session_pdfs/CodeChristmasTreeAgile2011.pdf	8900
+http://submit2011.agilealliance.org/files/session_pdfs/TenTalesofPositiveChange.pdf	8901
+http://submit2011.agilealliance.org/files/session_pdfs/Agile 2.0 - Rebooting A Raccoon In An Imperfect World.pdf	8912
+http://submit2011.agilealliance.org/files/session_pdfs/Howard Deiner - Reverting to Form - How to Make Sure That Agile Sticks.pdf	8917
+http://submit2011.agilealliance.org/files/session_pdfs/Agile2011 When the Coaches Leave.pdf	8920
+http://submit2011.agilealliance.org/files/session_pdfs/embedded tdd cycle.pdf	8923
+http://submit2011.agilealliance.org/files/session_pdfs/Technical_Debt_Workshop_Gat.pdf	8924
+http://submit2011.agilealliance.org/files/session_pdfs/The Agile Leadership Kata - Discovering the Practice of Leadership.pdf	8939
+http://submit2011.agilealliance.org/files/session_pdfs/Product Stewardship.pdf	8954
+http://submit2011.agilealliance.org/files/session_pdfs/Process Increments_1.pdf	8968
+http://submit2011.agilealliance.org/files/session_pdfs/Agile 2011 Presentation by Dean Leffingwell.pdf	8969
+http://submit2011.agilealliance.org/files/session_pdfs/Chasing the Constraint - Agile2011 - Adam Light.pdf	8973
+http://submit2011.agilealliance.org/files/session_pdfs/Agile2011-InsightsExperienceReport-AgileOffice-KenPower.pdf	8975
+http://submit2011.agilealliance.org/files/session_pdfs/BudgetingBlackHole.r1_0.pdf	8976
+http://submit2011.agilealliance.org/files/session_pdfs/The Risk Management Game v2.pdf	8985
+http://submit2011.agilealliance.org/files/session_pdfs/SATT-Simon_Bennett-Agile 2011.pdf	8989
+http://submit2011.agilealliance.org/files/session_pdfs/Putting the Fun Back In Your Retrospectives.pdf	8991
+http://submit2011.agilealliance.org/files/session_pdfs/Design Thinking - Agile 2011.pdf	8994
+http://submit2011.agilealliance.org/files/session_pdfs/Functional_Management.pdf	9001
+http://submit2011.agilealliance.org/files/session_pdfs/Wed_1100_GA_IMPC_Fair.pdf	9008
+http://submit2011.agilealliance.org/files/session_pdfs/Silo Busting.pdf	9011
+http://submit2011.agilealliance.org/files/session_pdfs/agile hardware and co-design_Punkka.pdf	9033
+http://submit2011.agilealliance.org/files/session_pdfs/poster-back_0.pdf	9038
+http://submit2011.agilealliance.org/files/session_pdfs/Dipping Your Toes Into Kanban Agile2011.pdf	9042
+http://submit2011.agilealliance.org/files/session_pdfs/cslim_and_fitnesse.pdf	9052
+http://submit2011.agilealliance.org/files/session_pdfs/ChileAyuda_agile2011_v_slideboom.pdf	9066
+http://submit2011.agilealliance.org/files/session_pdfs/Agile 2011 Insight Report - Community Engagement.pdf	9077
+http://submit2011.agilealliance.org/files/session_pdfs/ericsink_agile_2011.pdf	9082
+http://submit2011.agilealliance.org/files/session_pdfs/Agile2011 It Depends on Context.pdf	9083
+http://submit2011.agilealliance.org/files/session_pdfs/Agile2011_-_Fear-Driven_Impediments_-_Proposal_Presentation_Handouts_0.pdf	9089
+http://submit2011.agilealliance.org/files/session_pdfs/EIKALILFRC_Agile2011_20110809.pdf	9112
+http://submit2011.agilealliance.org/files/session_pdfs/ReqtsExplorationWithTesterCollaboration-Agile2011_(Gottesdiener-Gregory).pdf	9128
+http://submit2011.agilealliance.org/files/session_pdfs/avery.pdf	9140
+http://submit2011.agilealliance.org/files/session_pdfs/UE Gone Agile.pdf	9143
+http://submit2011.agilealliance.org/files/session_pdfs/Negotiating Agile Contracts 7-2011 PDF.pdf	9167
+http://submit2011.agilealliance.org/files/session_pdfs/Kotter Agile 2011_2.pdf	9170
+http://submit2011.agilealliance.org/files/session_pdfs/PAW_Process_Roles_Rules_Nationwide.pdf	9172
+http://submit2011.agilealliance.org/files/session_pdfs/Agile2011 - Lean Fundamentals - Understanding Flow Through Games.pdf	9178
+http://submit2011.agilealliance.org/files/session_pdfs/Agile2011 Olaf Lewitz and Marc Bless - LeanProcrastination_0.pdf	9185
+http://submit2011.agilealliance.org/files/session_pdfs/Rubin_Agile_2011_Strategies_for_Porfolio_Management.pdf	9186
+http://submit2011.agilealliance.org/files/session_pdfs/collaborative chartering.pdf	9192
+http://submit2011.agilealliance.org/files/session_pdfs/Integrated Product Development_0.pdf	9207
+http://submit2011.agilealliance.org/files/session_pdfs/Dreyfus-Agile2011-SLC For Upload 2.pdf	9210
+http://submit2011.agilealliance.org/files/session_pdfs/applying agile to ic development.pdf	9215
+http://submit2011.agilealliance.org/files/session_pdfs/Agile 2011 080911v1.pdf	9228
+http://submit2011.agilealliance.org/files/session_pdfs/Krebs.DistanceCollabTools.Agile2011.pdf	9241
+http://submit2011.agilealliance.org/files/session_pdfs/Agile2011_HandlingProductManagementAcrossTheEnterprise.pdf	9269
+http://submit2011.agilealliance.org/files/session_pdfs/Narrative Coaching Agile2011.pdf	9314
+http://submit2011.agilealliance.org/files/session_pdfs/strengths presentation.pdf	9316
+http://submit2011.agilealliance.org/files/session_pdfs/Integrating UX Into Agile How To Ensure Your Sprints Result In Usable Softwarel.pdf	9347
+http://submit2011.agilealliance.org/files/session_pdfs/Agile2011 - Evolving to Agile.pdf	9454
+http://submit2011.agilealliance.org/files/session_pdfs/To view the presentation.pdf	9504
+http://submit2011.agilealliance.org/files/session_pdfs/AGILE in Academics.pptx.pdf	9604
+http://submit2011.agilealliance.org/files/session_pdfs/Agile Thinking for Business Analysis V1.0.pdf	9615
+http://submit2011.agilealliance.org/files/session_pdfs/Scrum Simulation-Agile2011.pdf	9701
+http://submit2011.agilealliance.org/files/session_pdfs/Sprint100&BeyondSlides.pdf	9764
+http://submit2011.agilealliance.org/files/session_pdfs/Agile Game Incubator-agile2011.pdf	9906
+http://submit2011.agilealliance.org/files/session_pdfs/Agile2011_Agile Top Down_August9_0.pdf	9925
+http://submit2011.agilealliance.org/files/session_pdfs/agile2011saltlakelast-110811184003-phpapp02.pdf	9964
+http://submit2011.agilealliance.org/files/session_pdfs/making-metaphors-that-matter-proposal.pdf	10005
+http://submit2011.agilealliance.org/files/session_pdfs/Agile Scaling Model.pdf	10030
+http://submit2011.agilealliance.org/files/session_pdfs/AgileBigRocksDisplay.pdf	10202
+http://submit2011.agilealliance.org/files/session_pdfs/ETinAgile-agile2011-final.pdf	10596
+http://submit2011.agilealliance.org/files/session_pdfs/Leadership Agility in a VUCA World - 8-11.pdf	10636
+http://submit2011.agilealliance.org/files/session_pdfs/Embedded_Storycrafting_2perPage.pdf	10686
+http://submit2011.agilealliance.org/files/session_pdfs/agile2011_0.pdf	10782
+http://submit2011.agilealliance.org/files/session_pdfs/KaizenLegoGame.pdf	10877
+http://submit2011.agilealliance.org/files/session_pdfs/Agile 2011 Handouts.pdf	10918
+http://submit2011.agilealliance.org/files/session_pdfs/Agile & Kanban In Coordination.pdf	10932
+http://submit2011.agilealliance.org/files/session_pdfs/Writing Maintainable Automated Acceptance Tests.pdf	10957
+http://submit2011.agilealliance.org/files/session_pdfs/Bubblesphere Agile 2011 HANDOUTS.pdf	11031
+http://submit2011.agilealliance.org/files/session_pdfs/Teaching Kids Programming - Agile 2011.pdf	11037
+http://submit2011.agilealliance.org/files/session_pdfs/Complexity at VTG Overview.pdf	11055
+http://submit2011.agilealliance.org/files/session_pdfs/Resistance as a Resource (presentation).pdf	11062
+http://submit2011.agilealliance.org/files/session_pdfs/agile 2011 proposal.pdf	11074
+http://submit2011.agilealliance.org/files/session_pdfs/WhentheVPisaScrumMasterPresentation110805b.pdf	11103
+http://submit2011.agilealliance.org/files/session_pdfs/the-empirical-process_0.pdf	11108
+http://submit2011.agilealliance.org/files/session_pdfs/Presentation 20110802.pdf	11110
+http://submit2011.agilealliance.org/files/session_pdfs/Presentation - Agile Conference R7 -Print.pdf	11137
+http://submit2011.agilealliance.org/files/session_pdfs/Presentation - How a Traditional Project Manager Transforms to Scrum - FINAL.pdf	11141
+http://submit2011.agilealliance.org/files/session_pdfs/Twenty Ways to Split.pdf	11142
+http://submit2011.agilealliance.org/files/session_pdfs/Agile and Kanban Work Together to Deliver Maintenance (Final, Leslie Ekas).pdf	11166
+http://submit2011.agilealliance.org/files/session_pdfs/leading-continuous-improvement.pdf	11176
+http://submit2011.agilealliance.org/files/session_pdfs/Geek Leadership In Deep Legacy.pdf	11212
+http://submit2011.agilealliance.org/files/session_pdfs/Agile Adoption in a non-Western cultural context.pdf	11219
+http://submit2011.agilealliance.org/files/session_pdfs/PDF-0-To-Agile-In-3-5Years.pdf	11254
+http://submit2011.agilealliance.org/files/session_pdfs/Agile_Experience_Report.pdf	11270
+http://submit2011.agilealliance.org/files/session_pdfs/Appraising Performance Appraisals.pdf	11272
+http://submit2011.agilealliance.org/files/session_pdfs/BuildingGreatTeams.pdf	11304
+http://submit2011.agilealliance.org/files/session_pdfs/Agile2011- Growing Embedded Applications Organically with Ceedling and Friends.pdf	11321
+http://submit2011.agilealliance.org/files/session_pdfs/agile2011_bge_small.pdf	11327
+http://submit2011.agilealliance.org/files/session_pdfs/PO role_can you hear me now_0.pdf	11343
+http://submit2011.agilealliance.org/files/session_pdfs/Agile 2011_Managers vs. Agile Teams-Who Makes the Decisions.pdf	11344
+http://submit2011.agilealliance.org/files/session_pdfs/Get to CMMI ML3 Using Agile Development Processes_1.pdf	11350
+http://submit2011.agilealliance.org/files/session_pdfs/agile2011.pdf	11352
+http://submit2011.agilealliance.org/files/session_pdfs/Agile MDD.pdf	11369
+http://submit2011.agilealliance.org/files/session_pdfs/theOnlyAgileTools.pdf	11379
+http://submit2011.agilealliance.org/files/session_pdfs/Agile Office Spaces Workshop.pdf	11382
+http://submit2011.agilealliance.org/files/session_pdfs/Beyond_Metrics.pdf	11431
+http://submit2011.agilealliance.org/files/session_pdfs/Agile2011- Team to wow team_Final.pdf	11440
+http://submit2011.agilealliance.org/files/session_pdfs/Enterprise Coaching Lessons Learned.pdf	11455
+http://submit2011.agilealliance.org/files/session_pdfs/Agile 2011 - final.pdf	11473
+http://submit2011.agilealliance.org/files/session_pdfs/presentation.pdf	11482
+http://submit2011.agilealliance.org/files/session_pdfs/FasterUTesting-Agile2011-FINAL.pdf	11493
+http://submit2011.agilealliance.org/files/session_pdfs/BADLL.pdf	11502
+http://submit2011.agilealliance.org/files/session_pdfs/Agile, Lean, and the 21st Century Corporation - Agile2011.pdf	11517
+http://submit2011.agilealliance.org/files/session_pdfs/Agile in Non-IT Projects.pdf	11537
+http://submit2011.agilealliance.org/files/session_pdfs/2011-08-10-AgileConfLightningTalk-VisualizingTeamflow.pdf	12633
+http://submit2011.agilealliance.org/files/session_pdfs/COBOL Agile.pdf	12637
+http://submit2011.agilealliance.org/files/session_pdfs/Climbing the Mountain to Enterprise Agile at Intuit.pdf	12642
+http://submit2011.agilealliance.org/files/session_pdfs/minute_new_ideas_and_emerging_results_workshop_agile2011.pdf	12643
+http://submit2011.agilealliance.org/files/session_pdfs/minute_research_method_workshop_agile2011.pdf	12644
+http://submit2011.agilealliance.org/files/session_pdfs/Brown Agile 2011 Presentation 4 Practitioners_0.pdf	12648
+http://submit2011.agilealliance.org/files/session_pdfs/User-Centered Design and Agile Methods - A Systematic Review.pdf	12649
+http://submit2011.agilealliance.org/files/session_pdfs/SomethingAboutLean.pdf	12650
+http://submit2011.agilealliance.org/files/session_pdfs/agile_lean_combination_agile2011-08-11.pdf	12655
+http://submit2011.agilealliance.org/files/session_pdfs/Agile 2011 Abstract-Drury_Conboy_Power-Obstacles to ASD DM.pdf	12656
+http://submit2011.agilealliance.org/files/session_pdfs/Agile2011_GA low q 2.pdf	12659
+http://submit2011.agilealliance.org/files/session_pdfs/AgileTeamPerceptionsOfProductivityFactors_Meloetal_2011.pdf	12662
+http://submit2011.agilealliance.org/files/session_pdfs/Why SCRUM works.pdf	12665
+http://submit2011.agilealliance.org/files/session_pdfs/Code.pdf	12693
+http://submit2011.agilealliance.org/files/session_pdfs/Mindset.pdf	12694
+http://submit2011.agilealliance.org/files/session_pdfs/agile2011_making_the_most_of_manual_testing.pdf	12706
+http://submit2011.agilealliance.org/files/session_pdfs/Leading the Agile Release Train (Agile2011).pdf	12709
+http://submit2011.agilealliance.org/files/session_pdfs/3 Ingredients for Product Owner Agile 2011.pdf	12711
+http://submit2011.agilealliance.org/files/session_pdfs/short sprint vs valuable stories.pdf	12712
+http://submit2011.agilealliance.org/files/session_pdfs/3-ways-anders-ramsay-2.pdf	12716
 \.
 
 
