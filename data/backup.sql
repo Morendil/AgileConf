@@ -141,6 +141,51 @@ SELECT pg_catalog.setval('speakers_id_seq', 1507, true);
 
 
 --
+-- Name: videos; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE videos (
+    id integer NOT NULL,
+    thumb character varying(50),
+    media character varying(50),
+    player character varying(50),
+    width integer,
+    height integer,
+    duration character varying(50),
+    session_id integer NOT NULL
+);
+
+
+ALTER TABLE public.videos OWNER TO postgres;
+
+--
+-- Name: videos_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE videos_id_seq
+    INCREMENT BY 1
+    NO MAXVALUE
+    NO MINVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.videos_id_seq OWNER TO postgres;
+
+--
+-- Name: videos_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE videos_id_seq OWNED BY videos.id;
+
+
+--
+-- Name: videos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('videos_id_seq', 33, true);
+
+
+--
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -152,6 +197,13 @@ ALTER TABLE sessions ALTER COLUMN id SET DEFAULT nextval('sessions_id_seq'::regc
 --
 
 ALTER TABLE speakers ALTER COLUMN id SET DEFAULT nextval('speakers_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE videos ALTER COLUMN id SET DEFAULT nextval('videos_id_seq'::regclass);
 
 
 --
@@ -7363,6 +7415,47 @@ COPY speakers (id, name) FROM stdin;
 
 
 --
+-- Data for Name: videos; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY videos (id, thumb, media, player, width, height, duration, session_id) FROM stdin;
+1	\N	572274cae0b90	bit	590	360	\N	12692
+2	\N	79878a60e5925	bit	590	360	\N	12693
+3	\N	97af598503fb1	bit	590	360	\N	12694
+4	\N	2f3429fcdc073	bit	590	360	\N	9574
+5	\N	879cd97013fe3	bit	590	360	\N	8955
+6	\N	3b6e63350c34e	bit	590	360	\N	9197
+7	\N	0ed3bcfb3273b	bit	590	360	\N	11062
+8	\N	a35a934683620	bit	590	360	\N	11141
+9	\N	fddc940b8fea1	bit	590	360	\N	9182
+10	\N	343989051f8a0	bit	590	360	\N	11147
+11	\N	e8bdaa9e5211a	bit	590	360	\N	8900
+12	\N	9eb734b1afacb	bit	590	360	\N	10005
+13	\N	a9080c9e6a83f	bit	590	360	\N	8901
+14	\N	f926320b92860	bit	590	360	\N	9238
+15	\N	e760167d56fe6	bit	590	360	\N	9504
+16	\N	f32f1bfcf87e5	bit	590	360	\N	9454
+17	\N	a569730b46f70	bit	590	360	\N	8975
+18	\N	4e6f4a5dc1697	bit	590	360	\N	8877
+19	\N	20662bbe37772	bit	590	360	\N	11440
+20	\N	6b731459b849c	bit	590	360	\N	9764
+21	\N	8eb4abc286d3f	bit	590	360	\N	8968
+22	\N	1310f6313cb92	bit	590	360	\N	11270
+23	\N	057822e982ea8	bit	590	360	\N	9077
+24	\N	e4e49406bcf6d	bit	590	360	\N	8764
+25	\N	828f918c5b0a4	bit	590	360	\N	11103
+26	\N	17a0a89b01ed9	bit	590	360	\N	9347
+27	\N	ee221073c6ff2	bit	590	360	\N	8739
+28	\N	process	bit	590	360	\N	8780
+29	\N	process	bit	590	360	\N	9083
+30	\N	process	bit	590	360	\N	8876
+31	\N	process	bit	590	360	\N	8845
+32	\N	process	bit	590	360	\N	11122
+33	\N	process	bit	590	360	\N	11479
+\.
+
+
+--
 -- Name: records_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -7399,6 +7492,13 @@ ALTER TABLE ONLY speakers
 --
 
 CREATE INDEX index_records_session ON records USING btree (session_id);
+
+
+--
+-- Name: index_videos_session; Type: INDEX; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE INDEX index_videos_session ON videos USING btree (session_id);
 
 
 --
