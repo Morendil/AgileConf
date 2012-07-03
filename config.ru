@@ -20,7 +20,6 @@ helpers do
     values.each do |key,value| 
       self.instance_variable_set "@#{key}", value
     end
-    @embed = render @player, "sessions" if @player
   end
 
   def do_render template, controller
@@ -36,12 +35,13 @@ get '/sessions' do
 end
 
 get '/sessions/search' do
-  populate_from SearchSessions.new params[:query]
+  populate_from SearchSessions.new params[:query], params[:records], params[:page]
   do_render :index, :sessions
 end
 
 get '/sessions/:id' do
   populate_from ShowSession.new params[:id], request.cookies["MEMBERID"]
+  @embed = erb @player, :views => "views/sessions" if @player
   do_render :show, :sessions
 end
 

@@ -21,14 +21,15 @@ class ListSessions
 end
 
 class SearchSessions
-  def initialize query
-    @query = query
+  def initialize query, records, page
+    @query, @records, @page = query, records, page
   end
   def populate
+    query, records, page = @query, @records, @page
     search = Session.search do
-      keywords params[:query]
-      with :records, true if params[:records]
-      paginate :page => params[:page], :per_page => 10
+      keywords query
+      with :records, true if records
+      paginate :page => page, :per_page => 10
     end
     {:sessions => search.results, :query => CGI.escapeHTML(@query)}
   end
@@ -44,7 +45,7 @@ class ShowSession
     result = {:session => session}
     if @user and session.videos.any? then
       video = session.videos.first
-      result[:player] = "video_#{video.player}"
+      result[:player] = "video_#{video.player}".to_sym
       result[:video] = video
     end
     result
