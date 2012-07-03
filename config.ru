@@ -14,33 +14,35 @@ configure do
   DataMapper.auto_upgrade!
 end
 
-def populate_from command
-  values = command.populate
-  values.each do |key,value| 
-    self.instance_variable_set "@#{key}", value
+helpers do
+  def populate_from command
+    values = command.populate
+    values.each do |key,value| 
+      self.instance_variable_set "@#{key}", value
+    end
+    @embed = render @player, "sessions" if @player
   end
-  @embed = render @player, "sessions" if @player
-end
 
-def render template, controller
-  erb :template, :views => "views/#{controller}", :layout => :'../layout'
+  def do_render template, controller
+    erb template, :views => "views/#{controller}", :layout => :'../layout'
+  end
 end
 
 get('/') { redirect('/sessions') }
 
 get '/sessions' do
-  populate_from ListSessions.new
-  render :index, :sessions
+  populate_from ListSessions.new params[:page]
+  do_render :index, :sessions
 end
 
 get '/sessions/search' do
-  populate_from SearchSessions.new
-  render :index, :sessions
+  populate_from SearchSessions.new params[:query]
+  do_render :index, :sessions
 end
 
 get '/sessions/:id' do
   populate_from ShowSession.new params[:id], request.cookies["MEMBERID"]
-  render :show, :sessions
+  do_render :show, :sessions
 end
 
 get '/reindex' do

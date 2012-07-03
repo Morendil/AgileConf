@@ -9,9 +9,12 @@ require "./lib/video.rb"
 require "./lib/session_search.rb"
 
 class ListSessions
+  def initialize page
+    @page = page
+  end
   def populate
     {:sessions => Session.paginate(
-      :page => params[:page],
+      :page => @page,
       :per_page => 10,
       :order => [:year.desc, :stage.asc])}
   end
