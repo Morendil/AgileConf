@@ -39,7 +39,7 @@ get '/sessions/search' do
 end
 
 get '/sessions/:id' do
-  populate_from ShowSession.new params[:id], nil
+  populate_from ShowSession.new params[:id], request.cookies["MEMBERID"]
   render :show, :sessions
 end
 
