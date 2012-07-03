@@ -4,11 +4,8 @@ require 'dm-core'
 require 'dm-migrations'
 
 require 'will_paginate'
-require 'will_paginate/data_mapper'
 
-require "./lib/session.rb"
-require "./lib/speaker.rb"
-require "./lib/session_search.rb"
+require "./lib/conferences.rb"
 
 configure do
   DataMapper.finalize
@@ -17,30 +14,33 @@ configure do
   DataMapper.auto_upgrade!
 end
 
+def populate_from command
+  values = command.populate
+  values.each do |key,value| 
+    self.instance_variable_set "@#{key}", value
+  end
+  @embed = render @player, "sessions" if @player
+end
+
+def render template, controller
+  erb :template, :views => "views/#{controller}", :layout => :'../layout'
+end
+
 get('/') { redirect('/sessions') }
 
 get '/sessions' do
-  @sessions = Session.paginate(
-    :page => params[:page],
-    :per_page => 10,
-    :order => [:year.desc, :stage.asc])
-  erb :index, :views => "views/sessions", :layout => :'../layout'
+  populate_from ListSessions.new
+  render :index, :sessions
 end
 
 get '/sessions/search' do
-  search = Session.search do
-    keywords params[:query]
-    with :records, true if params[:records]
-    paginate :page => params[:page], :per_page => 10
-  end
-  @sessions = search.results
-  @query = CGI.escapeHTML(params[:query])
-  erb :index, :views => "views/sessions", :layout => :'../layout'
+  populate_from SearchSessions.new
+  render :index, :sessions
 end
 
 get '/sessions/:id' do
-  @session = Session.first(:id => params[:id])
-  erb :show, :views => "views/sessions", :layout => :'../layout'
+  populate_from ShowSession.new params[:id], nil
+  render :show, :sessions
 end
 
 get '/reindex' do

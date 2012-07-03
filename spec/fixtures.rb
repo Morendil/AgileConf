@@ -23,14 +23,22 @@ module Fixtures
     ]
   end
 
-  def video
+  def videos
+    [
     Video.new(
       :thumb => "Vid1.jpg",
       :media => "http://cdn/File.flv",
       :player => "flv",
       :width => 520,
       :height => 390,
-      :duration => "51:48")
+      :duration => "51:48"),
+    Video.new(
+        :media => "2f3429fcdc073",
+        :player => "bit",
+        :width => 590,
+        :height => 360,
+        :duration => "30:00")
+    ]
   end
 
 end

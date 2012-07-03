@@ -108,7 +108,7 @@ describe "Displaying sessions: " do
   describe "the sessions video module" do
 
     it "embeds older sessions' associated videos, if any, in the Flash player" do
-      @video = video
+      @video = videos[0]
       result = erb :video_flv, :views => "views/sessions"
       result.should include "<OBJECT classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" codebase=\"http://macromedia.com/cabs/swflash.cab#version=8,0,0,0\" ID=flaMovie WIDTH=520 HEIGHT=390>"
       result.should include "<PARAM NAME=FlashVars VALUE=\"flvurl=http://cdn/File.flv\">"
@@ -116,12 +116,7 @@ describe "Displaying sessions: " do
     end
 
     it "embeds recent sessions' associated videos, if any, in a different player" do
-      @video = Video.new(
-        :media => "2f3429fcdc073",
-        :player => "bit",
-        :width => 590,
-        :height => 360,
-        :duration => "30:00")
+      @video = videos[1]
       result = erb :video_bit, :views => "views/sessions"
       result.should include "<script src=\"http://vdassets.bitgravity.com/api/script\" type=\"text/javascript\"></script>"
       result.should include "viewNode(\"2f3429fcdc073\", {\"server_detection\": true, \"width\": 590, \"height\": 360});"    end

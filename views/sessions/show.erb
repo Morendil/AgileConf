@@ -1,5 +1,6 @@
 <h1><%= @session.title %></h1>
 <h2>Presented by <%= @session.speakers.map(&:name).join(", ") %></h2>
+<%= @embed %>
 <p/>
 <p><strong>Stage:</strong> <%= @session.stage %></p>
 <p><strong>Session type:</strong> <%= @session.type %></p>
