@@ -16,4 +16,5 @@ class Session
 
   has n, :speakers, :through => Resource
   has n, :records
+  has n, :videos
 end

@@ -1,0 +1,11 @@
+<div style="text-align:center;">
+		
+<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://macromedia.com/cabs/swflash.cab#version=8,0,0,0" ID=flaMovie WIDTH=<%= @video.width %> HEIGHT=<%= @video.height %>>
+  <PARAM NAME=movie VALUE="flvplayer520x390.swf">
+  <PARAM NAME=FlashVars VALUE="flvurl=<%= @video.media %>">
+  <PARAM NAME=quality VALUE=high>
+  <EMBED src="flvplayer520x390.swf" FlashVars="flvurl=<%= @video.media %>" WIDTH=<%= @video.width %> HEIGHT=<%= @video.height %> TYPE="application/x-shockwave-flash">
+  </EMBED>
+</OBJECT>
+
+</div>

@@ -6,39 +6,26 @@ require 'tilt'
 require 'capybara'
 
 require "./lib/session.rb"
+require "./lib/video.rb"
+
+require "fixtures"
 
 DataMapper.setup(:default,"in_memory://localhost")
 DataMapper.finalize
 
 describe "Displaying sessions: " do
+  include Fixtures
 
   include Sinatra::Templates
   attr_reader   :template_cache
 
   before do
     @template_cache = Tilt::Cache.new
-    @sessions = [
-      Session.new(
-        :id=>1,
-        :title=>"Title",
-        :stage=>"Its stage",
-        :type=>"Its type",
-        :description=>"Lorem\nipsum",
-        :year=>"2012",
-        :speakers=>[Speaker.new(:name=>"A"),Speaker.new(:name=>"B")]),
-      Session.new(
-        :id=>2,
-        :title=>"Another",
-        :stage=>"Its stage",
-        :type=>"Its type",
-        :description=>"Lorem\nipsum",
-        :year=>"2011",
-        :speakers=>[Speaker.new(:name=>"C"),Speaker.new(:name=>"D")]),
-    ]
+    @sessions = sessions
     @session = @sessions.first
   end
 
-  def page rendered
+  def document rendered
     Capybara::Node::Simple.new(rendered)
   end
 
@@ -59,14 +46,14 @@ describe "Displaying sessions: " do
       @sessions[1].records = [Record.new(:url=>"A.PDF")]
       result = erb :index, :views => "views/sessions"
       link_path = "//table/tbody/tr/td[@class='description']//a"
-      page(result).should have_xpath "#{link_path}[@href='A.PDF']"
+      document(result).should have_xpath "#{link_path}[@href='A.PDF']"
     end
 
     it "allows getting more information on each session" do
       result = erb :index, :views => "views/sessions"
       link_path = "//td[@class='description']//a"
-      page(result).should have_xpath "#{link_path}[@href='/sessions/1']"
-      page(result).should have_xpath "#{link_path}[@href='/sessions/2']"
+      document(result).should have_xpath "#{link_path}[@href='/sessions/1']"
+      document(result).should have_xpath "#{link_path}[@href='/sessions/2']"
     end
 
   end
@@ -115,6 +102,29 @@ describe "Displaying sessions: " do
       result.should include "<a href='A.PDF'>Download (pdf)</a>"
       result.should include "<a href='b.zip'>Download (zip)</a>"
     end
+
+  end
+
+  describe "the sessions video module" do
+
+    it "embeds older sessions' associated videos, if any, in the Flash player" do
+      @video = video
+      result = erb :video_flv, :views => "views/sessions"
+      result.should include "<OBJECT classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" codebase=\"http://macromedia.com/cabs/swflash.cab#version=8,0,0,0\" ID=flaMovie WIDTH=520 HEIGHT=390>"
+      result.should include "<PARAM NAME=FlashVars VALUE=\"flvurl=http://cdn/File.flv\">"
+      result.should include "<EMBED src=\"flvplayer520x390.swf\" FlashVars=\"flvurl=http://cdn/File.flv\" WIDTH=520 HEIGHT=390 TYPE=\"application/x-shockwave-flash\">"
+    end
+
+    it "embeds recent sessions' associated videos, if any, in a different player" do
+      @video = Video.new(
+        :media => "2f3429fcdc073",
+        :player => "bit",
+        :width => 590,
+        :height => 360,
+        :duration => "30:00")
+      result = erb :video_bit, :views => "views/sessions"
+      result.should include "<script src=\"http://vdassets.bitgravity.com/api/script\" type=\"text/javascript\"></script>"
+      result.should include "viewNode(\"2f3429fcdc073\", {\"server_detection\": true, \"width\": 590, \"height\": 360});"    end
 
   end
 
