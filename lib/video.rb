@@ -12,6 +12,4 @@ class Video
   property :duration, String
 
   belongs_to :session
-
-  property :url, Text, :key => true
 end
