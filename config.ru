@@ -39,6 +39,11 @@ get '/sessions/search' do
   do_render :index, :sessions
 end
 
+get '/speakers/:id/sessions' do
+  populate_from SessionsBySpeaker.new params[:id]
+  do_render :index, :sessions
+end
+
 get '/sessions/:id' do
   populate_from ShowSession.new params[:id], request.cookies["MEMBERID"]
   @embed = erb @player, :views => "views/sessions" if @player

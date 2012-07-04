@@ -11,7 +11,7 @@ module Fixtures
         :type=>"Its type",
         :description=>"Lorem\nipsum",
         :year=>"2012",
-        :speakers=>[Speaker.new(:name=>"A"),Speaker.new(:name=>"B")]),
+        :speakers=>[Speaker.new(:id=>1,:name=>"A"),Speaker.new(:id=>2,:name=>"B")]),
       Session.new(
         :id=>2,
         :title=>"Another",

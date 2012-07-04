@@ -72,8 +72,16 @@ describe "Displaying sessions: " do
     end
 
     it "shows a session's speakers as a comma separated list" do
+      @speaker_list = (ShowSession.new 1, nil).speaker_list @session
       result = erb :show, :views => "views/sessions"
-      result.should include "<h2>Presented by A, B</h2>"
+      document(result).find("h2").text.should == "Presented by A, B"
+    end
+
+    it "links each speaker's name to a page listing all their sessions" do
+      @speaker_list = (ShowSession.new 1, nil).speaker_list @session
+      result = erb :show, :views => "views/sessions"
+      document(result).find("h2/a[1]").text.should == "A"
+      document(result).find("h2/a[1]/@href").text.should == "/speakers/1/sessions"
     end
 
     it "shows a session's stage" do

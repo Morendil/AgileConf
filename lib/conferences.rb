@@ -8,6 +8,15 @@ require "./lib/speaker.rb"
 require "./lib/video.rb"
 require "./lib/session_search.rb"
 
+class SessionsBySpeaker
+  def initialize id
+    @id = id
+  end
+  def populate
+    {:sessions => Speaker.get(@id).sessions}
+  end
+end
+
 class ListSessions
   def initialize page
     @page = page
@@ -48,6 +57,15 @@ class ShowSession
       result[:player] = "video_#{video.player}".to_sym
       result[:video] = video
     end
+    result[:speaker_list] = speaker_list session
     result
   end
+
+  def speaker_list session
+    speakers_links = session.speakers.map do |speaker|
+      "<a href='/speakers/#{speaker.id}/sessions'>#{speaker.name}</a>"
+    end
+    speakers_links.join(", ")
+  end
+
 end
