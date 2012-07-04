@@ -146,8 +146,8 @@ SELECT pg_catalog.setval('speakers_id_seq', 1507, true);
 
 CREATE TABLE videos (
     id integer NOT NULL,
-    thumb character varying(50),
-    media character varying(50),
+    thumb character varying(500),
+    media character varying(500),
     player character varying(50),
     width integer,
     height integer,
@@ -182,7 +182,7 @@ ALTER SEQUENCE videos_id_seq OWNED BY videos.id;
 -- Name: videos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('videos_id_seq', 33, true);
+SELECT pg_catalog.setval('videos_id_seq', 45, true);
 
 
 --
@@ -7452,6 +7452,16 @@ COPY videos (id, thumb, media, player, width, height, duration, session_id) FROM
 31	\N	process	bit	590	360	\N	8845
 32	\N	process	bit	590	360	\N	11122
 33	\N	process	bit	590	360	\N	11479
+36	/files/9812/8519/0584/Agile-2010---Aug13-Closing-Keynote.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug13ClosingKeynote.flv	flv	520	390	\N	20081909
+37	/files/1712/8519/0571/Agile-2010---Aug09-Linda-Rising-Pt1.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug09LindaRisingPt1.flv	flv	520	390	\N	20105271
+38	/files/3412/8519/1630/Agile-2010---Aug09-Linda-Rising-Pt2.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug09LindaRisingPt2.flv	flv	520	390	\N	20105271
+39	/files/7712/8519/0574/Agile-2010---Aug10-Esther-Derby.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug10EstherDerby.flv	flv	520	390	\N	20105516
+40	/files/2912/8519/0576/Agile-2010---Aug10-Pollyanna-Pixton.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug10PollyannaPixton.flv	flv	520	390	\N	8854
+41	/files/1312/8519/0577/Agile-2010---Aug11-James-Shore-Arlo-Belshee.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug11JamesShoreArloBelshee.flv	flv	520	390	\N	20106161
+42	/files/4412/8519/0579/Agile-2010---Aug11-Scott-Ambler.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug11ScottAmbler.flv	flv	520	390	\N	20105200
+43	/files/2612/8519/0581/Agile-2010---Aug12-Arlo-Belshee.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug12ArloBelshee.flv	flv	520	390	\N	20106177
+44	/files/3812/8519/0582/Agile-2010---Aug12-Jon-Bach.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug12JonBach.flv	flv	520	390	\N	20106181
+45	/files/5212/8519/0583/Agile-2010---Aug12-Mary-Poppendick.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug12MaryPoppendick.flv	flv	520	390	\N	20105296
 \.
 
 
