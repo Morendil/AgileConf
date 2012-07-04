@@ -42,7 +42,7 @@ describe "Accessing session content: " do
       command = ShowSession.new "1", "MEMBERID"
       results = command.populate
       results[:session].id.should be 1
-      results[:player].should == "video_flv"
+      results[:player].should == :video_flv
       results[:video].media.should == "http://cdn/File.flv"
     end
 
@@ -51,7 +51,7 @@ describe "Accessing session content: " do
       command = ShowSession.new "2", "MEMBERID"
       results = command.populate
       results[:session].id.should be 2
-      results[:player].should == "video_bit"
+      results[:player].should == :video_bit
       results[:video].media.should == "2f3429fcdc073"
     end
 
