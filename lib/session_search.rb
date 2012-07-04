@@ -13,7 +13,7 @@ class Session
     text		:type
     integer		:year
     boolean	:records do
-      records.any?
+      records.any? || videos.any?
     end
   end
 
