@@ -49,6 +49,12 @@ describe "Displaying sessions: " do
       document(result).should have_xpath "#{link_path}[@href='A.PDF']"
     end
 
+    it "indicates sessions that have been recorded on video" do
+      @sessions[1].videos = [Video.new]
+      result = erb :index, :views => "views/sessions"
+      result.should include "(Video available to members)"
+    end
+
     it "allows getting more information on each session" do
       result = erb :index, :views => "views/sessions"
       link_path = "//td[@class='description']//a"

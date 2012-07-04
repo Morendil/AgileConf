@@ -38,6 +38,9 @@
 					<p><strong>Type:</strong> <%= session.type %></p>
 					<p><strong>Presented by: </strong><%= session.speakers.map(&:name).join(", ") %></p>
 
+<% if session.videos.any? then %>
+<p>(Video available to members)</p>
+<% end %>
 <% session.records.each do |record| %>
   <p>
   <a href='<%= record.url %>'>Download (<%= record.url[-3..-1].downcase %>)</a>
