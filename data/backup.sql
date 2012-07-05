@@ -7446,12 +7446,6 @@ COPY videos (id, thumb, media, player, width, height, duration, session_id) FROM
 25	\N	828f918c5b0a4	bit	590	360	\N	11103
 26	\N	17a0a89b01ed9	bit	590	360	\N	9347
 27	\N	ee221073c6ff2	bit	590	360	\N	8739
-28	\N	process	bit	590	360	\N	8780
-29	\N	process	bit	590	360	\N	9083
-30	\N	process	bit	590	360	\N	8876
-31	\N	process	bit	590	360	\N	8845
-32	\N	process	bit	590	360	\N	11122
-33	\N	process	bit	590	360	\N	11479
 36	/files/9812/8519/0584/Agile-2010---Aug13-Closing-Keynote.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug13ClosingKeynote.flv	flv	520	390	\N	20081909
 37	/files/1712/8519/0571/Agile-2010---Aug09-Linda-Rising-Pt1.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug09LindaRisingPt1.flv	flv	520	390	\N	20105271
 38	/files/3412/8519/1630/Agile-2010---Aug09-Linda-Rising-Pt2.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug09LindaRisingPt2.flv	flv	520	390	\N	20105271
@@ -7462,6 +7456,12 @@ COPY videos (id, thumb, media, player, width, height, duration, session_id) FROM
 43	/files/2612/8519/0581/Agile-2010---Aug12-Arlo-Belshee.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug12ArloBelshee.flv	flv	520	390	\N	20106177
 44	/files/3812/8519/0582/Agile-2010---Aug12-Jon-Bach.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug12JonBach.flv	flv	520	390	\N	20106181
 45	/files/5212/8519/0583/Agile-2010---Aug12-Mary-Poppendick.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug12MaryPoppendick.flv	flv	520	390	\N	20105296
+33	\N	1c59f26a49f5f	bit	590	360	\N	11479
+32	\N	e10874b2634db	bit	590	360	\N	11122
+31	\N	c7d56b7c471a4	bit	590	360	\N	8845
+30	\N	c5cb08eb1b735	bit	590	360	\N	8876
+29	\N	7d9b31f7e3881	bit	590	360	\N	9083
+28	\N	584fe570804b8	bit	590	360	\N	8780
 \.
 
 
