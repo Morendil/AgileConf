@@ -77,7 +77,7 @@ class ShowSession
 
   def show_videos session
     public_show = session.videos.any? {|v| v.public}
-    private_show = session.videos.any? and @user
+    private_show = @user and session.videos.any?
     public_show or private_show
   end
 
