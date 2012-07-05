@@ -27,7 +27,11 @@ helpers do
   end
 end
 
-get('/') { redirect('/sessions') }
+get '/' do
+  populate_from ListSessions.new params[:page]
+  @intro = erb :intro, :layout => false unless params[:page]
+  do_render :index, :sessions
+end
 
 get '/sessions' do
   populate_from ListSessions.new params[:page]
