@@ -12,3 +12,10 @@
   <a href='<%= record.url %>'>Download (<%= record.url[-3..-1].downcase %>)</a>
   </p>
 <% end %>
+
+<hr/>
+If you like this session, you might also like these:
+<div id="related"></div>
+<script>
+$("#related").load("/sessions/<%= @session.id %>/related");
+</script>

@@ -43,6 +43,8 @@ get '/sessions/search' do
   do_render :index, :sessions
 end
 
+get('/speakers/:id') { redirect('/speakers/#{params[:id]}/sessions') }
+
 get '/speakers/:id/sessions' do
   populate_from SessionsBySpeaker.new params[:id]
   do_render :index, :sessions
@@ -52,6 +54,11 @@ get '/sessions/:id' do
   populate_from ShowSession.new params[:id], request.cookies["MEMBERID"]
   @embed = erb @player, :views => "views/sessions" if @player
   do_render :show, :sessions
+end
+
+get '/sessions/:id/related' do
+  populate_from RelatedSessions.new params[:id]
+  erb :related, :views => "views/sessions", :layout => false
 end
 
 get '/reindex' do

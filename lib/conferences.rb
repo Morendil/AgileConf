@@ -44,6 +44,20 @@ class SearchSessions
   end
 end
 
+class RelatedSessions
+  def initialize id
+    @id = id
+  end
+  def populate
+    search = Session.get(@id).more_like_this do
+      adjust_solr_params do |params|
+        params[:rows] = 5
+      end
+    end
+    {:sessions => search.results}
+  end
+end
+
 class ShowSession
   def initialize id, user
     @id = id
