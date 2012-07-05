@@ -35,6 +35,7 @@ module Fixtures
     Video.new(
         :media => "2f3429fcdc073",
         :player => "bit",
+        :public => true,
         :width => 590,
         :height => 360,
         :duration => "30:00")

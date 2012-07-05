@@ -52,13 +52,19 @@ class ShowSession
   def populate
     session = Session.first(:id => @id)
     result = {:session => session}
-    if @user and session.videos.any? then
+    if show_videos session then
       video = session.videos.first
       result[:player] = "video_#{video.player}".to_sym
       result[:video] = video
     end
     result[:speaker_list] = speaker_list session
     result
+  end
+
+  def show_videos session
+    public_show = session.videos.any? {|v| v.public}
+    private_show = session.videos.any? and @user
+    public_show or private_show
   end
 
   def speaker_list session

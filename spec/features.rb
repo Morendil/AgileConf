@@ -23,9 +23,17 @@ describe "Accessing session content: " do
     @sessions[1].videos << videos[1]
   end
 
-  describe "when viewing session details as a visitor" do
+  describe "when viewing session details as a visitor," do
 
-    it "does not offer video playback" do
+    it "allows access to public videos" do
+      mock(Session).first(:id=>"2") {@sessions[1]}
+      command = ShowSession.new "2", nil
+      results = command.populate
+      results[:session].id.should == 2
+      results[:player].should == :video_bit
+    end
+
+    it "does not allow access to other videos" do
       mock(Session).first(:id=>"1") {@sessions[0]}
       command = ShowSession.new "1", nil
       results = command.populate
@@ -33,9 +41,10 @@ describe "Accessing session content: " do
       results[:templates].should be nil
     end
 
+
   end
 
-  describe "when viewing session details as a logged in member" do
+  describe "when viewing session details as a logged in member," do
 
     it "uses the appropriate player when playing older videos" do
       mock(Session).first(:id=>"1") {@sessions[0]}

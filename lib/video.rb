@@ -10,6 +10,7 @@ class Video
   property :width, Integer
   property :height, Integer
   property :duration, String
+  property :public, Boolean
 
   belongs_to :session
 end
