@@ -126,7 +126,7 @@ describe "Displaying sessions: " do
       result = erb :video_flv, :views => "views/sessions"
       result.should include "<OBJECT classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" codebase=\"http://macromedia.com/cabs/swflash.cab#version=8,0,0,0\" ID=flaMovie WIDTH=520 HEIGHT=390>"
       result.should include "<PARAM NAME=FlashVars VALUE=\"flvurl=http://cdn/File.flv\">"
-      result.should include "<EMBED src=\"flvplayer520x390.swf\" FlashVars=\"flvurl=http://cdn/File.flv\" WIDTH=520 HEIGHT=390 TYPE=\"application/x-shockwave-flash\">"
+      result.should include "<EMBED src=\"/assets/flvplayer520x390.swf\" FlashVars=\"flvurl=http://cdn/File.flv\" WIDTH=520 HEIGHT=390 TYPE=\"application/x-shockwave-flash\">"
     end
 
     it "embeds recent sessions' associated videos, if any, in a different player" do
