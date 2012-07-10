@@ -33,30 +33,44 @@ get '/' do
   do_render :index, :sessions
 end
 
-get '/sessions' do
+get '/sessions/?' do
   populate_from ListSessions.new params[:page]
   do_render :index, :sessions
 end
 
-get '/sessions/search' do
+get '/sessions/year/:year/?' do
+  populate_from ListSessions.new params[:page], params[:year]
+  do_render :index, :sessions
+end
+
+get '/learning-center/?' do
+   erb :learning_center
+end
+
+get '/learning-center/:access/?' do
+  populate_from ListVideos.new params[:access], request.cookies
+  @notice ? (erb @notice) : (do_render :index, :sessions)
+end
+
+get '/sessions/search/?' do
   populate_from SearchSessions.new params[:query], params[:records], params[:page]
   do_render :index, :sessions
 end
 
-get('/speakers/:id') { redirect('/speakers/#{params[:id]}/sessions') }
+get('/speakers/:id/?') { redirect('/speakers/#{params[:id]}/sessions') }
 
-get '/speakers/:id/sessions' do
+get '/speakers/:id/sessions/?' do
   populate_from SessionsBySpeaker.new params[:id]
   do_render :index, :sessions
 end
 
-get '/sessions/:id' do
+get '/sessions/:id/?' do
   populate_from ShowSession.new params[:id], request.cookies["MEMBERID"]
   @embed = erb @player, :views => "views/sessions" if @player
   do_render :show, :sessions
 end
 
-get '/sessions/:id/related' do
+get '/sessions/:id/related/?' do
   populate_from RelatedSessions.new params[:id]
   erb :related, :views => "views/sessions", :layout => false
 end
