@@ -20,6 +20,14 @@ module Fixtures
         :description=>"Lorem\nipsum",
         :year=>"2011",
         :speakers=>[Speaker.new(:name=>"C"),Speaker.new(:name=>"D")]),
+      Session.new(
+        :id=>3,
+        :title=>"Another",
+        :stage=>"Its stage",
+        :type=>"Its type",
+        :description=>"Lorem\nipsum",
+        :year=>"2010",
+        :speakers=>[Speaker.new(:name=>"C"),Speaker.new(:name=>"D")])
     ]
   end
 
@@ -31,14 +39,24 @@ module Fixtures
       :player => "flv",
       :width => 520,
       :height => 390,
-      :duration => "51:48"),
+      :duration => "51:48",
+      :access=>:public),
     Video.new(
         :media => "2f3429fcdc073",
         :player => "bit",
         :public => true,
         :width => 590,
         :height => 360,
-        :duration => "30:00")
+        :duration => "30:00",
+        :access=>:subscriber),
+    Video.new(
+        :media => "2f3429fcdc073",
+        :player => "bit",
+        :public => true,
+        :width => 590,
+        :height => 360,
+        :duration => "30:00",
+        :access=>:member)
     ]
   end
 

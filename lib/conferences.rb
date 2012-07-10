@@ -18,16 +18,38 @@ class SessionsBySpeaker
 end
 
 class ListSessions
-  def initialize page
-    @page = page
+  def initialize page, year=nil
+    @page, @year = page, year
   end
   def populate
-    {:sessions => Session.paginate(
+    params = {
       :page => @page,
       :per_page => 10,
-      :order => [:year.desc, :stage.asc])}
+      :order => [:year.desc, :stage.asc]
+    }
+    params[:year] = @year if @year
+    {:sessions => Session.paginate(params)}
   end
 end
+
+class ListVideos
+  def initialize access, cookies
+    @access, @cookies = access.to_sym, cookies
+  end
+  def populate
+    member = (not @cookies["MEMBERID"].nil?)
+    subscriber = (member or (not @cookies["SUBSCRIBER"].nil?))
+    result = {:notice=>@access}
+    result = all_videos if @access == :public
+    result = all_videos if @access == :subscriber and subscriber
+    result = all_videos if @access == :member and member
+    result
+  end
+  def all_videos
+    {:sessions => Session.all(Session.videos.access.lte => @access,:order=>:year.desc)}
+  end
+end
+
 
 class SearchSessions
   def initialize query, records, page

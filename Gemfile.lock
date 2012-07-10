@@ -20,6 +20,7 @@ GEM
     dm-postgres-adapter (1.2.0)
       dm-do-adapter (~> 1.2.0)
       do_postgres (~> 0.10.6)
+    dm-types (0.10.0)
     do_postgres (0.10.8)
       data_objects (= 0.10.8)
     i18n (0.6.0)
@@ -53,6 +54,7 @@ DEPENDENCIES
   dm-core
   dm-migrations
   dm-postgres-adapter
+  dm-types
   sinatra
   sunspot
   sunspot_rails

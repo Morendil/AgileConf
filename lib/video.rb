@@ -1,4 +1,5 @@
 require 'dm-core'
+require 'dm-types'
 
 class Video
   include DataMapper::Resource
@@ -11,6 +12,7 @@ class Video
   property :height, Integer
   property :duration, String
   property :public, Boolean
+  property :access, Enum[:public,:subscriber,:member], :default=>:member
 
   belongs_to :session
 end
