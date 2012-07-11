@@ -1,0 +1,29 @@
+<%= @notice or "" %>
+<div>
+
+	<table class="tablesorter">
+		<thead>
+			<tr>
+				<th scope="col">Title</th>
+				<th scope="col">Venue</th>
+				<th scope="col">Description</th>
+			</tr>
+		</thead>
+		<tbody>
+		
+  <% @sessions.each do |session| %>
+			<tr>
+				<th class="title"><a href="/sessions/<%= session.id %>/video"><%= session.title %></a></th>
+				<td class="stage"><p>Agile <%= session.year %></p><p><%= session.stage %></p></td>
+				<td class="description">
+					<p><strong>Type:</strong> <%= session.type %></p>
+					<p><strong>Presented by: </strong><%= session.speakers.map(&:name).join(", ") %></p>
+				<td/>
+			</tr>
+
+  <% end %>
+
+		</tbody>
+	</table>
+
+</div>

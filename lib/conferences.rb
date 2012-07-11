@@ -8,6 +8,19 @@ require "./lib/speaker.rb"
 require "./lib/video.rb"
 require "./lib/session_search.rb"
 
+module AccessControl
+  def lower_than actual, required
+    all = [:public,:subscriber,:member]
+    (all.index actual) < (all.index required)
+  end
+  def actual cookies
+    result = :public
+    result = :subscriber if (not cookies["SUBSCRIBER"].nil?)
+    result = :member if (not cookies["MEMBERID"].nil?)
+    result
+  end
+end
+
 class SessionsBySpeaker
   def initialize id
     @id = id
@@ -33,17 +46,14 @@ class ListSessions
 end
 
 class ListVideos
+  include AccessControl
   def initialize access, cookies
     @access, @cookies = access.to_sym, cookies
   end
   def populate
-    member = (not @cookies["MEMBERID"].nil?)
-    subscriber = (member or (not @cookies["SUBSCRIBER"].nil?))
     result = {}
-    result[:sessions] = all_videos :public if @access == :public
-    result[:sessions] = all_videos :subscriber if @access == :subscriber and subscriber
-    result[:sessions] = all_videos :member if @access == :member and member
-    result[:notice] = @access if not result[:sessions]
+    result[:sessions] = all_videos @access
+    result[:notice] = @access if lower_than (actual @cookies), @access
     result
   end
   def all_videos access
@@ -86,26 +96,30 @@ class RelatedSessions
 end
 
 class ShowSession
-  def initialize id, user
+  include AccessControl
+  def initialize id, cookies
     @id = id
-    @user = user
+    @cookies = cookies
   end
   def populate
     session = Session.first(:id => @id)
     result = {:session => session}
-    if show_videos session then
+    if session.videos.any? then
       video = session.videos.first
-      result[:player] = "video_#{video.player}".to_sym
-      result[:video] = video
+      may_access = show_videos video
+      if may_access then
+        result[:player] = "video_#{video.player}".to_sym
+        result[:video] = video
+      else
+        result[:notice] = video.access
+      end
     end
     result[:speaker_list] = speaker_list session
     result
   end
 
-  def show_videos session
-    public_show = session.videos.any? {|v| v.public}
-    private_show = (@user and session.videos.any?)
-    public_show or private_show
+  def show_videos video
+    not lower_than (actual @cookies), video.access
   end
 
   def speaker_list session

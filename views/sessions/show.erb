@@ -1,6 +1,6 @@
 <h1><%= @session.title %></h1>
 <h2>Presented by <%= @speaker_list %></h2>
-<%= @embed %>
+<%= (@notice || @embed || "") %>
 <p/>
 <p><strong>Stage:</strong> <%= @session.stage %></p>
 <p><strong>Session type:</strong> <%= @session.type %></p>

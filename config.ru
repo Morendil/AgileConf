@@ -49,7 +49,8 @@ end
 
 get '/learning-center/:access/?' do
   populate_from ListVideos.new params[:access], request.cookies
-  @notice ? (erb @notice) : (do_render :index, :sessions)
+  @notice = erb @notice, :layout=> false if @notice
+  do_render :videos, :sessions
 end
 
 get '/sessions/search/?' do
@@ -65,8 +66,15 @@ get '/speakers/:id/sessions/?' do
 end
 
 get '/sessions/:id/?' do
-  populate_from ShowSession.new params[:id], request.cookies["MEMBERID"]
+  populate_from ShowSession.new params[:id], request.cookies
   @embed = erb @player, :views => "views/sessions" if @player
+  do_render :show, :sessions
+end
+
+get '/sessions/:id/video?' do
+  populate_from ShowSession.new params[:id], request.cookies
+  @embed = erb @player, :views => "views/sessions" if @player
+  @notice = erb @notice, :layout=> false if @notice
   do_render :show, :sessions
 end
 
