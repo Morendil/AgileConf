@@ -40,7 +40,7 @@
 					<p><strong>Presented by: </strong><%= session.speakers.map(&:name).join(", ") %></p>
 
 <% if session.videos.any? then %>
-<p>(Video available to members)</p>
+<p>(With video)</p>
 <% end %>
 <% session.records.each do |record| %>
   <p>

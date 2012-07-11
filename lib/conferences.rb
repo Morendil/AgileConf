@@ -39,14 +39,19 @@ class ListVideos
   def populate
     member = (not @cookies["MEMBERID"].nil?)
     subscriber = (member or (not @cookies["SUBSCRIBER"].nil?))
-    result = {:notice=>@access}
-    result = all_videos if @access == :public
-    result = all_videos if @access == :subscriber and subscriber
-    result = all_videos if @access == :member and member
+    result = {}
+    result[:sessions] = all_videos :public if @access == :public
+    result[:sessions] = all_videos :subscriber if @access == :subscriber and subscriber
+    result[:sessions] = all_videos :member if @access == :member and member
+    result[:notice] = @access if not result[:sessions]
     result
   end
-  def all_videos
-    {:sessions => Session.all(Session.videos.access.lte => @access)}
+  def all_videos access
+    Session.all(
+      Session.videos.access.lte => access,
+      :order=>:year.desc,
+      # Workaround for bug in DataMapper
+      :fields=>[:year,:title,:id,:description,:stage,:type])
   end
 end
 

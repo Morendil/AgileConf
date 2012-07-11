@@ -31,8 +31,8 @@ describe "Accessing session content: " do
   describe "when viewing the three sections of the VLC, depending on access:" do
 
     it "lists all public videos, irrespective of access level" do
-      mock(Session).all(Session.videos.access.lte=>:public) {[@videos.first]}
       command = ListVideos.new :public, {}
+      mock(command).all_videos(:public) {[@sessions.first]}
       results = command.populate
       results[:sessions].length.should be 1
       results[:sessions].first.id.should be 1
@@ -46,15 +46,15 @@ describe "Accessing session content: " do
     end
 
     it "lists subscriber videos when requested by a subscriber" do
-      mock(Session).all(Session.videos.access.lte=>:subscriber) {@ sessions[0..1]}
       command = ListVideos.new :subscriber, {"SUBSCRIBER"=>"YES"}
+      mock(command).all_videos(:subscriber) {@sessions[0..1]}
       results = command.populate
       results[:sessions].length.should be 2
     end
 
     it "lists subscriber videos when requested by a member" do
-      mock(Session).all(Session.videos.access.lte=>:subscriber) {@ sessions[0..1]}
       command = ListVideos.new :subscriber, {"MEMBERID"=>"DC"}
+      mock(command).all_videos(:subscriber) {@sessions[0..1]}
       results = command.populate
       results[:sessions].length.should be 2
     end
@@ -67,8 +67,8 @@ describe "Accessing session content: " do
     end
 
     it "lists member videos when requested by a member" do
-      mock(Session).all(Session.videos.access.lte=>:member) {@sessions[0..2]}
       command = ListVideos.new :member, {"MEMBERID"=>"DC"}
+      mock(command).all_videos(:member) {@sessions[0..2]}
       results = command.populate
       results[:sessions].length.should be 3
     end

@@ -52,7 +52,7 @@ describe "Displaying sessions: " do
     it "indicates sessions that have been recorded on video" do
       @sessions[1].videos = [Video.new]
       result = erb :index, :views => "views/sessions"
-      result.should include "(Video available to members)"
+      result.should include "(With video)"
     end
 
     it "allows getting more information on each session" do
