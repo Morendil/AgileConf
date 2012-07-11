@@ -46,7 +46,7 @@ class ListVideos
     result
   end
   def all_videos
-    {:sessions => Session.all(Session.videos.access.lte => @access,:order=>:year.desc)}
+    {:sessions => Session.all(Session.videos.access.lte => @access)}
   end
 end
 
