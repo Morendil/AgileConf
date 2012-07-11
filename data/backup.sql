@@ -152,7 +152,9 @@ CREATE TABLE videos (
     width integer,
     height integer,
     duration character varying(50),
-    session_id integer NOT NULL
+    session_id integer NOT NULL,
+    public boolean,
+    access integer DEFAULT 3
 );
 
 
@@ -5980,6 +5982,7 @@ COPY sessions (id, title, description, stage, type, year) FROM stdin;
 16694	Estimate of the appropriate iteration length in agile development by conducting simulation	"Agile development refers to the group of software development methodologies based on an iterative and incremental process model. It divides the development period into short time frames called iterations and uses a body of knowledge obtained from past experience called practice to ensure agile software development Although the iteration length is an important factor in agile development however it has so far been decided by the qualitatively and it has been reported that projects with an inappropriate iteration length are more preme to failure. \n\nWe thus propose a new methodology for estimating an appropriate iteration length through the conduct on of a simulation based on project constraints. \n\nIn this study we first, propose a method of calculating an appropriate iteration length for a particular project to promote the easy use of agile development. \n\nSecond, the relationship between the iteration length and project constraints was investigated by varying the parameters to create diverse situations. "\n\n	Research at Work	Lecture	2012
 16695	Agile Development and User Experience Design Integration as an On-going Achievement in Pra	Little is known about how Agile developers and UX designers integrate their work on a day-to-day basis. While accounts in the literature attempt to integrate Agile development and UX design by combining their processes and tools, the contradicting claims found in the accounts complicate extracting advice from such accounts. This paper reports on three ethnographically-informed field studies of the day-to-day practice of developers and designers in organisational settings. Our results show that integration is achieved in practice through (1) mutual awareness, (2) expectations about acceptable behaviour, (3) negotiating progress and (4) engaging with each other. Successful integration relies on practices that support and maintain these four aspects in the day-to-day work of developers and designers.\n\n	Research at Work	Lecture	2012
 16696	Documentation Work in Agile Teams: The Role of Documentation Formalism in Achieving a Sust	As its second guiding principle, agile software development promotes working software over comprehensive documentation. In this paper we investigate alignment between two different documentation practices and agile development. We report upon an experiment conducted to explore the impact of formalism and media type on various dimensions of documentation practice in agile teams. 28 students in 8 teams were divided into two groups: SAD and UML. Group SAD was to update and deliver their high-level software architecture in form of a textual description defined by RUP templates. Group UML was instructed to update and deliver their low-level software design in form of UML models. Our results show that iterative documentation practices led to more extensive and more detailed textual documentation. We found that writing documentation was perceived as a intrusive task leading to task specialization and allocation of documentation to less qualified team members. Consequently, this hampered collaboration within the team. Based in our findings, we suggest that if documentation is to be delivered with the project, producing documentation should be communicated and accepted by the team as a proper product. Furthermore, we argue that codification of internal development knowledge should be a non-intrusive task.\n\n	Research at Work	Lecture	2012
+20108617	ADAPTing to Agile for Continued Success	Agile software development has had more of an influence and has become more widespread than any early practitioner could have imagined. Yet some still call agile a failure. They point to the fact that few teams have achieved the 10x productivity or quality gains that the best agile teams have shown us are possible. They rightly state that partial, half-hearted agile implementations are common. These are real obstacles, yes. But evidence of failure? No. Success with agile development is not binary. No teams are perfect - few have achieved the full benefits of being agile - but most who have begun the journey to embrace agile are better than they were.\\nWe succeed by iterating toward becoming more and more agile. Join me as we explore the five stages of the ADAPT model, a sustainable approach for both getting started with and getting better at agile. By creating Awareness, increasing Desire, developing Ability, Promoting successes, and Transferring the implications of being agile to the rest of the organization (ADAPT), we not only become progressively more agile, we also create a solid foundation on which to continue the industry-wide march toward continued organizational success.	Keynotes	Keynote	2010
 \.
 
 
@@ -7418,50 +7421,50 @@ COPY speakers (id, name) FROM stdin;
 -- Data for Name: videos; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY videos (id, thumb, media, player, width, height, duration, session_id) FROM stdin;
-1	\N	572274cae0b90	bit	590	360	\N	12692
-2	\N	79878a60e5925	bit	590	360	\N	12693
-3	\N	97af598503fb1	bit	590	360	\N	12694
-4	\N	2f3429fcdc073	bit	590	360	\N	9574
-5	\N	879cd97013fe3	bit	590	360	\N	8955
-6	\N	3b6e63350c34e	bit	590	360	\N	9197
-7	\N	0ed3bcfb3273b	bit	590	360	\N	11062
-8	\N	a35a934683620	bit	590	360	\N	11141
-9	\N	fddc940b8fea1	bit	590	360	\N	9182
-10	\N	343989051f8a0	bit	590	360	\N	11147
-11	\N	e8bdaa9e5211a	bit	590	360	\N	8900
-12	\N	9eb734b1afacb	bit	590	360	\N	10005
-13	\N	a9080c9e6a83f	bit	590	360	\N	8901
-14	\N	f926320b92860	bit	590	360	\N	9238
-15	\N	e760167d56fe6	bit	590	360	\N	9504
-16	\N	f32f1bfcf87e5	bit	590	360	\N	9454
-17	\N	a569730b46f70	bit	590	360	\N	8975
-18	\N	4e6f4a5dc1697	bit	590	360	\N	8877
-19	\N	20662bbe37772	bit	590	360	\N	11440
-20	\N	6b731459b849c	bit	590	360	\N	9764
-21	\N	8eb4abc286d3f	bit	590	360	\N	8968
-22	\N	1310f6313cb92	bit	590	360	\N	11270
-23	\N	057822e982ea8	bit	590	360	\N	9077
-24	\N	e4e49406bcf6d	bit	590	360	\N	8764
-25	\N	828f918c5b0a4	bit	590	360	\N	11103
-26	\N	17a0a89b01ed9	bit	590	360	\N	9347
-27	\N	ee221073c6ff2	bit	590	360	\N	8739
-36	/files/9812/8519/0584/Agile-2010---Aug13-Closing-Keynote.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug13ClosingKeynote.flv	flv	520	390	\N	20081909
-37	/files/1712/8519/0571/Agile-2010---Aug09-Linda-Rising-Pt1.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug09LindaRisingPt1.flv	flv	520	390	\N	20105271
-38	/files/3412/8519/1630/Agile-2010---Aug09-Linda-Rising-Pt2.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug09LindaRisingPt2.flv	flv	520	390	\N	20105271
-39	/files/7712/8519/0574/Agile-2010---Aug10-Esther-Derby.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug10EstherDerby.flv	flv	520	390	\N	20105516
-40	/files/2912/8519/0576/Agile-2010---Aug10-Pollyanna-Pixton.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug10PollyannaPixton.flv	flv	520	390	\N	8854
-41	/files/1312/8519/0577/Agile-2010---Aug11-James-Shore-Arlo-Belshee.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug11JamesShoreArloBelshee.flv	flv	520	390	\N	20106161
-42	/files/4412/8519/0579/Agile-2010---Aug11-Scott-Ambler.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug11ScottAmbler.flv	flv	520	390	\N	20105200
-43	/files/2612/8519/0581/Agile-2010---Aug12-Arlo-Belshee.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug12ArloBelshee.flv	flv	520	390	\N	20106177
-44	/files/3812/8519/0582/Agile-2010---Aug12-Jon-Bach.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug12JonBach.flv	flv	520	390	\N	20106181
-45	/files/5212/8519/0583/Agile-2010---Aug12-Mary-Poppendick.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug12MaryPoppendick.flv	flv	520	390	\N	20105296
-33	\N	1c59f26a49f5f	bit	590	360	\N	11479
-32	\N	e10874b2634db	bit	590	360	\N	11122
-31	\N	c7d56b7c471a4	bit	590	360	\N	8845
-30	\N	c5cb08eb1b735	bit	590	360	\N	8876
-29	\N	7d9b31f7e3881	bit	590	360	\N	9083
-28	\N	584fe570804b8	bit	590	360	\N	8780
+COPY videos (id, thumb, media, player, width, height, duration, session_id, public, access) FROM stdin;
+11	\N	e8bdaa9e5211a	bit	590	360	\N	8900	f	3
+12	\N	9eb734b1afacb	bit	590	360	\N	10005	f	3
+13	\N	a9080c9e6a83f	bit	590	360	\N	8901	f	3
+14	\N	f926320b92860	bit	590	360	\N	9238	f	3
+15	\N	e760167d56fe6	bit	590	360	\N	9504	f	3
+16	\N	f32f1bfcf87e5	bit	590	360	\N	9454	f	3
+17	\N	a569730b46f70	bit	590	360	\N	8975	f	3
+18	\N	4e6f4a5dc1697	bit	590	360	\N	8877	f	3
+19	\N	20662bbe37772	bit	590	360	\N	11440	f	3
+20	\N	6b731459b849c	bit	590	360	\N	9764	f	3
+21	\N	8eb4abc286d3f	bit	590	360	\N	8968	f	3
+22	\N	1310f6313cb92	bit	590	360	\N	11270	f	3
+23	\N	057822e982ea8	bit	590	360	\N	9077	f	3
+24	\N	e4e49406bcf6d	bit	590	360	\N	8764	f	3
+25	\N	828f918c5b0a4	bit	590	360	\N	11103	f	3
+26	\N	17a0a89b01ed9	bit	590	360	\N	9347	f	3
+27	\N	ee221073c6ff2	bit	590	360	\N	8739	f	3
+37	/files/1712/8519/0571/Agile-2010---Aug09-Linda-Rising-Pt1.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug09LindaRisingPt1.flv	flv	520	390	\N	20105271	f	3
+38	/files/3412/8519/1630/Agile-2010---Aug09-Linda-Rising-Pt2.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug09LindaRisingPt2.flv	flv	520	390	\N	20105271	f	3
+39	/files/7712/8519/0574/Agile-2010---Aug10-Esther-Derby.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug10EstherDerby.flv	flv	520	390	\N	20105516	f	3
+40	/files/2912/8519/0576/Agile-2010---Aug10-Pollyanna-Pixton.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug10PollyannaPixton.flv	flv	520	390	\N	8854	f	3
+41	/files/1312/8519/0577/Agile-2010---Aug11-James-Shore-Arlo-Belshee.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug11JamesShoreArloBelshee.flv	flv	520	390	\N	20106161	f	3
+42	/files/4412/8519/0579/Agile-2010---Aug11-Scott-Ambler.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug11ScottAmbler.flv	flv	520	390	\N	20105200	f	3
+43	/files/2612/8519/0581/Agile-2010---Aug12-Arlo-Belshee.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug12ArloBelshee.flv	flv	520	390	\N	20106177	f	3
+44	/files/3812/8519/0582/Agile-2010---Aug12-Jon-Bach.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug12JonBach.flv	flv	520	390	\N	20106181	f	3
+45	/files/5212/8519/0583/Agile-2010---Aug12-Mary-Poppendick.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug12MaryPoppendick.flv	flv	520	390	\N	20105296	f	3
+33	\N	1c59f26a49f5f	bit	590	360	\N	11479	f	3
+32	\N	e10874b2634db	bit	590	360	\N	11122	f	3
+31	\N	c7d56b7c471a4	bit	590	360	\N	8845	f	3
+30	\N	c5cb08eb1b735	bit	590	360	\N	8876	f	3
+29	\N	7d9b31f7e3881	bit	590	360	\N	9083	f	3
+28	\N	584fe570804b8	bit	590	360	\N	8780	f	3
+36	/files/9812/8519/0584/Agile-2010---Aug13-Closing-Keynote.jpg	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug13ClosingKeynote.flv	flv	520	390	\N	20108617	f	1
+2	\N	79878a60e5925	bit	590	360	\N	12693	f	1
+3	\N	97af598503fb1	bit	590	360	\N	12694	f	1
+1	\N	572274cae0b90	bit	590	360	\N	12692	f	1
+4	\N	2f3429fcdc073	bit	590	360	\N	9574	f	2
+5	\N	879cd97013fe3	bit	590	360	\N	8955	f	2
+6	\N	3b6e63350c34e	bit	590	360	\N	9197	f	2
+7	\N	0ed3bcfb3273b	bit	590	360	\N	11062	f	2
+8	\N	a35a934683620	bit	590	360	\N	11141	f	2
+9	\N	fddc940b8fea1	bit	590	360	\N	9182	f	2
+10	\N	343989051f8a0	bit	590	360	\N	11147	f	2
 \.
 
 
