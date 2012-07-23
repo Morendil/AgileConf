@@ -184,7 +184,7 @@ ALTER SEQUENCE videos_id_seq OWNED BY videos.id;
 -- Name: videos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('videos_id_seq', 45, true);
+SELECT pg_catalog.setval('videos_id_seq', 46, true);
 
 
 --
@@ -870,6 +870,43 @@ http://submit2011.agilealliance.org/files/session_pdfs/Leading the Agile Release
 http://submit2011.agilealliance.org/files/session_pdfs/3 Ingredients for Product Owner Agile 2011.pdf	12711
 http://submit2011.agilealliance.org/files/session_pdfs/short sprint vs valuable stories.pdf	12712
 http://submit2011.agilealliance.org/files/session_pdfs/3-ways-anders-ramsay-2.pdf	12716
+http://www.agilealliance.org/files/2313/2435/0810/Theres%20Something%20About%20Lean.pdf	12650
+http://www.agilealliance.org/files/5413/2435/0812/Why%20Scrum%20Works.pdf	12665
+http://www.agilealliance.org/files/7313/2435/0836/Survey%20of%20Agile%20Tool%20Usage%20and%20Needs.pdf	12659
+http://www.agilealliance.org/files/4613/2435/0819/Decision%20Making%20in%20Agile%20Development%20A%20Focus%20Group%20Study%20of%20Decisions%20and%20Obstacles.pdf	12656
+http://www.agilealliance.org/files/1613/2435/0803/Reconciling%20Perspectives%20How%20People%20Manage%20the%20Process%20of%20Software%20Development.pdf	12647
+http://www.agilealliance.org/files/1113/2435/0795/Agile%20Team%20Perceptions%20of%20Productivity%20Factors.pdf	12662
+http://www.agilealliance.org/files/3913/2435/0821/Enacted%20Routines%20in%20Agile%20and%20Waterfall%20Processes.pdf	12657
+http://www.agilealliance.org/files/2613/2435/0843/User-Centered%20Design%20and%20Agile%20Methods%20A%20Systematic%20Review.pdf	12649
+http://www.agilealliance.org/files/6313/2435/0796/Collaborative%20Events%20and%20Shared%20Artefacts.pdf	12648
+http://www.agilealliance.org/files/9213/2435/0809/The%20Home%20Ground%20of%20Automated%20Acceptance%20Testing%20Mature%20Use%20of%20FitNesse.pdf	12646
+http://www.agilealliance.org/files/1113/2435/0830/Rule-Based%20Exploratory%20Testing%20of%20Graphical%20User%20Interfaces.pdf	12661
+http://www.agilealliance.org/files/5213/2435/0842/Understanding%20Post-Adoptive%20Agile%20UsageAn%20Exploratory%20Cross-Case%20Analysis.pdf	12653
+http://www.agilealliance.org/files/8513/2435/0829/Manager%20as%20Scrum%20Master.pdf	8764
+http://www.agilealliance.org/files/4613/2435/0839/Taming%20the%20Customer%20Support%20Queue%20A%20Kanban%20Experience%20Report.pdf	8832
+http://www.agilealliance.org/files/6013/2435/0820/Do%20You%20Dare%20to%20Ask%20Your%20HR%20Manager%20to%20Practice%20KANBAN.pdf	8877
+http://www.agilealliance.org/files/6113/2435/0827/Lean%20as%20a%20Scrum%20Troubleshooter.pdf	8881
+http://www.agilealliance.org/files/7013/2435/0806/Selling%20the%20Investment%20to%20Pay%20Down%20Technical%20Debt%20The%20Code%20Christmas%20Tree.pdf	8900
+http://www.agilealliance.org/files/3713/2435/0807/Ten%20Tales%20of%20Positive%20Change.pdf	8901
+http://www.agilealliance.org/files/8313/2435/0794/Process%20Increments%20An%20Agile%20Approach%20to%20Software.pdf	8968
+http://www.agilealliance.org/files/6413/2435/0841/The%20Agile%20Office%20Experience%20Report%20from%20Ciscos%20Unified%20Communications.pdf	8975
+http://www.agilealliance.org/files/3113/2435/0798/Democracy%20Unleashed%20Bringing%20Agility%20to%20Citizen%20Engagement.pdf	9077
+http://www.agilealliance.org/files/9713/2435/0835/Stories%20from%20My%20Experiences%20Learning%20Scrum.pdf	9082
+http://www.agilealliance.org/files/4013/2435/0801/Innovation%20Jams%20Lessons%20in%20Agile%20Product%20Development.pdf	9271
+http://www.agilealliance.org/files/3713/2435/0813/To%20Deliver%20Faster%20Build%20it%20in%20Reverse.pdf	9238
+http://www.agilealliance.org/files/1813/2435/0823/Evolving%20to%20Agile%20A%20Story%20of%20Agile%20Adoption%20at%20a%20Small%20SaaS%20Company.pdf	9454
+http://www.agilealliance.org/files/4713/2435/0811/Vertical%20Slicing%20Smaller%20is%20Better.pdf	9504
+http://www.agilealliance.org/files/2713/2435/0818/Agile%20in%20Academics%20Applying%20Agile%20to%20Instructional%20Design.pdf	9604
+http://www.agilealliance.org/files/1813/2435/0813/Yahoo%20Sports%20Sprint%20100%20and%20Beyond.pdf	9764
+http://www.agilealliance.org/files/4313/2435/0828/Making%20Metaphors%20that%20Matter.pdf	10005
+http://www.agilealliance.org/files/8313/2435/0816/Agile%20and%20Kanban%20in%20Coordination.pdf	10932
+http://www.agilealliance.org/files/3313/2435/0815/You%20Want%20to%20do%20What%20Breaking%20the%20Rules%20to%20Increase%20Customer%20Satisfaction.pdf	11028
+http://www.agilealliance.org/files/6313/2435/0817/Agile%20Experience%20Report%20Transition%20and%20Complexity%20at%20Cisco%20Voice%20Technology%20Group.pdf	11055
+http://www.agilealliance.org/files/4213/2435/0845/When%20the%20VP%20is%20a%20Scrum%20Master%20You%20Hit%20the%20Ground%20Running.pdf	11103
+http://www.agilealliance.org/files/5513/2435/0831/Scrum%20in%20Sales%20How%20to%20Improve%20Account%20Management%20and%20Sales%20Processes.pdf	11110
+http://www.agilealliance.org/files/4713/2435/0826/Increasing%20Learning%20in%20an%20Agile%20Environment%20Lessons%20Learned%20in%20an%20Agile%20Team.pdf	11352
+http://www.agilealliance.org/files/6513/2435/0800/From%20Team%20to%20Wow%20Team%20An%20Agile%20Teams%20Journey.pdf	11440
+http://www.agilealliance.org/files/7513/2435/0818/Anatomy%20and%20Physiology%20of%20an%20Agile%20Transition.pdf	11270
 \.
 
 
@@ -3875,6 +3912,7 @@ COPY session_speakers (speaker_id, session_id) FROM stdin;
 520	20092921
 320	20105243
 277	20060420
+108	20108617
 \.
 
 
@@ -5983,6 +6021,7 @@ COPY sessions (id, title, description, stage, type, year) FROM stdin;
 16695	Agile Development and User Experience Design Integration as an On-going Achievement in Pra	Little is known about how Agile developers and UX designers integrate their work on a day-to-day basis. While accounts in the literature attempt to integrate Agile development and UX design by combining their processes and tools, the contradicting claims found in the accounts complicate extracting advice from such accounts. This paper reports on three ethnographically-informed field studies of the day-to-day practice of developers and designers in organisational settings. Our results show that integration is achieved in practice through (1) mutual awareness, (2) expectations about acceptable behaviour, (3) negotiating progress and (4) engaging with each other. Successful integration relies on practices that support and maintain these four aspects in the day-to-day work of developers and designers.\n\n	Research at Work	Lecture	2012
 16696	Documentation Work in Agile Teams: The Role of Documentation Formalism in Achieving a Sust	As its second guiding principle, agile software development promotes working software over comprehensive documentation. In this paper we investigate alignment between two different documentation practices and agile development. We report upon an experiment conducted to explore the impact of formalism and media type on various dimensions of documentation practice in agile teams. 28 students in 8 teams were divided into two groups: SAD and UML. Group SAD was to update and deliver their high-level software architecture in form of a textual description defined by RUP templates. Group UML was instructed to update and deliver their low-level software design in form of UML models. Our results show that iterative documentation practices led to more extensive and more detailed textual documentation. We found that writing documentation was perceived as a intrusive task leading to task specialization and allocation of documentation to less qualified team members. Consequently, this hampered collaboration within the team. Based in our findings, we suggest that if documentation is to be delivered with the project, producing documentation should be communicated and accepted by the team as a proper product. Furthermore, we argue that codification of internal development knowledge should be a non-intrusive task.\n\n	Research at Work	Lecture	2012
 20108617	ADAPTing to Agile for Continued Success	Agile software development has had more of an influence and has become more widespread than any early practitioner could have imagined. Yet some still call agile a failure. They point to the fact that few teams have achieved the 10x productivity or quality gains that the best agile teams have shown us are possible. They rightly state that partial, half-hearted agile implementations are common. These are real obstacles, yes. But evidence of failure? No. Success with agile development is not binary. No teams are perfect - few have achieved the full benefits of being agile - but most who have begun the journey to embrace agile are better than they were.\\nWe succeed by iterating toward becoming more and more agile. Join me as we explore the five stages of the ADAPT model, a sustainable approach for both getting started with and getting better at agile. By creating Awareness, increasing Desire, developing Ability, Promoting successes, and Transferring the implications of being agile to the rest of the organization (ADAPT), we not only become progressively more agile, we also create a solid foundation on which to continue the industry-wide march toward continued organizational success.	Keynotes	Keynote	2010
+20108618	Industry Analyst Roundtable: Agile Trends and Future Directions		Special Events	Panel	2010
 \.
 
 
@@ -7465,6 +7504,7 @@ COPY videos (id, thumb, media, player, width, height, duration, session_id, publ
 8	\N	a35a934683620	bit	590	360	\N	11141	f	2
 9	\N	fddc940b8fea1	bit	590	360	\N	9182	f	2
 10	\N	343989051f8a0	bit	590	360	\N	11147	f	2
+46	\N	http://c2459152.cdn.cloudfiles.rackspacecloud.com/Agile2010-Aug10Roundtable.flv	flv	520	390	\N	20108618	\N	3
 \.
 
 
