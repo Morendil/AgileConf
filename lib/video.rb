@@ -11,7 +11,6 @@ class Video
   property :width, Integer
   property :height, Integer
   property :duration, String
-  property :public, Boolean
   property :access, Enum[:public,:subscriber,:member], :default=>:member
 
   belongs_to :session
