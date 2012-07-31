@@ -67,13 +67,13 @@ end
 
 get '/sessions/:id/?' do
   populate_from ShowSession.new params[:id], request.cookies
-  @embed = erb @player, :views => "views/sessions" if @player
+  @embed = erb @player, :views => "views/sessions", :layout=>false if @player
   do_render :show, :sessions
 end
 
 get '/sessions/:id/video?' do
   populate_from ShowSession.new params[:id], request.cookies
-  @embed = erb @player, :views => "views/sessions" if @player
+  @embed = erb @player, :views => "views/sessions", :layout=>false if @player
   @notice = erb @notice, :layout=> false if @notice
   do_render :show, :sessions
 end
